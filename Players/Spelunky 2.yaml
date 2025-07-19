@@ -1,0 +1,268 @@
+﻿# Q. What is this file?
+# A. This file contains options which allow you to configure your multiworld experience while allowing
+#    others to play how they want as well.
+#
+# Q. How do I use it?
+# A. The options in this file are weighted. This means the higher number you assign to a value, the
+#    more chances you have for that option to be chosen. For example, an option like this:
+#
+#    map_shuffle:
+#      on: 5
+#      off: 15
+#
+#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
+#    off.
+#
+# Q. I've never seen a file like this before. What characters am I allowed to use?
+# A. This is a .yaml file. You are allowed to use most characters.
+#    To test if your yaml is valid or not, you can use this website:
+#        http://www.yamllint.com/
+#    You can also verify that your Archipelago options are valid at this site:
+#        https://archipelago.gg/check
+
+# Your name in-game, limited to 16 characters.
+#     {player} will be replaced with the player's slot number.
+#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
+#     {number} will be replaced with the counter value of the name.
+#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
+name: Player{number}
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default Spelunky 2 Template
+
+game: Spelunky 2
+requires:
+  version: 0.6.2 # Version of Archipelago required for this yaml to work as expected.
+
+Spelunky 2:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # 
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # **Full:** ensure everything can be reached and acquired.
+    # 
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  plando_items:
+    # Generic items plando.
+    []
+
+  goal:
+    # When is your world considered finished.
+    # Tiamat: Requires completing the "normal" ending by reaching 6-4 and defeating Tiamat
+    # Hundun: Requires completing the "hard" ending by reaching 7-4 and defeating Hundun
+    # Cosmic Ocean: Requires reaching a specified level in Cosmic Ocean
+    tiamat: 50
+    hundun: 0
+    cosmic_ocean: 0
+
+  goal_level:
+    # Which level in Cosmic Ocean are you required to clear to consider your game as beaten.
+    # This option can be ignored if your goal is not set to "Cosmic Ocean"
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 10
+    # Maximum value is 99
+    30: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  progressive_worlds:
+    # Whether new worlds should be unlocked individually or progressively.
+    'false': 0
+    'true': 50
+
+  starting_health:
+    # How much Health should you initially start with.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 8
+    4: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  starting_bombs:
+    # How many Bombs should you initially start with.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 10
+    4: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  starting_ropes:
+    # How many Ropes should you initially start with.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 10
+    4: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  traps_enabled:
+    # Whether traps should be included in the item pool.
+    'false': 50
+    'true': 0
+
+  trap_weight:
+    # Determines the percentage of filler items that will be replaced by traps.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 5
+    # Maximum value is 30
+    15: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  poison_weight:
+    # Sets the likelihood of a trap being a Poison Trap relative to other traps.
+    # Poison Traps will instantly poison the player.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    15: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  curse_weight:
+    # Sets the likelihood of a trap being a Curse Trap relative to other traps.
+    # Curse Traps will instantly curse the player.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    5: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  ghost_weight:
+    # Sets the likelihood of a trap being a Ghost Trap relative to other traps.
+    # Ghost Traps will immediately spawn the ghost (or Jelly if in Cosmic Ocean).
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  stun_weight:
+    # Sets the likelihood of a trap being a Stun Trap relative to other traps.
+    # Stun Traps wll stun the player for 1 second.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    25: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  bomb_weight:
+    # Sets the likelihood of a trap being a Loose Bombs Trap relative to other traps.
+    # Loose Bombs Traps will spawn 1 lit bomb at the player's feet every second for 5 seconds.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    15: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  blind_weight:
+    # Sets the likelihood of a trap being a Blindness Trap relative to other traps.
+    # Blindness traps will trigger a darkness effect similar to the "I can't see a thing!" level
+    # feeling for the current level.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    20: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  punish_weight:
+    # Sets the likelihood of a trap being a Punish Ball Trap relative to other traps.
+    # Punish Ball Traps will attach a ball and chain to the player for 3 levels.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    'false': 50
+    'true': 0
+
+  bypass_ankh:
+    # Sets whether deaths sent through Death Link will trigger the Ankh, or ignore it.
+    'false': 50
+    'true': 0
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []

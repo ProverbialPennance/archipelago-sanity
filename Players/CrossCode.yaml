@@ -1,0 +1,413 @@
+﻿# Q. What is this file?
+# A. This file contains options which allow you to configure your multiworld experience while allowing
+#    others to play how they want as well.
+#
+# Q. How do I use it?
+# A. The options in this file are weighted. This means the higher number you assign to a value, the
+#    more chances you have for that option to be chosen. For example, an option like this:
+#
+#    map_shuffle:
+#      on: 5
+#      off: 15
+#
+#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
+#    off.
+#
+# Q. I've never seen a file like this before. What characters am I allowed to use?
+# A. This is a .yaml file. You are allowed to use most characters.
+#    To test if your yaml is valid or not, you can use this website:
+#        http://www.yamllint.com/
+#    You can also verify that your Archipelago options are valid at this site:
+#        https://archipelago.gg/check
+
+# Your name in-game, limited to 16 characters.
+#     {player} will be replaced with the player's slot number.
+#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
+#     {number} will be replaced with the counter value of the name.
+#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
+name: Player{number}
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default CrossCode Template
+
+game: CrossCode
+requires:
+  version: 0.6.2 # Version of Archipelago required for this yaml to work as expected.
+
+CrossCode:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # 
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # **Full:** ensure everything can be reached and acquired.
+    # 
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  plando_items:
+    # Generic items plando.
+    []
+
+  logic_mode:
+    # Logic mode; in other words, how is the player allowed to access items.
+    # [Linear] Progression follows the game's linear path, though sequence breaks are allowed and inevitably will still
+    #          occur. Makes for a longer, more BK-heavy playthrough with fewer options at each point.
+    # [Open] (Default) Progression is based only on whether it is possible to reach area given the current list of
+    #        received items.
+    linear: 0
+    open: 50
+
+  vt_shade_lock:
+    # If set to a non-None value, creates an in-game barrier at the entrance of Vermillion Tower to prevent extremely
+    # quick playthroughs.
+    # [Bosses] Vermillion Tower only opens when the bosses at the end of the first four dungeons have been beaten.
+    # [Shades] Vermillion Tower only opens when the four shades acquired at the end of the first four dungeons have been
+    #          acquired.
+    # [Bosses and Shades] Vermillion Tower opens when both of the other conditions have been satisfied.
+    none: 0
+    bosses_and_shades: 50
+    shades: 0
+    bosses: 0
+
+  vw_meteor_passage:
+    # If enabled, places a gate between Sapphire Ridge and Vermillion Wasteland unlockable with the meteor shade,
+    'false': 0
+    'true': 50
+
+  vt_skip:
+    # If enabled, Vermillion Tower will not need to be completed; instead, the player will skip through it to the final
+    # boss.
+    'false': 0
+    'true': 50
+
+  progressive_area_unlocks:
+    # If enabled, the items that unlock overworld areas and dungeons (including shades and some passes) will be made
+    # progressive.
+    # [None] no areas are unlocked progressively.
+    # [Dungeons] dungeons are unlocked progressively; overworld areas are not.
+    # [Overworld] overworld areas are unlocked progressively; dungeons are not.
+    # [Split] both dungeons and overworld areas are unlocked progressively in separate progressive chains.
+    # [Combined] both dungeons and overworld areas are unlocked progressively from the same progressive chain.
+    none: 50
+    dungeons: 0
+    overworld: 0
+    split: 0
+    combined: 0
+
+  progressive_equipment:
+    # If enabled, equipment will be progressive, sorted into different categories according to playstyle depending on
+    # which of the other location-adding options are enabled.
+    'false': 50
+    'true': 0
+
+  keyrings:
+    # If enabled, all keys for each dungeon will be replaced with a singular item that unlocks every door in that dungeon.
+    'false': 50
+    'true': 0
+
+  # Quests
+  quest_rando:
+    # If enabled, all quest rewards will be added to the location list.
+    'false': 50
+    'true': 0
+
+  hidden_quest_reward_mode:
+    # Some quests hide their rewards until they are completed.
+    # [Vanilla] Behavior is unchanged from the base game.
+    # [Show All] Show all rewards regardless of whether they're hidden in the base game.
+    # [Hide All] Hide all rewards regardless of whether they're hidden in the base game.
+    vanilla: 50
+    show_all: 0
+    hide_all: 0
+
+  hidden_quest_obfuscation_level:
+    # For quests with hidden rewards, this option controls the level to which rewards are obscured.
+    # [Hide Item] Only hides the item name. The icon and receiving player are still accurate.
+    # [Hide Text] Obscures item name and receiving player. The icon will still be accurate.
+    # [Hide All] The item name and receiving player will all be hidden and the icon will be replaced with a generic
+    #            Archipelago logo.
+    hide_item: 50
+    hide_text: 0
+    hide_all: 0
+
+  quest_dialog_hints:
+    # If enabled, upon viewing the quest dialog for a quest with rewards that are not hidden, hints are sent to the
+    # Archipelago server for all non-filler quest rewards.
+    'false': 0
+    'true': 50
+
+  # Shops
+  shop_rando:
+    # If enabled, all shops will be added to the location list.
+    'false': 50
+    'true': 0
+
+  shop_dialog_hints:
+    # If enabled, upon opening the dialog for a shop, corresponding hints are sent to the Archipelago server for all
+    # non-filler shop items.
+    'false': 0
+    'true': 50
+
+  shop_send_mode:
+    # Controls what exactly counts as a check when shop randomization is enabled.
+    # [Per Item Type] A check is added for each type of item (for example, Sandwich). Therefore, purchasing a sandwich
+    # from any shop in the game clears the same check.
+    # [Per Slot] A check is added for each item slot in each shop. Therefore, purchasing a Sandwich in Rookie Harbor
+    # clears a separate check than purchasing a Sandwich in Bergen Village.
+    per_item_type: 50
+    per_slot: 0
+
+  shop_receive_mode:
+    # Controls how shops are unlocked when shop randomization is enabled.
+    # [None] All shop slots are able to be purchased as soon as the player can access the shop.
+    # [Per Item Type] A check is added for each type of item (for example, Sandwich) which unlocks the ability to purchase
+    # that item from any shop.
+    # [Per Shop] A check is added for each shop (for example, Rookie Harbor Items) which unlocks the ability to purchase
+    # items from that shop.
+    # [Per Slot] A check is added for each item slot in each shop which unlocks the ability to purchase that item from
+    # that shop (this may lead to tedious playthroughs).
+    none: 0
+    per_item_type: 50
+    per_shop: 0
+    per_slot: 0
+
+  # Starting Inventory
+  start_with_green_leaf_shade:
+    # If enabled, the player will start with the green leaf shade, unlocking Autumn's Fall. This makes the early game far
+    # more open.
+    'false': 0
+    'true': 50
+
+  start_with_chest_detector:
+    # If enabled, the player will start with the chest detector item, which will notify them of the chests in the room.
+    'false': 0
+    'true': 50
+
+  start_with_discs:
+    # If set to a value other than "none", the player will start with the corresponding disc items.
+    # Disc of Insight unlocks the records menu.
+    # Disc of Flora unlocks the botany menu, allowing the player to start collecting plant samples from the beginning.
+    none: 0
+    insight: 50
+    flora: 0
+    both: 0
+
+  start_with_pet:
+    # If enabled, the player will start with a random pet. This is just for fun.
+    'false': 0
+    'true': 50
+
+  # Item Locations
+  shade_shuffle:
+    # Where shades will appear.
+    own_world: 0
+    different_world: 0
+    any_world: 50
+
+  element_shuffle:
+    # Where elements will appear.
+    own_world: 0
+    different_world: 0
+    any_world: 50
+    own_dungeons: 0
+    original_dungeons: 0
+
+  small_key_shuffle:
+    # Where small keys will appear.
+    own_world: 0
+    different_world: 0
+    any_world: 50
+    own_dungeons: 0
+    original_dungeons: 0
+
+  master_key_shuffle:
+    # Where master keys will appear.
+    own_world: 0
+    different_world: 0
+    any_world: 50
+    own_dungeons: 0
+    original_dungeons: 0
+
+  chest_key_shuffle:
+    # Where the Thief's Key, White Key, and Radiant Key (the keys that open bronze, silver, and gold chests, respectively)
+    # may appear.
+    own_world: 0
+    different_world: 0
+    any_world: 50
+    own_dungeons: 0
+    original_dungeons: 0
+
+  # Chest Locks
+  chest_lock_randomization:
+    # If enabled, the lock on all chests (Bronze, Silver, Gold, or None) will be randomized.
+    'false': 50
+    'true': 0
+
+  no_chest_lock_weight:
+    # Controls the likelihood of giving a chest no lock (if chest lock randomization is enabled).
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    60: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  bronze_chest_lock_weight:
+    # Controls the likelihood of giving a chest bronze lock, requiring Thief's Key to open (if chest lock randomization is enabled).
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    15: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  silver_chest_lock_weight:
+    # Controls the likelihood of giving a chest silver lock, requiring White Key to open (if chest lock randomization is enabled).
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    15: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  gold_chest_lock_weight:
+    # Controls the likelihood of giving a chest gild lock, requiring Radiant Key to open (if chest lock randomization is enabled).
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  # Locations
+  exclude_always_quests:
+    # Certain quests are always in the location pool because they hold progression items when playing vanilla CrossCode.
+    # If this option is selected (and quest rando is disabled), this option will ensure that none of those locations are
+    # populated with progression or useful items. It will also prohibit items from being placed on NPC interactions that
+    # give progression items but require working through part of a questline to get to.
+    'false': 0
+    'true': 50
+
+  # Pools
+  common_pool_weight:
+    # Controls the likelihood of choosing a common filler item when filling the world.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    38: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  rare_pool_weight:
+    # Controls the likelihood of choosing a rare filler item when filling the world.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    32: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  epic_pool_weight:
+    # Controls the likelihood of choosing a epic filler item when filling the world.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    24: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  legendary_pool_weight:
+    # Controls the likelihood of choosing a legendary filler item when filling the world.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    6: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  consumable_weight:
+    # Controls the likelihood of choosing a consumable item (as opposed to a drop).
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    50: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  drop_weight:
+    # Controls the likelihood of choosing a drop item (as opposed to a consumable).
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    50: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []

@@ -1,0 +1,499 @@
+﻿# Q. What is this file?
+# A. This file contains options which allow you to configure your multiworld experience while allowing
+#    others to play how they want as well.
+#
+# Q. How do I use it?
+# A. The options in this file are weighted. This means the higher number you assign to a value, the
+#    more chances you have for that option to be chosen. For example, an option like this:
+#
+#    map_shuffle:
+#      on: 5
+#      off: 15
+#
+#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
+#    off.
+#
+# Q. I've never seen a file like this before. What characters am I allowed to use?
+# A. This is a .yaml file. You are allowed to use most characters.
+#    To test if your yaml is valid or not, you can use this website:
+#        http://www.yamllint.com/
+#    You can also verify that your Archipelago options are valid at this site:
+#        https://archipelago.gg/check
+
+# Your name in-game, limited to 16 characters.
+#     {player} will be replaced with the player's slot number.
+#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
+#     {number} will be replaced with the counter value of the name.
+#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
+name: Player{number}
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default Brotato Template
+
+game: Brotato
+requires:
+  version: 0.6.2 # Version of Archipelago required for this yaml to work as expected.
+
+Brotato:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # 
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # **Full:** ensure everything can be reached and acquired.
+    # 
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  plando_items:
+    # Generic items plando.
+    []
+
+  num_victories:
+    # The number of runs you need to win to complete your goal.
+    # 
+    # Each win must be done with a different character.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 62
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  num_characters:
+    # The total number of characters in the world.
+    # 
+    # The characters will be randomly selected from the valid characters determined by the "Include Characters" options.
+    # 
+    # The actual number of characters may be less if there are not enough included characters in the options.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 62
+    15: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  num_starting_characters:
+    # The number of random characters to start with.
+    # 
+    # This is ignored if "Starting Characters" is set to any of the "Default <x>" options, and is clamped to the maximum
+    # number of characters in the enabled DLCs.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 62
+    5: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  starting_characters:
+    # Determines your set of starting characters.
+    # 
+    # Characters omitted from "Include Characters" will not be included regardless of this option.
+    # 
+    # If a DLC option is chosen but the DLC is not enabled, an error will be raised during generation.
+    # 
+    # * Default All: Start with the default characters from the base game and all enabled DLCs.
+    # * Random All: Start with random characters chosen from the base game and all enabled DLCs.
+    # * Default Base Game: Start with Well Rounded, Brawler, Crazy, Ranger and Mage.
+    # * Random Base Game: Start with random characters from the base game only.
+    # * Default Abyssal Terrors: Start with Sailor, Curious, Builder, Captain, and Creature.
+    # * Random Abyssal Terrors: Start with random characters from the Abyssal Terrors DLC.
+    default_all: 50
+    random_all: 0
+    default_base_game: 0
+    random_base_game: 0
+    default_abyssal_terrors: 0
+    random_abyssal_terrors: 0
+
+  include_base_game_characters:
+    # Which base game characters to include for checks.
+    # 
+    # Characters not listed here will not be available to play. There will be no item to unlock them, and there will be
+    # no run or wave complete checks associated with them.
+    ['Farmer', 'Brawler', 'Vampire', 'Bull', 'Technomage', 'Apprentice', 'Ranger', 'Hunter', 'One Armed', 'Mage', 'Wildling', 'King', 'Speedy', 'Pacifist', 'Fisherman', 'Entrepreneur', 'Cyborg', 'Gladiator', 'Old', 'Multitasker', 'Golem', 'Lucky', 'Saver', 'Explorer', 'Lich', 'Demon', 'Well Rounded', 'Ghost', 'Arms Dealer', 'Knight', 'Doctor', 'Loud', 'Mutant', 'Artificer', 'Generalist', 'Crazy', 'Engineer', 'Baby', 'Renegade', 'Streamer', 'Vagabond', 'Masochist', 'Chunky', 'Sick', 'Jack', 'Cryptid', 'Soldier', 'Glutton']
+
+  waves_per_drop:
+    # How many waves to win to receive a check.
+    # 
+    # 1 means every wave is a check, 2 means every other wave, etc.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 20
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  gold_reward_mode:
+    # Chooses how gold rewards are given.
+    # 
+    # #. One Time: Gold items are only given once, in either the current run or the next run after receiving the item.
+    # #. All Every Time: The total amount of gold received is given to the player at the start of every run. Since gold is
+    #    a filler item, this can lead to the game being "won" very easily early on in larger multiworlds.
+    one_time: 50
+    all_every_time: 0
+
+  xp_reward_mode:
+    # Chooses how XP rewards are given.
+    # 
+    # #. One Time: XP items are only given once, in either the current run or the next run after receiving the item.
+    # #. All Every Time: The total amount of XP received is given to the player at the start of every run.
+    one_time: 50
+    all_every_time: 0
+
+  enable_enemy_xp:
+    # Sets enemies will give XP or not.
+    # 
+    # If disabled, enemies will not give XP. The only XP will be from XP items in the multiworld. Upgrades will be from
+    # leveling up and upgrade items received.
+    'false': 50
+    'true': 0
+
+  # Loot Crates
+  spawn_normal_loot_crates:
+    # Sets whether loot crates can still spawn when connected to a multiworld.
+    # 
+    # If off, then the only consumables that spawn will be the health items and the Archipelago drop item. No regular or
+    # legendary loot crates will spawn.
+    # 
+    # If on, then loot crates will still spawn when there are no available Archipelago drops. See 'Loot Crate Groups' for
+    # details.
+    'false': 50
+    'true': 0
+
+  num_common_crate_drops:
+    # Replaces the in-game loot crate drops with an Archipelago item which must be picked up to generate a check.
+    # 
+    # How the drops are made available and how many are needed to make a check are controlled by the next two settings.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 50
+    25: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  num_common_crate_drops_per_check:
+    # The number of common loot crates which need to be picked up to count as a check.
+    # 
+    # 1 means every crate is a check, 2 means every other crate, etc.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 50
+    2: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  num_common_crate_drop_groups:
+    # The number of groups to separate loot crate locations into.
+    # 
+    # Once you check all the locations in a group, the randomizer will not drop more loot crate Archipelago items until
+    # you win more runs.
+    # 
+    # The number of loot crate locations will be evenly split among the groups, and the groups will be evenly spread out
+    # over the number of wins you choose.
+    # 
+    # Set to 1 to make all loot crate locations available from the start.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 50
+    1: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  num_legendary_crate_drops:
+    # Replaces the in-game legendary loot crate drops with an Archipelago item which must be picked up to generate a
+    # check.
+    # 
+    # How the drops are made available and how many are needed to make a check are controlled by the next two settings.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 50
+    5: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  num_legendary_crate_drops_per_check:
+    # The number of legendary loot crates which need to be picked up to count as a check.
+    # 
+    # 1 means every crate is a check, 2 means every other crate, etc.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 50
+    1: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  num_legendary_crate_drop_groups:
+    # The number of groups to separate legendary loot crate locations into.
+    # 
+    # Once you check all the locations in a group, the randomizer will not drop more legendary loot crate Archipelago
+    # items until you win more runs.
+    # 
+    # The number of loot crate locations will be evenly split among the groups, and the groups will be evenly spread out
+    # over the number of wins you choose.
+    # 
+    # Set to 1 to make all legendary loot crate locations available from the start.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 50
+    1: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  # Shop Slots
+  num_starting_shop_slots:
+    # How many slot the shop begins with. Missing slots are added as items.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 4
+    4: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  shop_lock_buttons_mode:
+    # Add the "Lock" buttons in the shop as items.
+    # 
+    # Missing buttons will be disabled until they are received as items.
+    # 
+    # The button and shop slot are different items, so it's possible to receive the button without the shop.
+    # 
+    # * All: Start with all lock buttons enabled (vanilla behavior).
+    # * None: Start with no lock buttons enabled at start.
+    # * Match shop slots: Start with the same number of lock buttons as shop slots.
+    # * Custom: Choose the number to start with using "Number of Lock Buttons".
+    all: 0
+    none: 0
+    match_shop_slots: 50
+    custom: 0
+
+  num_starting_lock_buttons:
+    # The number of "Lock" buttons in the shop to start with.
+    # 
+    # Missing buttons will not be usable until they are received as items.
+    # 
+    # The button and shop slot are different items, so it's possible to receive the button without the shop.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 4
+    0: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  # Item Weights
+  common_item_weight:
+    # The weight of Common/Tier 1/White items in the pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    50: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  uncommon_item_weight:
+    # The weight of Uncommon/Tier 2/Blue items in the pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    30: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  rare_item_weight:
+    # The weight of Rare/Tier 3/Purple items in the pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    12: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  legendary_item_weight:
+    # The weight of Legendary/Tier 4/Red items in the pool.
+    # 
+    # Note that this is for common crate drop locations only. An additional number of legendary items is also added for
+    # each legendary crate drop location.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    8: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  common_upgrade_weight:
+    # The number of Common/Tier 1/White upgrades to include in the item pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    50: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  uncommon_upgrade_weight:
+    # The number of Uncommon/Tier 2/Blue upgrades to include in the item pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    30: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  rare_upgrade_weight:
+    # The number of Rare/Tier 3/Purple upgrades to include in the item pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    12: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  legendary_upgrade_weight:
+    # The number of Legendary/Tier 4/Red upgrades to include in the item pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    8: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  gold_weight:
+    # Weight of Gold items in the item pool.
+    # 
+    # The actual value of each gold item will we randomly picked from:
+    # 
+    # * 10
+    # * 25
+    # * 50
+    # * 100
+    # * 200
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  xp_weight:
+    # Weight of XP items in the item pool.
+    # 
+    # The actual value of each XP item will we randomly picked from:
+    # 
+    # * 5
+    # * 10
+    # * 25
+    # * 50
+    # * 100
+    # * 150
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  # Abyssal Terrors DLC
+  enable_abyssal_terrors_dlc:
+    # Enable options which require the "Abyssal Terrors" DLC.
+    # 
+    # Currently, this only enables adding the checks for all the DLC characters.
+    'false': 50
+    'true': 0
+
+  include_abyssal_terrors_characters:
+    # Which characters from the "Abyssal Terrors" DLC to include for checks.
+    # 
+    # Characters not listed here will not be available to play. There will be no item to unlock them, and there will be
+    # no run or wave complete checks associated with them.
+    # 
+    # Does nothing if "Enable Abyssal Terrors DLC" is not set.
+    ['Curious', 'Chef', 'Diver', 'Buccaneer', 'Ogre', 'Captain', 'Gangster', 'Sailor', 'Builder', 'Hiker', 'Druid', 'Romantic', 'Creature', 'Dwarf']
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []

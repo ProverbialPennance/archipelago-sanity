@@ -1,0 +1,196 @@
+﻿# Q. What is this file?
+# A. This file contains options which allow you to configure your multiworld experience while allowing
+#    others to play how they want as well.
+#
+# Q. How do I use it?
+# A. The options in this file are weighted. This means the higher number you assign to a value, the
+#    more chances you have for that option to be chosen. For example, an option like this:
+#
+#    map_shuffle:
+#      on: 5
+#      off: 15
+#
+#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
+#    off.
+#
+# Q. I've never seen a file like this before. What characters am I allowed to use?
+# A. This is a .yaml file. You are allowed to use most characters.
+#    To test if your yaml is valid or not, you can use this website:
+#        http://www.yamllint.com/
+#    You can also verify that your Archipelago options are valid at this site:
+#        https://archipelago.gg/check
+
+# Your name in-game, limited to 16 characters.
+#     {player} will be replaced with the player's slot number.
+#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
+#     {number} will be replaced with the counter value of the name.
+#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
+name: Player{number}
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default Castlevania - Legacy of Darkness Template
+
+game: Castlevania - Legacy of Darkness
+requires:
+  version: 0.6.2 # Version of Archipelago required for this yaml to work as expected.
+
+Castlevania - Legacy of Darkness:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # 
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # **Full:** ensure everything can be reached and acquired.
+    # 
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  plando_items:
+    # Generic items plando.
+    []
+
+  sub_weapon_shuffle:
+    # Shuffles all sub-weapons in the game within each other in their own pool or in the main item pool.
+    'off': 50
+    own_pool: 0
+    anywhere: 0
+
+  spare_keys:
+    # Puts an additional copy of every non-Special key item in the pool for every key item that there is.
+    # Chance gives each key item a 50% chance of having a duplicate instead of guaranteeing one for all of them.
+    'off': 50
+    'on': 0
+    chance: 0
+
+  carrie_logic:
+    # Adds the 2 checks inside Underground Waterway's crawlspace to the pool.
+    # If you (and everyone else if racing the same seed) are planning to only ever play Reinhardt, don't enable this.
+    # Can be combined with Hard Logic to include Carrie-only tricks.
+    'false': 50
+    'true': 0
+
+  hard_logic:
+    # Properly considers sequence break tricks in logic (i.e. maze skip). Can be combined with Carrie Logic to include
+    # Carrie-only tricks.
+    # See the Game Page for a full list of tricks and glitches that may be logically required.
+    'false': 50
+    'true': 0
+
+  multi_hit_breakables:
+    # Adds the items that drop from the objects that break in three hits to the pool. There are 18 of these throughout
+    # the game, adding up to 79 or 80 checks (depending on sub-weapons
+    # being shuffled anywhere or not) in total with all stages.
+    # The game will be modified to
+    # remember exactly which of their items you've picked up instead of simply whether they were broken or not.
+    'false': 50
+    'true': 0
+
+  increase_item_limit:
+    # Increases the holding limit of usable items from 10 to 99 of each item.
+    'false': 0
+    'true': 50
+
+  countdown:
+    # Displays, near the HUD clock and below the health bar, the number of unobtained progression-marked items
+    # or the total check locations remaining in the stage you are currently in.
+    none: 50
+    majors: 0
+    all_locations: 0
+
+  window_color_r:
+    # The red value for the background color of the text windows during gameplay.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 15
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  window_color_g:
+    # The green value for the background color of the text windows during gameplay.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 15
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  window_color_b:
+    # The blue value for the background color of the text windows during gameplay.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 15
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  window_color_a:
+    # The alpha value for the background color of the text windows during gameplay.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 15
+    6: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_inventory_from_pool:
+    # Start with these items and don't place them in the world.
+    # 
+    # The game decides what the replacement items will be.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []

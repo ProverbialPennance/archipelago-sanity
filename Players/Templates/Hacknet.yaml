@@ -1,0 +1,272 @@
+﻿# Q. What is this file?
+# A. This file contains options which allow you to configure your multiworld experience while allowing
+#    others to play how they want as well.
+#
+# Q. How do I use it?
+# A. The options in this file are weighted. This means the higher number you assign to a value, the
+#    more chances you have for that option to be chosen. For example, an option like this:
+#
+#    map_shuffle:
+#      on: 5
+#      off: 15
+#
+#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
+#    off.
+#
+# Q. I've never seen a file like this before. What characters am I allowed to use?
+# A. This is a .yaml file. You are allowed to use most characters.
+#    To test if your yaml is valid or not, you can use this website:
+#        http://www.yamllint.com/
+#    You can also verify that your Archipelago options are valid at this site:
+#        https://archipelago.gg/check
+
+# Your name in-game, limited to 16 characters.
+#     {player} will be replaced with the player's slot number.
+#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
+#     {number} will be replaced with the counter value of the name.
+#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
+name: Player{number}
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default Hacknet Template
+
+game: Hacknet
+requires:
+  version: 0.6.2 # Version of Archipelago required for this yaml to work as expected.
+
+Hacknet:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # 
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # **Full:** ensure everything can be reached and acquired.
+    # 
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  plando_items:
+    # Generic items plando.
+    []
+
+  player_goal:
+    # What the player should achieve to reach their goal.
+    # Heartstopper: Vanilla ending, fulfill Bit's final request
+    # Altitude Loss: Labyrinths ending, any
+    # Veteran: Break into a super secret node
+    # VIP: Complete every Entropy and CSEC mission
+    # Completionist: All of the above. Recommended for asyncs
+    heartstopper: 50
+    altitude_loss: 0
+    veteran: 0
+    vip: 0
+    completionist: 0
+
+  exclude_junebug:
+    # If enabled, Project Junebug will not be marked as a location.
+    # If "Admin Access as Checks" is enabled, this will also not mark Project Junebug nodes.
+    # Recommended for those easily triggered by sensitive topics.
+    # If enabled while Shuffle Executables is disabled, KBTPortTest can be found in finale nodes.
+    'false': 50
+    'true': 0
+
+  shuffle_labs:
+    # Whether or not to shuffle Labyrinths content (missions, executables, etc.)
+    # If player goal is set to Altitude Loss, Veteran, or Completionist, generation will throw an error if this is disabled.
+    'false': 0
+    'true': 50
+
+  enable_limits:
+    # Whether or not to set limits on in-game mechanics, shuffling progressive limits into the item pool.
+    # Enable All: Set limits for shells (defaults to 1) and RAM.
+    # Shells: Restricts how many shells you can have open at once. (Defaults to 1)
+    # Shells Zero: Same as shells, but defaults to 0 instead of 1 shell. (Meaning, you can't open ANY shells from the start)
+    # RAM: Restricts your RAM to 300mb from the get-go. Progressive RAM adds 50mb each time it's received.
+    # Disabled: (Default) Don't set any limits.
+    enable_all: 0
+    shells: 0
+    shells_zero: 0
+    ram: 0
+    disabled: 50
+
+  shuffle_nodes:
+    # Adds admin access for EVERY ACCESSIBLE NODE as a check. This adds a LOT of locations. (~140 with DLC enabled) Recommended for asyncs.
+    # Respects "Shuffle Labyrinths"
+    # 
+    # (Not yet implemented.)
+    'false': 50
+    'true': 0
+
+  max_mission_skips:
+    # The maximum amount of mission skips that should be shuffled into the item pool.
+    # Mission skips allow you to skip any current mission.
+    # Mission skips cannot be used on transition missions.
+    # Mission skips cannot be used on finale missions.
+    # If set to 0, no mission skips will be shuffled into the item pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 5
+    0: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  max_forcehacks:
+    # The maximum amount of forcehacks that should be shuffled into the item pool.
+    # ForceHacks allow you to instantly gain admin access to most nodes. (With a few exceptions...)
+    # If set to 0, no forcehacks will be shuffled into the item pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 10
+    0: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  # Executable Options
+  shuffle_execs:
+    # Shuffles executables into the item pool. The player can't do ANYTHING without these, pretty much.
+    # Any executable not shuffled can be found and downloaded in its vanilla location.
+    # 
+    # Shuffle All: Shuffle EVERY executable. Even the useless ones.
+    # Progression And Useful: Only shuffle progression and useful executables. (e.g., OpShell, ThemeChanger)
+    # Progression Only: Only shuffle progression executables. (e.g., FTPBounce, WebServerWorm)
+    # Disabled: Don't shuffle executables.
+    # 
+    # The finale sequencer executable is never shuffled.
+    shuffle_all: 50
+    progression_and_useful: 0
+    progression_only: 0
+    disabled: 0
+
+  exec_grouping:
+    # When shuffling executables, how should they be grouped?
+    # Currently, doesn't work (its rules aren't implemented), but will before beta
+    # If set to a value other than Individually, all executables will be shuffled, regardless of classification.
+    # 
+    # Individually: (Default) Every executable is its own item.
+    # Regional: Executables are grouped by region. (e.g., "Labyrinths Executables" is TorrentStreamInjector, SSLTrojan, etc.)
+    # Practicality: Executables are grouped by what they're used for. (e.g., Portcrushers, Aesthetics, etc.) Good for quick syncs.
+    individually: 50
+    regional: 0
+    practicality: 0
+
+  start_with_ftp_and_ssh:
+    # When shuffling executables, add FTPBounce and SSHCrack to starting inventory automatically.
+    'false': 0
+    'true': 50
+
+  sprint_replaces_bounce:
+    # Completely removes FTPBounce from the item pool, replacing it with FTPSprint.
+    # If disabled, FTPBounce and FTPSprint will be two different items in the item pool.
+    # This ignores Shuffle Labyrinths.
+    # If Shuffle Executables is set to Disabled, this does nothing.
+    'false': 0
+    'true': 50
+
+  # Optional Checks
+  shuffle_achvs:
+    # If enabled, actions that usually unlock Steam achievements will be added as location checks.
+    # ("Rude" is excluded, as the player is automatically put onto the /el Sec path after defeating Naix.)
+    # (If the player misses Quickdraw, they can get it again by starting a new save file.)
+    'false': 50
+    'true': 0
+
+  shuffle_ptc:
+    # Adds PointClicker upgrades as checks and items.
+    # PointClicker upgrades only send a check the first time they're bought.
+    # This adds ~51 location checks.
+    # 
+    # Block Upgrades: Every PointClicker upgrade is a check, but won't do anything when the player buys it.
+    # This forces the player to rely on PointClicker Passive items being sent to them.
+    # Only Checks: Every PointClicker upgrade is a check, and will actually upgrade when the player buys it.
+    # Disabled: (Default) Don't shuffle PointClicker, at all.
+    block_upgrades: 0
+    only_checks: 0
+    disabled: 50
+
+  faction_access:
+    # If enabled, the player must first receive the respective Access for the faction before they can do missions for it. (Entropy, CSEC, Kaguya Trials)
+    # Good for asyncs!
+    # 
+    # Starting Hints: Automatically hints access for each faction from the start of the run.
+    enabled: 0
+    starting_hints: 0
+    disabled: 50
+
+  # Trap Options
+  trap_percentage:
+    # What percentage of filler items should be traps. If set to 0, no traps will be shuffled into the item pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  enable_etas_traps:
+    # If traps are enabled, shuffle ETAS traps. Automatically causes an ETAS to trigger.
+    # These can be REALLY annoying, so they're off by default. Enable them if you like a challenge!
+    'false': 50
+    'true': 0
+
+  # DeathLink Options
+  deathlink:
+    # If enabled: whenever you are traced back or your in-game computer crashes, a deathlink is sent.
+    # DeathLinks are not sent for the crash caused by Striker. (But they are for Naix)
+    # 
+    # A DeathLink in Hacknet will crash the player's (in-game) computer. If an ETAS is currently active, then the DeathLink is discarded.
+    'false': 50
+    'true': 0
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []
