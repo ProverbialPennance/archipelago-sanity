@@ -915,8 +915,8 @@ Pokemon Crystal:
 
   better_marts:
     # Improves the selection of items at Pokemarts
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 50
 
   experience_modifier:
     # Scale the amount of Experience Points given in battle
