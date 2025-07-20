@@ -38,7 +38,7 @@ yrtnuoC gnoK yeknoD:
   # Game Options
   progression_balancing:
     # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
-    # 
+    #
     # A lower setting means more getting stuck. A higher setting means less getting stuck.
     #
     # You can define additional values between the minimum and maximum values.
@@ -53,9 +53,9 @@ yrtnuoC gnoK yeknoD:
 
   accessibility:
     # Set rules for reachability of your items/locations.
-    # 
+    #
     # **Full:** ensure everything can be reached and acquired.
-    # 
+    #
     # **Minimal:** ensure what is needed to reach your goal can be acquired.
     full: 50
     minimal: 0
@@ -66,16 +66,16 @@ yrtnuoC gnoK yeknoD:
 
   energy_link:
     # EnergyLink allows players to deposit energy extracted from collected bananas into a shared pool across games in the session.
-    # 
+    #
     # You can exchange energy for Instant DK Barrels. Great for players that find the base game hard.
     # There's an additional item in the item pool that allows for better energy extraction from bananas.
-    'false': 50
-    'true': 0
+    "false": 0
+    "true": 50
 
   trap_link:
     # Whether your received traps are linked to other players
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   starting_life_count:
     # How many lives to start the game with.
@@ -178,29 +178,29 @@ yrtnuoC gnoK yeknoD:
 
   kong_checks:
     # Whether collecting all KONG letters in each level will grant a check
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   balloon_checks:
     # Whether collecting balloons in levels will grant a check
-    # 
+    #
     # Doesn't include balloons inside bonuses
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   banana_checks:
     # Whether collecting banana bunches in levels will grant a check
-    # 
+    #
     # Doesn't include banana bunches inside bonuses
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   token_checks:
     # Whether collecting an animal token in levels will grant a check
-    # 
+    #
     # Doesn't include tokens inside bonuses
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   # Shuffle
   starting_world:
@@ -222,17 +222,17 @@ yrtnuoC gnoK yeknoD:
   shuffle_abilities:
     # Which abilities will be added as items in the item pool
     # If an ability is not present in the list they will be treated as unlocked from the start
-    ['Carry', 'Gorilla Slap', 'Roll', 'Swim', 'Climb']
+    ["Carry", "Gorilla Slap", "Roll", "Swim", "Climb"]
 
   shuffle_animals:
     # Which animal buddies will be added as items in the item pool
     # If an animal buddy is not present in the list they will be treated as unlocked from the start
-    ['Winky', 'Rambi', 'Squawks', 'Enguarde', 'Expresso']
+    ["Winky", "Rambi", "Squawks", "Enguarde", "Expresso"]
 
   shuffle_objects:
     # Which kind of objects will be added as items in the item pool
     # If an object is not present in the list they will be treated as unlocked from the start
-    ['Switch Barrels', 'Barrel Kannons', 'Tires', 'Platforms', 'Minecart']
+    ["Switch Barrels", "Barrel Kannons", "Tires", "Platforms", "Minecart"]
 
   # Traps
   trap_fill_percentage:
@@ -299,7 +299,7 @@ yrtnuoC gnoK yeknoD:
   player_palettes:
     # Allows you to create colors for each Kong status. Includes K.Rool effects and the invincibility barrel
     # This will override the option preset
-    # 
+    #
     # Each one expects 15 values which are mapped to the Kongs colors
     # The values can be in SNES RGB (bgr555) with the $ prefix or PC RGB (rgb888) with the # prefix
     {}
@@ -307,10 +307,10 @@ yrtnuoC gnoK yeknoD:
   player_palette_filters:
     # Applies a filter that can brighten or darken your selected palette
     # Doesn't produce results similar to the original ones, but it's good enough
-    # 
+    #
     # Positive numbers create a brighter color palette (the higher the number, the brighter the palette)
     # Negative numbers create a darker color palette (the higher (or lower lol) the negative number, the darker the palette)
-    # 
+    #
     # Treat the values as percentages
     Diddy: 0
     Diddy Inactive: 0
@@ -439,7 +439,7 @@ yrtnuoC gnoK yeknoD:
 
   start_inventory_from_pool:
     # Start with these items and don't place them in the world.
-    # 
+    #
     # The game decides what the replacement items will be.
     {}
 

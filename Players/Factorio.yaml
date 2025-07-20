@@ -38,7 +38,7 @@ Factorio:
   # Game Options
   progression_balancing:
     # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
-    # 
+    #
     # A lower setting means more getting stuck. A higher setting means less getting stuck.
     #
     # You can define additional values between the minimum and maximum values.
@@ -53,9 +53,9 @@ Factorio:
 
   accessibility:
     # Set rules for reachability of your items/locations.
-    # 
+    #
     # **Full:** ensure everything can be reached and acquired.
-    # 
+    #
     # **Minimal:** ensure what is needed to reach your goal can be acquired.
     full: 50
     minimal: 0
@@ -160,8 +160,8 @@ Factorio:
 
   imported_blueprints:
     # Allow or Disallow Blueprints from outside the current savegame.
-    'false': 0
-    'true': 50
+    "false": 0
+    "true": 50
 
   world_gen:
     # World Generation settings. Overview of options at https://wiki.factorio.com/Map_generator,
@@ -246,13 +246,13 @@ Factorio:
 
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   energy_link:
     # Allow sending energy to other worlds. 25% of the energy is lost in the transfer.
-    'false': 50
-    'true': 0
+    "false": 0
+    "true": 50
 
   # Technologies
   tech_tree_layout:
@@ -279,9 +279,9 @@ Factorio:
   progressive:
     # Merges together Technologies like "automation-1" to "automation-3" into 3 copies of "Progressive Automation",
     # which awards them in order.
-    'off': 0
+    "off": 0
     grouped_random: 0
-    'on': 50
+    "on": 50
 
   min_tech_cost:
     # The cheapest a Technology can be in Science Packs.
@@ -333,8 +333,8 @@ Factorio:
     # For example:
     # off: Automation (red)/Logistics (green) sciences can range from 1 to 1000 Science Packs,
     # on: Automation (red) ranges to ~500 packs and Logistics (green) from ~500 to 1000 Science Packs
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   tech_tree_information:
     # How much information should be displayed in the tech tree.
@@ -476,7 +476,7 @@ Factorio:
 
   start_inventory_from_pool:
     # Start with these items and don't place them in the world.
-    # 
+    #
     # The game decides what the replacement items will be.
     {}
 

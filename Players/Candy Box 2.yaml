@@ -38,7 +38,7 @@ Candy Box 2:
   # Game Options
   progression_balancing:
     # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
-    # 
+    #
     # A lower setting means more getting stuck. A higher setting means less getting stuck.
     #
     # You can define additional values between the minimum and maximum values.
@@ -53,9 +53,9 @@ Candy Box 2:
 
   accessibility:
     # Set rules for reachability of your items/locations.
-    # 
+    #
     # **Full:** ensure everything can be reached and acquired.
-    # 
+    #
     # **Minimal:** ensure what is needed to reach your goal can be acquired.
     full: 50
     minimal: 0
@@ -66,17 +66,17 @@ Candy Box 2:
 
   quest_randomisation:
     # Determine logic for quest randomisation
-    # 
+    #
     # Off - Do not randomise quests
-    # 
+    #
     # Quests Only, Except X Potion Quest - Randomise every quest, except for the X Potion Quest
-    # 
+    #
     # Quests Only - Rendomise every quest
-    # 
+    #
     # Quests and Rooms Separate - Randomise every quest and every room
-    # 
+    #
     # Everything - Randomise every quest and room together
-    'off': 50
+    "off": 50
     quests_only_except_x_potion_quest: 0
     quests_only: 0
     quests_and_rooms_separate: 0
@@ -106,32 +106,32 @@ Candy Box 2:
 
   randomise_hp_bar:
     # Whether the HP Bar must be an item found elsewhere
-    'false': 0
-    'true': 50
+    "false": 0
+    "true": 50
 
   x_potion_brewing:
     # Determine whether you can brew more than one X potion at a time
-    # 
+    #
     # One at a time - You can only brew one X potion at a time
-    # 
+    #
     # Simultaneously - You can brew multiple X potions at a time, provided you have enough resources to brew them all at once.
     one_at_a_time: 50
     simultaneously: 0
 
   enable_computer:
     # Whether to enable The Computer. Once you have cleared the game, The Computer can be used to cheat items.
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   scouting:
     # Do you want to create hints when you first enter a shop?
-    'false': 0
-    'true': 50
+    "false": 0
+    "true": 50
 
   # Inventory Customisation
   starting_weapon:
     # Select the weapon that you will start the game with.
-    # 
+    #
     # Progressive Weapons will give you the next weapon in the sequence each time you get it.
     nothing: 50
     progressive_weapons: 0
@@ -149,16 +149,16 @@ Candy Box 2:
 
   progressive_jump:
     # Obtain the Pogo Stick, the Desert Bird Feather and the Rocket Boots in that order
-    'false': 0
-    'true': 50
+    "false": 0
+    "true": 50
 
   grimoires:
     # Select how spells will be itemised
-    # 
+    #
     # Individual Grimoires - The item pool will be filled with Beginner's Grimoire, Advanced Grimoire and Black Magic Grimoire
-    # 
+    #
     # Progressive Grimoires - The item pool will have three Progressive Grimoires
-    # 
+    #
     # Individual Spells - The item pool will contain each spell individually. Buying the Beginner's Grimoire will send three checks. Obtaining the other grimoires will send two checks.
     individual_grimoires: 50
     progressive_grimoires: 0
@@ -224,19 +224,19 @@ Candy Box 2:
   # Inter-game Features
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   energy_link:
     # Allow sending energy to other worlds. Candy and lollipops can be converted to energy. 25% of the energy is lost in the transfer.
-    'false': 50
-    'true': 0
+    "false": 0
+    "true": 50
 
   gifting:
     # Do you want to enable gifting items to and from other Archipelago slots?
     # Items can only be sent to games that also support gifting
-    'false': 0
-    'true': 50
+    "false": 0
+    "true": 50
 
   # Item & Location Options
   local_items:

@@ -38,7 +38,7 @@ Mega Man 3:
   # Game Options
   progression_balancing:
     # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
-    # 
+    #
     # A lower setting means more getting stuck. A higher setting means less getting stuck.
     #
     # You can define additional values between the minimum and maximum values.
@@ -53,9 +53,9 @@ Mega Man 3:
 
   accessibility:
     # Set rules for reachability of your items/locations.
-    # 
+    #
     # **Full:** ensure everything can be reached and acquired.
-    # 
+    #
     # **Minimal:** ensure what is needed to reach your goal can be acquired.
     full: 50
     minimal: 0
@@ -66,16 +66,16 @@ Mega Man 3:
 
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   energy_link:
     # Enables EnergyLink support.
     # When enabled, pickups dropped from enemies are sent to the EnergyLink pool, and healing/weapon energy/1-Ups can
     # be requested from the EnergyLink pool.
     # Some of the energy sent to the pool will be lost on transfer.
-    'false': 50
-    'true': 0
+    "false": 0
+    "true": 50
 
   starting_robot_master:
     # The initial stage unlocked at the start.
@@ -98,14 +98,14 @@ Mega Man 3:
 
   enemy_weakness:
     # Randomizes the damage dealt to enemies by weapons. Certain enemies will always take damage from the buster.
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   strict_weakness:
     # Only your starting Robot Master will take damage from the Mega Buster, the rest must be defeated with weapons.
     # Weapons that only do 1-3 damage to bosses no longer deal damage (aside from Wily/Gamma).
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   random_weakness:
     # None: Bosses will have their regular weaknesses.

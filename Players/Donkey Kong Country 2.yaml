@@ -38,7 +38,7 @@ Donkey Kong Country 2:
   # Game Options
   progression_balancing:
     # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
-    # 
+    #
     # A lower setting means more getting stuck. A higher setting means less getting stuck.
     #
     # You can define additional values between the minimum and maximum values.
@@ -53,9 +53,9 @@ Donkey Kong Country 2:
 
   accessibility:
     # Set rules for reachability of your items/locations.
-    # 
+    #
     # **Full:** ensure everything can be reached and acquired.
-    # 
+    #
     # **Minimal:** ensure what is needed to reach your goal can be acquired.
     full: 50
     minimal: 0
@@ -66,21 +66,21 @@ Donkey Kong Country 2:
 
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   energy_link:
     # EnergyLink allows players to deposit energy extracted from collected bananas into a shared pool across games in the session.
-    # 
+    #
     # You can exchange energy for Instant DK Barrels. Great for players that find the base game hard.
     # There's an additional item in the item pool that allows for better energy extraction from bananas.
-    'false': 50
-    'true': 0
+    "false": 0
+    "true": 50
 
   trap_link:
     # Whether your received traps are linked to other players
-    'false': 50
-    'true': 0
+    "false": 0
+    "true": 50
 
   starting_life_count:
     # How many lives to start the game with.
@@ -105,7 +105,7 @@ Donkey Kong Country 2:
 
   krock_boss_tokens:
     # How many Boss Tokens are required to access the Flying Krock.
-    # 
+    #
     # If this value is set to 0, then the access will be a multiworld item.
     #
     # You can define additional values between the minimum and maximum values.
@@ -144,7 +144,7 @@ Donkey Kong Country 2:
     # - **lost_world_level_clear**: Forced in Level Clears found in Lost World
     #   This option always creates 5 rocks. Extra lost world rocks aren't created.
     # - **lost_world_anywhere**: Forced in anywhere in Lost World
-    # 
+    #
     # These options listens to Excluded Locations, it won't force you to deal with levels you don't want to deal with.
     # However, if it can place an item due to excluded locations AP will place them anywhere in the multiworld.
     anywhere: 0
@@ -163,39 +163,39 @@ Donkey Kong Country 2:
 
   kong_checks:
     # Whether collecting all KONG letters in each level will grant a check
-    'false': 0
-    'true': 50
+    "false": 0
+    "true": 50
 
   dk_coin_checks:
     # Whether collecting a DK Coin in each level will grant a check
-    'false': 0
-    'true': 50
+    "false": 0
+    "true": 50
 
   balloonsanity:
     # Whether collecting a colored balloon in levels will grant a check
-    # 
+    #
     # Doesn't include balloons from the goal or Black Klobbers
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   coinsanity:
     # Whether collecting a banana coin in levels will grant a check
-    # 
+    #
     # Doesn't include banana coins from the goal
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   bananasanity:
     # Whether collecting a banana bunch in levels will grant a check
-    # 
+    #
     # Doesn't include banana bunches from the goal, Yellow Klobbers or Rickety Race
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   swanky_checks:
     # Whether completing a quiz will grant a check
-    'false': 0
-    'true': 50
+    "false": 0
+    "true": 50
 
   # Shuffle
   starting_kong:
@@ -206,23 +206,46 @@ Donkey Kong Country 2:
 
   shuffle_levels:
     # Shuffles levels and bosses around
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   shuffle_abilities:
     # Which abilities will be added as items in the item pool
     # If an ability is not present in the list they will be treated as unlocked from the start
-    ['Team Attack', 'Cling', 'Carry', 'Swim', 'Climb', 'Cartwheel', 'Helicopter Spin']
+    [
+      "Team Attack",
+      "Cling",
+      "Carry",
+      "Swim",
+      "Climb",
+      "Cartwheel",
+      "Helicopter Spin",
+    ]
 
   shuffle_animals:
     # Which animal buddies will be added as items in the item pool
     # If an animal buddy is not present in the list they will be treated as unlocked from the start
-    ['Rattly', 'Clapper', 'Rambi', 'Squitter', 'Skull Kart', 'Squawks', 'Glimmer', 'Enguarde']
+    [
+      "Rattly",
+      "Clapper",
+      "Rambi",
+      "Squitter",
+      "Skull Kart",
+      "Squawks",
+      "Glimmer",
+      "Enguarde",
+    ]
 
   shuffle_barrels:
     # Which kind of barrels will be added as items in the item pool
     # If a barrel is not present in the list they will be treated as unlocked from the start
-    ['Exclamation Barrels', 'Kong Barrels', 'Controllable Barrels', 'Warp Barrels', 'Barrel Kannons']
+    [
+      "Exclamation Barrels",
+      "Kong Barrels",
+      "Controllable Barrels",
+      "Warp Barrels",
+      "Barrel Kannons",
+    ]
 
   # Trivia
   swanky_questions_per_quiz:
@@ -238,20 +261,120 @@ Donkey Kong Country 2:
 
   swanky_forced_topics:
     # Which additional topics will be added to Swanky's Bonus Bonanza pool of questions.
-    # 
+    #
     # Swanky already enforces questions from games in the multiworld if they're on the database.
-    # 
+    #
     # This option has priority over the Excluded Topics option.
-    ['A Link to the Past', 'Actraiser', 'Adventure', 'Astalon', 'Banjo-Tooie', 'Castlevania - Circle of the Moon', 'Cave Story', 'Diddy Kong Racing', 'Donkey Kong 64', 'Donkey Kong Country 2', 'Donkey Kong Country 3', 'EarthBound', 'Final Fantasy Mystic Quest', 'Genshin Impact', 'Hollow Knight', 'Kingdom Hearts', 'Kingdom Hearts 2', 'Kirby 64 - The Crystal Shards', 'Kirby Super Star', "Kirby's Dream Land 3", "Luigi's Mansion", "Majora's Mask Recompiled", 'Mario & Luigi Superstar Saga', 'Math', 'Mega Man 2', 'Mega Man 3', 'Mega Man X', 'Mega Man X2', 'Mega Man X3', 'Ocarina of Time', 'Overcooked! 2', 'Paper Mario', 'Pokemon Crystal', 'Pokemon Emerald', 'Pokemon Red and Blue', 'Rabi-Ribi', 'Risk of Rain 2', 'Skyward Sword', 'Sonic Adventure 2 Battle', 'Super Mario 64', 'Super Mario World', 'Super Metroid', 'Symphony of the Night', 'Terraria', 'The Legend of Zelda', 'VVVVVV', "Yoshi's Island", 'Zelda II: The Adventure of Link', 'Zillion']
+    [
+      "A Link to the Past",
+      "Actraiser",
+      "Adventure",
+      "Astalon",
+      "Banjo-Tooie",
+      "Castlevania - Circle of the Moon",
+      "Cave Story",
+      "Diddy Kong Racing",
+      "Donkey Kong 64",
+      "Donkey Kong Country 2",
+      "Donkey Kong Country 3",
+      "EarthBound",
+      "Final Fantasy Mystic Quest",
+      "Genshin Impact",
+      "Hollow Knight",
+      "Kingdom Hearts",
+      "Kingdom Hearts 2",
+      "Kirby 64 - The Crystal Shards",
+      "Kirby Super Star",
+      "Kirby's Dream Land 3",
+      "Luigi's Mansion",
+      "Majora's Mask Recompiled",
+      "Mario & Luigi Superstar Saga",
+      "Math",
+      "Mega Man 2",
+      "Mega Man 3",
+      "Mega Man X",
+      "Mega Man X2",
+      "Mega Man X3",
+      "Ocarina of Time",
+      "Overcooked! 2",
+      "Paper Mario",
+      "Pokemon Crystal",
+      "Pokemon Emerald",
+      "Pokemon Red and Blue",
+      "Rabi-Ribi",
+      "Risk of Rain 2",
+      "Skyward Sword",
+      "Sonic Adventure 2 Battle",
+      "Super Mario 64",
+      "Super Mario World",
+      "Super Metroid",
+      "Symphony of the Night",
+      "Terraria",
+      "The Legend of Zelda",
+      "VVVVVV",
+      "Yoshi's Island",
+      "Zelda II: The Adventure of Link",
+      "Zillion",
+    ]
 
   swanky_excluded_topics:
     # Which topics will be excluded from Swanky's Bonus Bonanza pool of questions.
-    # 
+    #
     # Swanky enforces questions from the multiworld. This will help you to remove topics from games you don't know/care about in the session.
     # Donkey Kong Country 2 can't be excluded (can be put here, but it'll be forced anyway)
-    # 
+    #
     # Do note that if you remove way too many topics and set a very high question per quiz count an error may arise from the lack of questions available
-    ['A Link to the Past', 'Actraiser', 'Adventure', 'Astalon', 'Banjo-Tooie', 'Castlevania - Circle of the Moon', 'Cave Story', 'Diddy Kong Racing', 'Donkey Kong 64', 'Donkey Kong Country 2', 'Donkey Kong Country 3', 'EarthBound', 'Final Fantasy Mystic Quest', 'Genshin Impact', 'Hollow Knight', 'Kingdom Hearts', 'Kingdom Hearts 2', 'Kirby 64 - The Crystal Shards', 'Kirby Super Star', "Kirby's Dream Land 3", "Luigi's Mansion", "Majora's Mask Recompiled", 'Mario & Luigi Superstar Saga', 'Math', 'Mega Man 2', 'Mega Man 3', 'Mega Man X', 'Mega Man X2', 'Mega Man X3', 'Ocarina of Time', 'Overcooked! 2', 'Paper Mario', 'Pokemon Crystal', 'Pokemon Emerald', 'Pokemon Red and Blue', 'Rabi-Ribi', 'Risk of Rain 2', 'Skyward Sword', 'Sonic Adventure 2 Battle', 'Super Mario 64', 'Super Mario World', 'Super Metroid', 'Symphony of the Night', 'Terraria', 'The Legend of Zelda', 'VVVVVV', "Yoshi's Island", 'Zelda II: The Adventure of Link', 'Zillion']
+    [
+      "A Link to the Past",
+      "Actraiser",
+      "Adventure",
+      "Astalon",
+      "Banjo-Tooie",
+      "Castlevania - Circle of the Moon",
+      "Cave Story",
+      "Diddy Kong Racing",
+      "Donkey Kong 64",
+      "Donkey Kong Country 2",
+      "Donkey Kong Country 3",
+      "EarthBound",
+      "Final Fantasy Mystic Quest",
+      "Genshin Impact",
+      "Hollow Knight",
+      "Kingdom Hearts",
+      "Kingdom Hearts 2",
+      "Kirby 64 - The Crystal Shards",
+      "Kirby Super Star",
+      "Kirby's Dream Land 3",
+      "Luigi's Mansion",
+      "Majora's Mask Recompiled",
+      "Mario & Luigi Superstar Saga",
+      "Math",
+      "Mega Man 2",
+      "Mega Man 3",
+      "Mega Man X",
+      "Mega Man X2",
+      "Mega Man X3",
+      "Ocarina of Time",
+      "Overcooked! 2",
+      "Paper Mario",
+      "Pokemon Crystal",
+      "Pokemon Emerald",
+      "Pokemon Red and Blue",
+      "Rabi-Ribi",
+      "Risk of Rain 2",
+      "Skyward Sword",
+      "Sonic Adventure 2 Battle",
+      "Super Mario 64",
+      "Super Mario World",
+      "Super Metroid",
+      "Symphony of the Night",
+      "Terraria",
+      "The Legend of Zelda",
+      "VVVVVV",
+      "Yoshi's Island",
+      "Zelda II: The Adventure of Link",
+      "Zillion",
+    ]
 
   # Traps
   trap_fill_percentage:
@@ -304,7 +427,7 @@ Donkey Kong Country 2:
   player_palettes:
     # Allows you to create colors for each Kong status. Includes K.Rool effects and the invincibility barrel
     # This will override the option preset
-    # 
+    #
     # Each one expects 15 values which are mapped to the Kongs colors
     # The values can be in SNES RGB (bgr555) with the $ prefix or PC RGB (rgb888) with the # prefix
     {}
@@ -312,10 +435,10 @@ Donkey Kong Country 2:
   player_palette_filters:
     # Applies a filter that can brighten or darken your selected palette
     # Doesn't produce results similar to the original ones, but it's good enough
-    # 
+    #
     # Positive numbers create a brighter color palette (the higher the number, the brighter the palette)
     # Negative numbers create a darker color palette (the higher (or lower lol) the negative number, the darker the palette)
-    # 
+    #
     # Treat the values as percentages
     Diddy: 0
     Diddy Frozen: 0
@@ -747,7 +870,7 @@ Donkey Kong Country 2:
 
   start_inventory_from_pool:
     # Start with these items and don't place them in the world.
-    # 
+    #
     # The game decides what the replacement items will be.
     {}
 

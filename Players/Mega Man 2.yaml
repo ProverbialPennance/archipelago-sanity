@@ -38,7 +38,7 @@ Mega Man 2:
   # Game Options
   progression_balancing:
     # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
-    # 
+    #
     # A lower setting means more getting stuck. A higher setting means less getting stuck.
     #
     # You can define additional values between the minimum and maximum values.
@@ -53,9 +53,9 @@ Mega Man 2:
 
   accessibility:
     # Set rules for reachability of your items/locations.
-    # 
+    #
     # **Full:** ensure everything can be reached and acquired.
-    # 
+    #
     # **Minimal:** ensure what is needed to reach your goal can be acquired.
     full: 50
     minimal: 0
@@ -66,16 +66,16 @@ Mega Man 2:
 
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   energy_link:
     # Enables EnergyLink support.
     # When enabled, pickups dropped from enemies are sent to the EnergyLink pool, and healing/weapon energy/1-Ups can
     # be requested from the EnergyLink pool.
     # Some of the energy sent to the pool will be lost on transfer.
-    'false': 50
-    'true': 0
+    "false": 0
+    "true": 50
 
   starting_robot_master:
     # The initial stage unlocked at the start.
@@ -101,25 +101,25 @@ Mega Man 2:
   yoku_jumps:
     # When enabled, the player is expected to be able to perform the yoku block sequence in Heat Man's
     # stage without Item 2.
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   enable_lasers:
     # When enabled, the player is expected to complete (and acquire items within) the laser sections of Quick Man's
     # stage without the Time Stopper.
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   enemy_weakness:
     # Randomizes the damage dealt to enemies by weapons. Friender will always take damage from the buster.
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   strict_weakness:
     # Only your starting Robot Master will take damage from the Mega Buster, the rest must be defeated with weapons.
     # Weapons that only do 1-3 damage to bosses no longer deal damage (aside from Alien).
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   random_weakness:
     # None: Bosses will have their regular weaknesses.
@@ -167,8 +167,8 @@ Mega Man 2:
 
   quickswap:
     # When enabled, the player can quickswap through all received weapons by pressing Select.
-    'false': 0
-    'true': 50
+    "false": 0
+    "true": 50
 
   reduce_flashing:
     # Reduce flashing seen in gameplay, such as the stage select and when defeating a Wily boss.
