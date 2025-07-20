@@ -25,7 +25,7 @@
 #     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
 #     {number} will be replaced with the counter value of the name.
 #     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
-name: Player{number}
+name: RezuInscryption
 
 # Used to describe your yaml. Useful if you have multiple files.
 description: Default Inscryption Template
@@ -38,7 +38,7 @@ Inscryption:
   # Game Options
   progression_balancing:
     # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
-    # 
+    #
     # A lower setting means more getting stuck. A higher setting means less getting stuck.
     #
     # You can define additional values between the minimum and maximum values.
@@ -53,9 +53,9 @@ Inscryption:
 
   accessibility:
     # Set rules for reachability of your items/locations.
-    # 
+    #
     # **Full:** ensure everything can be reached and acquired.
-    # 
+    #
     # **Minimal:** ensure what is needed to reach your goal can be acquired.
     full: 50
     minimal: 0
@@ -66,25 +66,25 @@ Inscryption:
 
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   act1_death_link_behaviour:
     # If DeathLink is enabled, determines what counts as a death in act 1. This affects deaths sent and received.
-    # 
+    #
     # - Sacrificed: Send a death when sacrificed by Leshy. Receiving a death will extinguish all candles.
-    # 
+    #
     # - Candle Extinguished: Send a death when a candle is extinguished. Receiving a death will extinguish a candle.
     sacrificed: 50
     candle_extinguished: 0
 
   goal:
     # Defines the goal to accomplish in order to complete the randomizer.
-    # 
+    #
     # - Full Story In Order: Complete each act in order. You can return to previously completed acts.
-    # 
+    #
     # - Full Story Any Order: Complete each act in any order. All acts are available from the start.
-    # 
+    #
     # - First Act: Complete Act 1 by finding the New Game button. Great for a smaller scale randomizer.
     full_story_in_order: 50
     full_story_any_order: 0
@@ -92,17 +92,17 @@ Inscryption:
 
   randomize_codes:
     # Randomize codes and passwords in the game (clocks, safes, etc.)
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   randomize_deck:
     # Randomize cards in your deck into new cards.
     # Disable: Disable the feature.
-    # 
+    #
     # - Every Encounter Within Same Type: Randomize cards within the same type every encounter (keep rarity/scrybe type).
-    # 
+    #
     # - Every Encounter Any Type: Randomize cards into any possible card every encounter.
-    # 
+    #
     # - Starting Only: Only randomize cards given at the beginning of runs and acts.
     disable: 50
     every_encounter_within_same_type: 0
@@ -111,11 +111,11 @@ Inscryption:
 
   randomize_sigils:
     # Randomize sigils printed on the cards into new sigils every encounter.
-    # 
+    #
     # - Disable: Disable the feature.
-    # 
+    #
     # - Randomize Addons: Only randomize sigils added from sacrifices or other means.
-    # 
+    #
     # - Randomize All: Randomize all sigils.
     disable: 50
     randomize_addons: 0
@@ -123,33 +123,33 @@ Inscryption:
 
   optional_death_card:
     # Add a moment after death in act 1 where you can decide to create a death card or not.
-    # 
+    #
     # - Disable: Disable the feature.
-    # 
+    #
     # - Always On: The choice is always offered after losing all candles.
-    # 
+    #
     # - DeathLink Only: The choice is only offered after receiving a DeathLink event.
     disable: 0
-    always_on: 0
-    deathlink_only: 50
+    always_on: 50
+    deathlink_only: 0
 
   skip_tutorial:
     # Skips the first few tutorial runs of act 1. Bones are available from the start.
-    'false': 0
-    'true': 50
+    "false": 0
+    "true": 50
 
   skip_epilogue:
     # Completes the goal as soon as the required acts are completed without the need of completing the epilogue.
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   epitaph_pieces_randomization:
     # Determines how epitaph pieces in act 2 are randomized. This can affect your chances of getting stuck.
-    # 
+    #
     # - All Pieces: Randomizes all nine pieces as their own item.
-    # 
+    #
     # - In Groups: Randomizes pieces in groups of three.
-    # 
+    #
     # - As One Item: Group all nine pieces as a single item.
     all_pieces: 50
     in_groups: 0
@@ -157,11 +157,11 @@ Inscryption:
 
   painting_checks_balancing:
     # Generation options for the second and third painting checks in act 1.
-    # 
+    #
     # - None: Adds no progression logic to these painting checks. They will all count as sphere 1 (early game checks).
-    # 
+    #
     # - Balanced: Adds rules to these painting checks. Early game items are less likely to appear into these paintings.
-    # 
+    #
     # - Force Filler: For when you dislike doing these last two paintings. Their checks will only contain filler items.
     none: 0
     balanced: 50
@@ -182,7 +182,7 @@ Inscryption:
 
   start_inventory_from_pool:
     # Start with these items and don't place them in the world.
-    # 
+    #
     # The game decides what the replacement items will be.
     {}
 

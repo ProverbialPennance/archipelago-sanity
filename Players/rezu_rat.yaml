@@ -25,7 +25,7 @@
 #     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
 #     {number} will be replaced with the counter value of the name.
 #     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
-name: Player{number}
+name: RezuRat
 
 # Used to describe your yaml. Useful if you have multiple files.
 description: Default Autopelago Template
@@ -38,7 +38,7 @@ Autopelago:
   # Game Options
   progression_balancing:
     # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
-    # 
+    #
     # A lower setting means more getting stuck. A higher setting means less getting stuck.
     #
     # You can define additional values between the minimum and maximum values.
@@ -53,9 +53,9 @@ Autopelago:
 
   accessibility:
     # Set rules for reachability of your items/locations.
-    # 
+    #
     # **Full:** ensure everything can be reached and acquired.
-    # 
+    #
     # **Minimal:** ensure what is needed to reach your goal can be acquired.
     full: 50
     minimal: 0
@@ -66,14 +66,14 @@ Autopelago:
 
   fill_with_determination:
     # Either fills the rat with determination, or does nothing. Perhaps both.
-    # 
+    #
     # This option was added early on for technical reasons. It does not directly affect the game.
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   victory_location:
     # Optionally moves the final victory location earlier to reduce the number of locations in the multiworld.
-    # 
+    #
     # - **Snakes on a Planet (default):** The game goes all the way to "Moon, The". This gives the longest game.
     # - **Secret Cache:** The game stops at the end of Cool World. This gives the middlest-length game.
     # - **Captured Goldfish:** The game stops at the end of The Sewers. This gives the shortest game.
@@ -83,52 +83,59 @@ Autopelago:
 
   enabled_buffs:
     # Enables various buffs that affect how the rat behaves. All are enabled by default.
-    # 
+    #
     # - **Well Fed:** Gets more done
     # - **Lucky:** One free success
     # - **Energized:** Moves faster
     # - **Stylish:** Better RNG
     # - **Confident:** Ignore a trap
     # - **Smart:** Next check is progression
-    ['Stylish', 'Lucky', 'Confident', 'Energized', 'Well Fed', 'Smart']
+    ["Stylish", "Lucky", "Confident", "Energized", "Well Fed", "Smart"]
 
   enabled_traps:
     # Enables various traps that affect how the rat behaves. All are enabled by default.
-    # 
+    #
     # - **Upset Tummy:** Gets less done
     # - **Unlucky:** Worse RNG
     # - **Sluggish:** Moves slower
     # - **Distracted:** Skip a "step"
     # - **Startled:** Run towards start
     # - **Conspiratorial:** Next check is trap
-    ['Sluggish', 'Unlucky', 'Conspiratorial', 'Upset Tummy', 'Distracted', 'Startled']
+    [
+      "Sluggish",
+      "Unlucky",
+      "Conspiratorial",
+      "Upset Tummy",
+      "Distracted",
+      "Startled",
+    ]
 
   msg_changed_target:
     # What messages the rat can say when a buff or trap is added to the queue of location checks to send before resuming its normal logic.
-    # 
+    #
     # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
-    # 
+    #
     # The text {LOCATION} will be replaced with the name of the actual location.
-    # 
+    #
     # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
     - "Oh, hey, what's that thing over there at {LOCATION}?"
     - "There's something at {LOCATION}, I'm sure of it!"
-    - 'Something at {LOCATION} smells good!'
+    - "Something at {LOCATION} smells good!"
     - "There's a rumor that something's going on at {LOCATION}!"
 
   msg_enter_go_mode:
     # What messages the rat can say when it first realizes that it can complete its goal.
-    # 
+    #
     # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
-    # 
+    #
     # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
     - "That's it! I have everything I need! The goal is in sight!"
 
   msg_enter_bk:
     # What messages the rat can say when it first sees that no further location checks are in logic.
-    # 
+    #
     # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
-    # 
+    #
     # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
     - "I don't have anything to do right now. Go team!"
     - "Hey, I'm completely stuck. But I still believe in you!"
@@ -137,9 +144,9 @@ Autopelago:
 
   msg_remind_bk:
     # What messages the rat can say to occasionally remind the players that it has no further location checks in logic.
-    # 
+    #
     # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
-    # 
+    #
     # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
     - "I don't have anything to do right now. Go team!"
     - "Hey, I'm completely stuck. But I still believe in you!"
@@ -148,9 +155,9 @@ Autopelago:
 
   msg_exit_bk:
     # What messages the rat can say after one or more location checks become in logic.
-    # 
+    #
     # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
-    # 
+    #
     # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
     - "Yippee, that's just what I needed!"
     - "I'm back! I knew you could do it!"
@@ -159,16 +166,16 @@ Autopelago:
 
   msg_completed_goal:
     # What messages the rat can say to celebrate victory.
-    # 
+    #
     # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
-    # 
+    #
     # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
-    - 'Yeah, I did it! er... WE did it!'
+    - "Yeah, I did it! er... WE did it!"
 
   lactose_intolerant:
     # Replaces all references to lactose-containing products with less offensive ones.
-    'false': 50
-    'true': 0
+    "false": 50
+    "true": 0
 
   # Item & Location Options
   local_items:
