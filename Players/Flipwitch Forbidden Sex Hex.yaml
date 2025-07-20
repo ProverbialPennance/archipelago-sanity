@@ -74,8 +74,8 @@ Flipwitch Forbidden Sex Hex:
     # Off: All pieces are placed in their original locations.
     # On: All six Chaos Pieces can be found anywhere in the multiworld.
     # If you want to plando these, turn this on first.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 50
 
   shopsanity:
     # Shuffles all items normally sold in your game. Opens 29 locations.
@@ -88,7 +88,7 @@ Flipwitch Forbidden Sex Hex:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 200
-    100: 50
+    1: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -106,7 +106,7 @@ Flipwitch Forbidden Sex Hex:
     # Note that the gacha machine order is deterministic based on the seed rolled.
     'off': 0
     coin: 50
-    all: 0
+    all: 50
 
   quest_for_sex:
     # Shuffles locations relevant to quest and sex experience.
@@ -116,8 +116,8 @@ Flipwitch Forbidden Sex Hex:
     # All: All quests give a reward, and sex experience is included in the multiworld.  Cutscenes do not reward sex experience.  Opens 79 locations.
     'off': 0
     sensei: 0
-    quests: 50
-    all: 0
+    quests: 0
+    all: 50
 
   crystal_teleports:
     # Shuffles the crystal teleports other than the starting warp.  Item is obtained by interacting with a teleport panel.
