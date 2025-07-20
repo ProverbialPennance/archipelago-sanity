@@ -87,7 +87,7 @@ Brotato:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 1
     # Maximum value is 62
-    15: 50
+    62: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -101,7 +101,7 @@ Brotato:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 1
     # Maximum value is 62
-    5: 50
+    1: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -131,8 +131,7 @@ Brotato:
     # 
     # Characters not listed here will not be available to play. There will be no item to unlock them, and there will be
     # no run or wave complete checks associated with them.
-    ['Brawler', 'Baby', 'Doctor', 'Apprentice', 'Vampire', 'Well Rounded', 'Generalist', 'Arms Dealer', 'Old', 'Gladiator', 'Soldier', 'Mutant', 'Sick', 'Hunter', 'Speedy', 'Demon', 'Farmer', 'Wildling', 'Knight', 'Pacifist', 'Crazy', 'Artificer', 'Streamer', 'Saver', 'Ghost', 'Masochist', 'Ranger', 'Golem', 'Lich', 'Technomage', 'Jack', 'Multitasker', 'Entrepreneur', 'Vagabond', 'Cryptid', 'Mage', 'Engineer', 'Glutton', 'Fisherman', 'One Armed', 'Bull', 'King', 'Explorer', 'Cyborg', 'Renegade', 'Lucky', 'Loud', 'Chunky']
-
+    ['Farmer', 'Brawler', 'Vampire', 'Bull', 'Technomage', 'Apprentice', 'Ranger', 'Hunter', 'One Armed', 'Mage', 'Wildling', 'King', 'Speedy', 'Pacifist', 'Fisherman', 'Entrepreneur', 'Cyborg', 'Gladiator', 'Old', 'Multitasker', 'Golem', 'Lucky', 'Saver', 'Explorer', 'Lich', 'Demon', 'Well Rounded', 'Ghost', 'Arms Dealer', 'Knight', 'Doctor', 'Loud', 'Mutant', 'Artificer', 'Generalist', 'Crazy', 'Engineer', 'Baby', 'Renegade', 'Streamer', 'Vagabond', 'Masochist', 'Chunky', 'Sick', 'Jack', 'Cryptid', 'Soldier', 'Glutton']
   waves_per_drop:
     # How many waves to win to receive a check.
     # 
@@ -152,24 +151,24 @@ Brotato:
     # #. One Time: Gold items are only given once, in either the current run or the next run after receiving the item.
     # #. All Every Time: The total amount of gold received is given to the player at the start of every run. Since gold is
     #    a filler item, this can lead to the game being "won" very easily early on in larger multiworlds.
-    one_time: 50
-    all_every_time: 0
+    one_time: 0
+    all_every_time: 50
 
   xp_reward_mode:
     # Chooses how XP rewards are given.
     # 
     # #. One Time: XP items are only given once, in either the current run or the next run after receiving the item.
     # #. All Every Time: The total amount of XP received is given to the player at the start of every run.
-    one_time: 50
-    all_every_time: 0
+    one_time: 0
+    all_every_time: 50
 
   enable_enemy_xp:
     # Sets enemies will give XP or not.
     # 
     # If disabled, enemies will not give XP. The only XP will be from XP items in the multiworld. Upgrades will be from
     # leveling up and upgrade items received.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 50
 
   # Loot Crates
   spawn_normal_loot_crates:
@@ -180,8 +179,8 @@ Brotato:
     # 
     # If on, then loot crates will still spawn when there are no available Archipelago drops. See 'Loot Crate Groups' for
     # details.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 50
 
   num_common_crate_drops:
     # Replaces the in-game loot crate drops with an Archipelago item which must be picked up to generate a check.
@@ -191,7 +190,7 @@ Brotato:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 50
-    25: 50
+    50: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -204,7 +203,7 @@ Brotato:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 1
     # Maximum value is 50
-    2: 50
+    1: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -237,7 +236,7 @@ Brotato:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 50
-    5: 50
+    10: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -281,7 +280,7 @@ Brotato:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 4
-    4: 50
+    2: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -453,8 +452,8 @@ Brotato:
     # Enable options which require the "Abyssal Terrors" DLC.
     # 
     # Currently, this only enables adding the checks for all the DLC characters.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 50
 
   include_abyssal_terrors_characters:
     # Which characters from the "Abyssal Terrors" DLC to include for checks.
@@ -463,8 +462,8 @@ Brotato:
     # no run or wave complete checks associated with them.
     # 
     # Does nothing if "Enable Abyssal Terrors DLC" is not set.
-    ['Buccaneer', 'Sailor', 'Curious', 'Captain', 'Druid', 'Hiker', 'Chef', 'Builder', 'Ogre', 'Romantic', 'Dwarf', 'Diver', 'Creature', 'Gangster']
-
+    ['Curious', 'Chef', 'Diver', 'Buccaneer', 'Ogre', 'Captain', 'Gangster', 'Sailor', 'Builder', 'Hiker', 'Druid', 'Romantic', 'Creature', 'Dwarf']
+    
   # Item & Location Options
   local_items:
     # Forces these items to be in their native world.
