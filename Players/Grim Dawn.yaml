@@ -1,0 +1,318 @@
+﻿# Q. What is this file?
+# A. This file contains options which allow you to configure your multiworld experience while allowing
+#    others to play how they want as well.
+#
+# Q. How do I use it?
+# A. The options in this file are weighted. This means the higher number you assign to a value, the
+#    more chances you have for that option to be chosen. For example, an option like this:
+#
+#    map_shuffle:
+#      on: 5
+#      off: 15
+#
+#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
+#    off.
+#
+# Q. I've never seen a file like this before. What characters am I allowed to use?
+# A. This is a .yaml file. You are allowed to use most characters.
+#    To test if your yaml is valid or not, you can use this website:
+#        http://www.yamllint.com/
+#    You can also verify that your Archipelago options are valid at this site:
+#        https://archipelago.gg/check
+
+# Your name in-game, limited to 16 characters.
+#     {player} will be replaced with the player's slot number.
+#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
+#     {number} will be replaced with the counter value of the name.
+#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
+name: GDawnJeff
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default Grim Dawn Template
+
+game: Grim Dawn
+requires:
+  version: 0.6.2 # Version of Archipelago required for this yaml to work as expected.
+
+Grim Dawn:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # 
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # **Full:** ensure everything can be reached and acquired.
+    # 
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  plando_items:
+    # Generic items plando.
+    []
+
+  goal:
+    # The goal to accomplish in order to complete the game.
+    # Beat Warden - Find the Warden's Lab and defeat Warden Krieg
+    # Beat Korvaak - Find the Tomb of the Eldritch Sun and defeat Korvaak (requires Forgotten Gods DLC)
+    # Beat Ravna - Find the Royal Hive under the Infested Croplands and defeat Swarm Queen Ravna
+    # Beat Loghorrean - Find the Tomb of the Watchers under the Necropolis and defeat The Loghorrean
+    # Beat Master of Flesh - Find the Fleshworks in the ruined city and defeat The Master of Flesh (requires Ashes of Malmouth DLC)
+    # Beat All Bosses - Find and defeat all of the above bosses (requires both DLC)
+    # Emblem Hunt - Find the Aetherial Emblems scattered throughout the multiworld
+    beat_warden: 50
+    beat_korvaak: 0
+    beat_ravna: 0
+    beat_loghorrean: 0
+    beat_master_of_flesh: 0
+    beat_all_bosses: 0
+    emblem_hunt: 0
+
+  max_emblems:
+    # Maximum number of Aetherial Emblems that will be in the item pool.
+    # Does nothing if the goal is not set to Emblem Hunt.
+    # This converts filler items into Emblems, if there is not enough filler, then the max emblem count will be reduced to match the available filler.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 100
+    50: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  required_emblems:
+    # Number of Aetherial Emblems that are required to complete the Emblem Hunt goal.
+    # Does nothing if the goal is not set to Emblem Hunt.
+    # If required emblems is higher than max emblems, then required emblems will be reduced to match max emblems.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 100
+    50: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  forbidden_dungeons:
+    # Enable Forbidden Dungeons (aka Challenge Dungeons) as locations
+    'false': 50
+    'true': 0
+
+  one_shot:
+    # Enable One Shot Chests as locations
+    'false': 50
+    'true': 0
+
+  secret_chest:
+    # Enable Secret Chests as locations
+    'false': 50
+    'true': 0
+
+  devotion_shrine:
+    # Enable Devotion Shrines as locations
+    'false': 50
+    'true': 0
+
+  lore:
+    # Enable Lore Note locations
+    # Does not include missable or RNG lore notes.
+    'false': 50
+    'true': 0
+
+  progressive_progression:
+    # If enabled, will convert major progression items into generic progression items so that major progression will always be unlocked in order.
+    # For example, Arkovia Bridge Repair and Arkovian Foothills Barricade Destroy will be converted into two Progressive Main Campaign items
+    # and receiving them in any order will always unlock arkovia bridge repair first. Side areas like East Marsh will be unaffected.
+    'false': 50
+    'true': 0
+
+  faction:
+    # Enable Faction Quests as locations
+    # Various enemies, lore notes, quest, etc are part of this location pool.
+    # Adds items to the pool that max your standing with specific factions, such as "Devil's Crossing Revered"
+    'false': 50
+    'true': 0
+
+  dlc_aom:
+    # Enable locations inside the Ashes of Malmouth DLC (required for Master of Flesh goal)
+    'false': 50
+    'true': 0
+
+  dlc_fg:
+    # Enable locations inside the Forgotten Gods DLC (required for Korvaak goal)
+    # Beware that Forgotten Gods also requires you to own and have installed Ashes of Malmouth, even though you can still disable Ashes of Malmouth locations with the option above.
+    'false': 50
+    'true': 0
+
+  skill_balance_randomizer:
+    # Randomize all numerical values in player class skills and passives, including but not limited to
+    # damage values, action speeds, mana costs, cooldown times, projectile count, and pet summons.
+    'false': 50
+    'true': 0
+
+  devotion_balance_randomizer:
+    # Randomize all numerical values in player devotion skills in the constellation tree, including but not limited to
+    # damage values, action speeds, mana costs, cooldown times, projectile count, and pet summons.
+    # Only the skills are randomized, not the passive nodes leading up to them.
+    'false': 50
+    'true': 0
+
+  skill_balance_range:
+    # The range which skill balance randomizer can affect skill values. Has no effect if Skill/Devotion Balance Randomizer is disabled.
+    # micro - Random range between 0.9x and 1.1x
+    # small - Random range between 0.75x and 1.25x
+    # medium - Random range between 0.66x and 1.5x
+    # large - Random range between 0.5x and 2x
+    # extreme - Random range between 0.2x and 3x
+    # mayhem - Random range between 0.1x and 10x. This is just for fun as this setting completely breaks game balance.
+    micro: 0
+    small: 0
+    medium: 50
+    large: 0
+    extreme: 0
+    mayhem: 0
+
+  skill_balance_weight:
+    # The weight that affects a skill's randomized value to be buffed or nerfed. Has no effect if Skill/Devotion Balance Randomizer is disabled.
+    # only_nerfs - 100% chance for values to roll a nerf
+    # mostly_nerfs - 75% chance for values to roll a nerf
+    # balanced - 50/50 chance for values to roll a buff or nerf
+    # mostly_buffs - 75% chance for values to roll a buff
+    # only_buffs - 100% chance for values to roll a buff
+    only_nerfs: 0
+    mostly_nerfs: 0
+    balanced: 50
+    mostly_buffs: 0
+    only_buffs: 0
+
+  skill_balance_preserve_damage:
+    # If enabled, prevents base damage and damage multiplier values from being randomized.
+    # Has no effect if Skill/Devotion Balance Randomizer is disabled.
+    'false': 50
+    'true': 0
+
+  skill_balance_preserve_area:
+    # If enabled, prevents area, distance, and target values from being randomized.
+    # Has no effect if Skill/Devotion Balance Randomizer is disabled.
+    'false': 50
+    'true': 0
+
+  skill_balance_preserve_duration:
+    # If enabled, prevents effect duration and summon lifetime values from being randomized.
+    # Has no effect if Skill/Devotion Balance Randomizer is disabled.
+    'false': 50
+    'true': 0
+
+  skill_balance_preserve_mana:
+    # If enabled, prevents mana cost and mana reservation values from being randomized.
+    # Has no effect if Skill/Devotion Balance Randomizer is disabled.
+    'false': 50
+    'true': 0
+
+  skill_balance_preserve_projectiles:
+    # If enabled, prevents projectile and fragment values from being randomized.
+    # Has no effect if Skill/Devotion Balance Randomizer is disabled.
+    'false': 50
+    'true': 0
+
+  skill_balance_preserve_cooldown:
+    # If enabled, prevents cooldown values from being randomized.
+    # Has no effect if Skill/Devotion Balance Randomizer is disabled.
+    'false': 50
+    'true': 0
+
+  skill_balance_preserve_chance:
+    # If enabled, prevents chance to activate effect values from being randomized.
+    # Has no effect if Skill/Devotion Balance Randomizer is disabled.
+    'false': 50
+    'true': 0
+
+  skill_balance_preserve_defense:
+    # If enabled, prevents defensive values from being randomized.
+    # Has no effect if Skill/Devotion Balance Randomizer is disabled.
+    'false': 50
+    'true': 0
+
+  skill_balance_preserve_summons:
+    # If enabled, prevents summon amount and summon limit values from being randomized.
+    # Has no effect if Skill/Devotion Balance Randomizer is disabled.
+    'false': 50
+    'true': 0
+
+  skill_balance_preserve_speed:
+    # If enabled, prevents attack, cast, and movement speed values from being randomized.
+    # Has no effect if Skill/Devotion Balance Randomizer is disabled.
+    'false': 50
+    'true': 0
+
+  starting_skill_points:
+    # If enabled, you will receive 1 level up and 3 skill points when you first connect to the multiworld.
+    'false': 50
+    'true': 0
+
+  free_skill_respec:
+    # If enabled, makes the skill respec NPCs cost nothing.
+    'false': 50
+    'true': 0
+
+  enemy_randomizer:
+    # Randomize most non-boss enemies.
+    'false': 50
+    'true': 0
+
+  dangerous_enemies:
+    # Randomizes enemies to be only dangerous enemies.
+    'false': 50
+    'true': 0
+
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    'false': 0
+    'true': 50
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []

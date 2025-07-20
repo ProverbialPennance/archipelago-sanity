@@ -25,7 +25,7 @@
 #     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
 #     {number} will be replaced with the counter value of the name.
 #     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
-name: Player{number}
+name: XcomLaura
 
 # Used to describe your yaml. Useful if you have multiple files.
 description: Default XCOM 2 War of the Chosen Template
@@ -117,7 +117,7 @@ XCOM 2 War of the Chosen:
   progressive_items:
     # Force these items to be collected in order.
     # Valid values: 'RifleTech', 'MeleeWeaponTech', 'ArmorTech', 'GREMLINTech', 'PsionicsTech'
-    ['MeleeWeaponTech', 'RifleTech', 'ArmorTech', 'GREMLINTech', 'PsionicsTech']
+    ['GREMLINTech', 'PsionicsTech', 'RifleTech', 'MeleeWeaponTech', 'ArmorTech']
 
   early_proving_ground:
     # Force the Proving Ground to be unlockable very early (sphere 1).
@@ -162,13 +162,13 @@ XCOM 2 War of the Chosen:
     # Automatically skip these mission types when they are spawned from a regular calendar event.
     # Can be changed in-game via Mod Config Menu.
     # Valid values: 'SupplyRaid', 'CouncilMission', 'ResistanceOp'
-    ['CouncilMission', 'ResistanceOp', 'SupplyRaid']
+    ['SupplyRaid', 'CouncilMission', 'ResistanceOp']
 
   disable_covert_action_risks:
     # Disable these covert action risks.
     # Can be changed in-game via Mod Config Menu.
     # Valid values: 'Ambush', 'Capture'
-    ['Ambush', 'Capture']
+    ['Capture', 'Ambush']
 
   supply_raid_reward_base:
     # Set the amount of resources that are rewarded for skipped supply raids.

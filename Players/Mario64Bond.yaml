@@ -1,0 +1,108 @@
+﻿---
+name: MarioBond
+description: Default Super Mario 64 Template
+game: Super Mario 64
+requires:
+  version: 0.6.2
+Super Mario 64:
+  progression_balancing:
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0
+    normal: 50
+    extreme: 0
+  accessibility:
+    full: 50
+    minimal: 0
+  plando_items: []
+  death_link:
+    "false": 50
+    "true": 0
+  completion_type:
+    last_bowser_stage: 50
+    all_bowser_stages: 0
+  area_rando:
+    off: 50
+    courses_only: 0
+    courses_and_secrets_separate: 0
+    courses_and_secrets: 0
+  buddy_checks:
+    "false": 50
+    "true": 0
+  exclamation_boxes:
+    "false": 50
+    "true": 0
+  progressive_keys:
+    "false": 0
+    "true": 50
+  enable_coin_stars:
+    off: 50
+    on: 0
+    vanilla: 0
+  strict_cap_requirements:
+    "false": 0
+    "true": 50
+  strict_cannon_requirements:
+    "false": 0
+    "true": 50
+  enable_move_rando:
+    "false": 50
+    "true": 0
+  move_rando_actions:
+    - Triple Jump
+    - Long Jump
+    - Backflip
+    - Side Flip
+    - Wall Kick
+    - Dive
+    - Ground Pound
+    - Kick
+    - Climb
+    - Ledge Grab
+  strict_move_requirements:
+    "false": 0
+    "true": 50
+  amount_of_stars:
+    "120": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  first_bowser_star_door_cost:
+    "7": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  basement_star_door_cost:
+    "25": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  second_floor_star_door_cost:
+    "42": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  mips1_cost:
+    "12": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  mips2_cost:
+    "42": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  stars_to_finish:
+    "58": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []

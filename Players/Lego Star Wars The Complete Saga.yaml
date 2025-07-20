@@ -25,7 +25,7 @@
 #     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
 #     {number} will be replaced with the counter value of the name.
 #     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
-name: Player{number}
+name: LegoStarLaura
 
 # Used to describe your yaml. Useful if you have multiple files.
 description: 'Default Lego Star Wars: The Complete Saga Template'
@@ -201,7 +201,7 @@ requires:
     # Starting with 1-5 will also open 1-6.
     # Starting with 3-2 will also open 3-6.
     # Starting with 4-3 will also open 4-2.
-    1-1: 50
+    1-1: 0
     1-2: 0
     1-3: 0
     1-4: 0
@@ -237,7 +237,7 @@ requires:
     6-4: 0
     6-5: 0
     6-6: 0
-    random_chapter: 0
+    random_chapter: 50
     random_non_vehicle: 0
     random_vehicle: 0
     random_episode_1: 0
@@ -420,7 +420,7 @@ requires:
     # `/items` command.
     # 
     # If no vehicle Chapters are enabled, no vehicle characters will be included in the item pool.
-    ['Droideka', 'General Grievous', 'Yoda (Ghost)']
+    ['Yoda (Ghost)', 'Droideka', 'General Grievous']
 
   preferred_extras:
     # Specify Extras that the generator should try to always include in the item pool.
@@ -437,7 +437,7 @@ requires:
     # When Progressive Score Multiplier items are enabled (always enabled currently), preferring "Score x{number}" to be
     # included in the item pool will try to ensure there are enough Progressive Score Multiplier items to unlock that
     # score multiplier.
-    ['Score x8', 'Fast Build', 'Stud Magnet', 'Deflect Bolts', 'Dark Side', 'Invincibility', 'Self Destruct', 'Super Ewok Catapult', 'Force Grapple Leap', 'Infinite Torpedos', 'Score x4', 'Disarm Troopers', 'Exploding Blaster Bolts', 'Score x10', 'Score x2', 'Fast Force', 'Score x6']
+    ['Force Grapple Leap', 'Infinite Torpedos', 'Disarm Troopers', 'Super Ewok Catapult', 'Score x2', 'Dark Side', 'Self Destruct', 'Score x10', 'Invincibility', 'Exploding Blaster Bolts', 'Deflect Bolts', 'Score x4', 'Fast Build', 'Fast Force', 'Score x8', 'Score x6', 'Stud Magnet']
 
   start_with_detectors:
     # Start with the Minikit Detector and Power Brick Detector unlocked.

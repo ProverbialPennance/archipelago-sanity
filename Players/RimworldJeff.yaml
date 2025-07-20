@@ -1,0 +1,354 @@
+﻿# Q. What is this file?
+# A. This file contains options which allow you to configure your multiworld experience while allowing
+#    others to play how they want as well.
+#
+# Q. How do I use it?
+# A. The options in this file are weighted. This means the higher number you assign to a value, the
+#    more chances you have for that option to be chosen. For example, an option like this:
+#
+#    map_shuffle:
+#      on: 5
+#      off: 15
+#
+#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
+#    off.
+#
+# Q. I've never seen a file like this before. What characters am I allowed to use?
+# A. This is a .yaml file. You are allowed to use most characters.
+#    To test if your yaml is valid or not, you can use this website:
+#        http://www.yamllint.com/
+#    You can also verify that your Archipelago options are valid at this site:
+#        https://archipelago.gg/check
+
+# Your name in-game, limited to 16 characters.
+#     {player} will be replaced with the player's slot number.
+#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
+#     {number} will be replaced with the counter value of the name.
+#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
+name: RimmWJeff
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default Rimworld Template
+
+game: Rimworld
+requires:
+  version: 0.6.2 # Version of Archipelago required for this yaml to work as expected.
+
+Rimworld:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # 
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # **Full:** ensure everything can be reached and acquired.
+    # 
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  plando_items:
+    # Generic items plando.
+    []
+
+  BasicResearchLocationCount:
+    # The number of basic research locations in the game. These will only require the basic research bench.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 10
+    # Maximum value is 200
+    35: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  HiTechResearchLocationCount:
+    # The number of hi-tech research locations in the game. These will only require the hi-tech research bench (which requires Microelectronics.)
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 200
+    35: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  MultiAnalyzerResearchLocationCount:
+    # The number of multi-analyzer research locations in the game. These will only require the hi-tech research bench and the multi-analyzer (and the research for them.)
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 200
+    35: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  ResearchBaseCost:
+    # The amount of research points required to research research locations.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 10
+    # Maximum value is 8000
+    500: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  ResearchMaxPrerequisites:
+    # The max number of prerequisites for the generated Archipelago research. The higher this is, the more restricted your selection of research will be.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 3
+    3: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  CraftLocationCount:
+    # The number of craft locations in the game. These locations require crafting two random items together.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 400
+    51: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  RaidTrapCount:
+    # The guaranteed number of raid traps in the game.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    0: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  ColonistItemCount:
+    # The number of colonists that will get sent as items in the game. Note: If you wind up with more than ~20 colonists, you may have performance issues.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 50
+    5: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  PlayerNamesAsColonistItems:
+    # If enabled, random player names from the multiworld will be used for colonist nicknames
+    disabled: 50
+    enabled: 0
+
+  PercentFillerAsTraps:
+    # The chance random filler will become trap items, like raids.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    20: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  VictoryCondition:
+    # The way to win. Choosing "any" will ensure one of these is considered "in-logic." They also require a "basic" set of research that isn't strictly required to win, so royalty will consider pianos and noble apparel in logic, while anomaly will consider basic bioferrite research in logic. The monument victory condition will require building a room with special archipelago statues and some number of randomized room conditions.
+    any: 0
+    ship_launch: 50
+    royalty: 0
+    archonexus: 0
+    anomaly: 0
+    monument: 0
+
+  MonumentStatueCount:
+    # If the monument victory condition is enabled, this specifies how many Archipelago statues will be required to create a monument and win the game.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 30
+    5: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  MonumentOtherBuildingRequirementCount:
+    # If the monument victory condition is enabled, this specifies how many non-statue building requirements will be required to create a monument and win the game.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 20
+    5: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  MonumentWealthRequirement:
+    # If the monument victory condition is enabled, this specifies how much wealth is required in the monument room to win.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 350000
+    10000: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  RoyaltyEnabled:
+    # Enable the Royalty DLC. If you disable any DLC in yaml and enable it in client, all research will be researchable and excluded from the generator.
+    disabled: 0
+    enabled: 50
+
+  IdeologyEnabled:
+    # Enable the Ideology DLC. If you disable any DLC in yaml and enable it in client, all research will be researchable and excluded from the generator.
+    disabled: 0
+    enabled: 50
+
+  BiotechEnabled:
+    # Enable the Biotech DLC. If you disable any DLC in yaml and enable it in client, all research will be researchable and excluded from the generator.
+    disabled: 0
+    enabled: 50
+
+  AnomalyEnabled:
+    # Enable the Anomaly DLC. If you disable any DLC in yaml and enable it in client, all research will be researchable and excluded from the generator.
+    disabled: 0
+    enabled: 50
+
+  OdysseyEnabled:
+    # Enable the Odyssey DLC. If you disable any DLC in yaml and enable it in client, all research will be researchable and excluded from the generator.
+    disabled: 50
+    enabled: 0
+
+  StartingResearchLevel:
+    # If "none" is selected, the player will have access to NO research, regardless of starting scenario. Tribal and Crashlanded will give the player those starting research (regardless of starting scenario.)
+    none: 50
+    tribal: 0
+    crashlanded: 0
+
+  ResearchScoutType:
+    # How research project scouting works - this will show you what items research projects will send. "None" will show no information for all research. "Summary" options will show the player name and item type (Chris's progressive item). "Fullitem" options will show player name and item name (Chris's progressive item, Master Sword). "Available" options will show only if the research can be started now. "All" options will hint all research.
+    none: 0
+    summary_available: 0
+    fullitem_available: 50
+    summary_all: 0
+    fullitem_all: 0
+
+  ResearchScoutSecretTraps:
+    # If turned on, the game will lie about scouted trap items. If the scout type shows the player and item name, all traps will be replaced by a random progression item from another player (instead of showing Alex's freeze trap, it will show Chris's Master Sword.) If the scout type only shows item type, it will simply show traps as progression items.
+    'off': 50
+    'on': 0
+
+  NeolithicItemWeight:
+    # How likely it will be that low/no-tech items are chosen for crafting locations. Higher weights make this category more likely. 0 will exempt it from the list. Note that these categories are slightly different than the vanilla "Tech Level," to help account for how challenging they are to craft.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    60: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  MedievalItemWeight:
+    # How likely it will be that low-tech items are chosen for crafting locations. Higher weights make this category more likely. 0 will exempt it from the list. Note that these categories are slightly different than the vanilla "Tech Level," to help account for how challenging they are to craft.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    60: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  IndustrialItemWeight:
+    # How likely it will be that mid-tech items are chosen for crafting locations. Higher weights make this category more likely. 0 will exempt it from the list. Note that these categories are slightly different than the vanilla "Tech Level," to help account for how challenging they are to craft.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    30: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  SpacerItemWeight:
+    # How likely it will be that high-tech items are chosen for crafting locations. Higher weights make this category more likely. 0 will exempt it from the list. Note that these categories are slightly different than the vanilla "Tech Level," to help account for how challenging they are to craft.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  HardToMakeItemWeight:
+    # How likely it will be that complicated items are chosen for crafting locations. These items usually require specific/unique investment, like multiple advanced components and the like. Higher weights make this category more likely. 0 will exempt it from the list. Note that these categories are slightly different than the vanilla "Tech Level," to help account for how challenging they are to craft.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    1: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  AnomalyItemWeight:
+    # How likely it will be that Anomaly-specific items are chosen for crafting locations. These items will often require bioferrite, and investment into the anomaly expansion to craft. Higher weights make this category more likely. 0 will exempt it from the list. Note that these categories are slightly different than the vanilla "Tech Level," to help account for how challenging they are to craft.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []

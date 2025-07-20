@@ -1,0 +1,375 @@
+﻿# Q. What is this file?
+# A. This file contains options which allow you to configure your multiworld experience while allowing
+#    others to play how they want as well.
+#
+# Q. How do I use it?
+# A. The options in this file are weighted. This means the higher number you assign to a value, the
+#    more chances you have for that option to be chosen. For example, an option like this:
+#
+#    map_shuffle:
+#      on: 5
+#      off: 15
+#
+#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
+#    off.
+#
+# Q. I've never seen a file like this before. What characters am I allowed to use?
+# A. This is a .yaml file. You are allowed to use most characters.
+#    To test if your yaml is valid or not, you can use this website:
+#        http://www.yamllint.com/
+#    You can also verify that your Archipelago options are valid at this site:
+#        https://archipelago.gg/check
+
+# Your name in-game, limited to 16 characters.
+#     {player} will be replaced with the player's slot number.
+#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
+#     {number} will be replaced with the counter value of the name.
+#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
+name: Flair_SF64-BIG
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default Star Fox 64 Template
+
+game: Star Fox 64
+requires:
+  version: 0.6.2 # Version of Archipelago required for this yaml to work as expected.
+
+Star Fox 64:
+  # Game Options
+  plando_items:
+    # Generic items plando.
+    []
+
+  # Common Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # 
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # **Full:** ensure everything can be reached and acquired.
+    # 
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  deathlink:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    'false': 50
+    'true': 0
+
+  ringlink:
+    # Enable Ring Link for use with games that support it. Incoming rings are converted to the current level's Hit counter.
+    'false': 50
+    'true': 0
+
+  # Goal Options
+  victory_condition:
+    # Choose your victory condition.
+    # Andross or Robot Andross - Defeat either Andross or Robot Andross
+    # Andross and Robot Andross - Defeat both Andross and Robot Andross
+    # Andross - Defeat Andross in Venom 2
+    andross_or_robot_andross: 50
+    andross_and_robot_andross: 0
+    andross: 0
+
+  required_medals:
+    # Require a certain number of medals before you can enter Venom 2.
+    # The same requirment will apply for Venom 1 if your victory condition is 'Andross or Robot Andross'
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 15
+    0: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  # Shuffle Options
+  level_access:
+    # Completing a level a certain way will give a random item.
+    # Choose what type of level access item gets added to the pool.
+    # 
+    # Shuffle Levels - You will receive levels as items which will allow you to select that level at any time.
+    # Shuffle Paths - You will receive paths as items which will allow you to take that path to other levels.
+    shuffle_levels: 50
+    shuffle_paths: 0
+
+  shuffle_starting_level:
+    # If Level Access is 'Shuffle Levels', shuffle which level you start with.
+    # You normally start with Corneria.
+    'false': 50
+    'true': 0
+
+  shuffle_medals:
+    # Shuffle the medals awarded by reaching a certain number of Hits in each level.
+    # Earning a medal will give a random item, and you will visually see the medal on the map to indicate that you've completed the check.
+    # 
+    # Note: Medals are very challenging in vanilla.
+    # Unless you know what you're doing, it is recommended to lower the score needed for each level using their options.
+    'false': 50
+    'true': 0
+
+  shuffle_checkpoints:
+    # Shuffle checkpoints rings for the levels that have them.
+    # You will not be able to use the checkpoint ring in a level until you receive the item for it.
+    'false': 50
+    'true': 0
+
+  # Speedup Options
+  accomplished_sends_complete:
+    # Getting 'Mission Accomplished' on any level will also count as getting 'Mission Complete' for that level.
+    'false': 50
+    'true': 0
+
+  # Vanity Options
+  radio_rando:
+    # Randomize the radio dialog.
+    'off': 0
+    'on': 50
+    on_including_training: 0
+
+  engine_glow:
+    # Set the color of your engine's glow.
+    default: 50
+    rainbow: 0
+    red: 0
+    deep_pink: 0
+    magenta: 0
+    electric_indigo: 0
+    blue: 0
+    dodger_blue: 0
+    aqua: 0
+    spring_green: 0
+    lime: 0
+    chartreuse: 0
+    yellow: 0
+    dark_orange: 0
+
+  # Accessibility Options
+  default_lives:
+    # Set the number of lives (Arwings) you start with and reset to after a game over.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    2: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  medal_corneria:
+    # Set the score required to earn the medal on Corneria.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 150
+    150: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  medal_meteo:
+    # Set the score required to earn the medal on Meteo.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 200
+    200: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  medal_sector_y:
+    # Set the score required to earn the medal on Sector Y.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 150
+    150: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  medal_katina:
+    # Set the score required to earn the medal on Katina.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 150
+    150: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  medal_fortuna:
+    # Set the score required to earn the medal on Fortuna.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 50
+    50: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  medal_aquas:
+    # Set the score required to earn the medal on Aquas.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 150
+    150: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  medal_solar:
+    # Set the score required to earn the medal on Solar.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    100: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  medal_sector_x:
+    # Set the score required to earn the medal on Sector X.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 150
+    150: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  medal_zoness:
+    # Set the score required to earn the medal on Zoness.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 250
+    250: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  medal_titania:
+    # Set the score required to earn the medal on Titania.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 150
+    150: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  medal_sector_z:
+    # Set the score required to earn the medal on Sector Z.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    100: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  medal_macbeth:
+    # Set the score required to earn the medal on Macbeth.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 150
+    150: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  medal_area_6:
+    # Set the score required to earn the medal on Area 6.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 300
+    300: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  medal_bolse:
+    # Set the score required to earn the medal on Bolse.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 150
+    150: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  medal_venom:
+    # Set the score required to earn the medal on Venom.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 200
+    200: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_inventory_from_pool:
+    # Start with these items and don't place them in the world.
+    # 
+    # The game decides what the replacement items will be.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []
