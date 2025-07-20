@@ -1,0 +1,247 @@
+﻿# Q. What is this file?
+# A. This file contains options which allow you to configure your multiworld experience while allowing
+#    others to play how they want as well.
+#
+# Q. How do I use it?
+# A. The options in this file are weighted. This means the higher number you assign to a value, the
+#    more chances you have for that option to be chosen. For example, an option like this:
+#
+#    map_shuffle:
+#      on: 5
+#      off: 15
+#
+#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
+#    off.
+#
+# Q. I've never seen a file like this before. What characters am I allowed to use?
+# A. This is a .yaml file. You are allowed to use most characters.
+#    To test if your yaml is valid or not, you can use this website:
+#        http://www.yamllint.com/
+#    You can also verify that your Archipelago options are valid at this site:
+#        https://archipelago.gg/check
+
+# Your name in-game, limited to 16 characters.
+#     {player} will be replaced with the player's slot number.
+#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
+#     {number} will be replaced with the counter value of the name.
+#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
+name: Flair_OoA-BIG
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default The Legend of Zelda - Oracle of Ages Template
+
+game: The Legend of Zelda - Oracle of Ages
+requires:
+  version: 0.6.2 # Version of Archipelago required for this yaml to work as expected.
+
+The Legend of Zelda - Oracle of Ages:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # 
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # **Full:** ensure everything can be reached and acquired.
+    # 
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  plando_items:
+    # Generic items plando.
+    []
+
+  goal:
+    # The goal to accomplish in order to complete the seed.
+    # - Beat Veran: beat the usual final boss (same as vanilla)
+    # - Beat Ganon: teleport to the Room of Rites after beating Veran, then beat Ganon (same as linked game)
+    beat_veran: 50
+    beat_ganon: 0
+
+  logic_difficulty:
+    # The difficulty of the logic used to generate the seed.
+    # - Casual: expects you to know what you would know when playing the game for the first time
+    # - Medium: expects you to know well the alternatives on how to do basic things, but won't expect any trick
+    # - Hard: expects you to know difficult tricks such as bomb jumps
+    casual: 50
+    medium: 0
+    hard: 0
+
+  required_essences:
+    # The amount of essences that need to be obtained in order to get the Maku Seed from the Maku Tree and be able
+    # to fight Veran in the Black Tower
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 8
+    8: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  required_slates:
+    # The amount of slate that need to be obtained in order to get to the boss of the eigth dungeons.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 4
+    4: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  animal_companion:
+    # Determines which animal companion you can summon using the Flute, as well as the layout of the Nuun region.
+    # - Ricky: the kangaroo with boxing skills
+    # - Dimitri: the swimming dinosaur who can eat anything
+    # - Moosh: the flying blue bear with a passion for Spring Bananas
+    ricky: 0
+    dimitri: 0
+    moosh: 0
+    random: 50
+
+  default_seed:
+    # Determines which of the 5 seed types will be the "default seed type", which is given:
+    # - when obtaining Seed Satchel
+    # - when obtaining Slingshot
+    # - by Lynna Seed Tree
+    ember: 50
+    scent: 0
+    pegasus: 0
+    gale: 0
+    mystery: 0
+
+  shuffle_dungeons:
+    # - Vanilla: each dungeon entrance leads to its intended dungeon
+    # - Shuffle: each dungeon entrance leads to a random dungeon picked at generation time
+    vanilla: 50
+    shuffle: 0
+
+  master_keys:
+    # - Disabled: All dungeon keys must be obtained individually, just like in vanilla
+    # - All Small Keys: Small Keys are replaced by a single Master Key for each dungeon which is capable of opening
+    #   every small keydoor for that dungeon
+    # - All Dungeon Keys: the Master Key for each dungeon is also capable of opening the boss keydoor,
+    #   removing Boss Keys from the item pool
+    # Master Keys placement is determined following the "Keysanity (Small Keys)" option.
+    disabled: 50
+    all_small_keys: 0
+    all_dungeon_keys: 0
+
+  keysanity_small_keys:
+    # If enabled, dungeon Small Keys can be found anywhere instead of being confined in their dungeon of origin.
+    'false': 50
+    'true': 0
+
+  keysanity_boss_keys:
+    # If enabled, dungeon Boss Keys can be found anywhere instead of being confined in their dungeon of origin.
+    'false': 50
+    'true': 0
+
+  keysanity_maps_compasses:
+    # If enabled, Dungeon Maps and Compasses can be found anywhere instead of being confined in their dungeon of origin.
+    'false': 50
+    'true': 0
+
+  keysanity_slates:
+    # If enabled, Slates can be found anywhere instead of being confined in Dungeon 8.
+    'false': 50
+    'true': 0
+
+  required_rings:
+    # Forces a specified set of rings to appear somewhere in the seed.
+    # Adding too many rings to this list can cause generation failures.
+    # List of ring names can be found here: https://zeldawiki.wiki/wiki/Magic_Ring
+    []
+
+  excluded_rings:
+    # Forces a specified set of rings to not appear in the seed.
+    # List of ring names can be found here: https://zeldawiki.wiki/wiki/Magic_Ring
+    ['100th Ring', 'Cursed Ring', 'First Gen Ring', 'Friendship Ring', 'GBA Nature Ring', 'GBA Time Ring', 'Like Like Ring', 'Moblin Ring', 'Octo Ring', 'Rupee Ring', 'Sign Ring', "Slayer's Ring", 'Subrosian Ring', 'Victory Ring']
+
+  shop_prices_factor:
+    # A factor (expressed as percentage) that will be applied to all prices inside all shops in the game.
+    # - Setting it at 10% will make all items almost free
+    # - Setting it at 500% will make all items horrendously expensive, use at your own risk!
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 10
+    # Maximum value is 500
+    100: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  advance_shop:
+    # In the vanilla game, there is secret "Advance Shop" next to the shooting gallery in past Lynna Village that can only
+    # be accessed if the game is being played on a Game Boy Advance console.
+    # If enabled, this option makes this shop always open, adding 3 shop locations to the game (and some rupees to the
+    # item pool to compensate for the extra purchases that might be required)
+    'false': 50
+    'true': 0
+
+  combat_difficulty:
+    # Modifies the damage taken during combat to make this aspect of the game easier or harder depending on the
+    # type of experience you want to have
+    peaceful: 0
+    easier: 0
+    vanilla: 50
+    harder: 0
+    insane: 0
+
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    'false': 50
+    'true': 0
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_inventory_from_pool:
+    # Start with these items and don't place them in the world.
+    # 
+    # The game decides what the replacement items will be.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []

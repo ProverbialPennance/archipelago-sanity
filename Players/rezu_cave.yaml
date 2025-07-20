@@ -1,0 +1,392 @@
+﻿# Q. What is this file?
+# A. This file contains options which allow you to configure your multiworld experience while allowing
+#    others to play how they want as well.
+#
+# Q. How do I use it?
+# A. The options in this file are weighted. This means the higher number you assign to a value, the
+#    more chances you have for that option to be chosen. For example, an option like this:
+#
+#    map_shuffle:
+#      on: 5
+#      off: 15
+#
+#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
+#    off.
+#
+# Q. I've never seen a file like this before. What characters am I allowed to use?
+# A. This is a .yaml file. You are allowed to use most characters.
+#    To test if your yaml is valid or not, you can use this website:
+#        http://www.yamllint.com/
+#    You can also verify that your Archipelago options are valid at this site:
+#        https://archipelago.gg/check
+
+# Your name in-game, limited to 16 characters.
+#     {player} will be replaced with the player's slot number.
+#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
+#     {number} will be replaced with the counter value of the name.
+#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
+name: RezuCave
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default Cavern of Dreams Template
+
+game: Cavern of Dreams
+requires:
+  version: 0.6.2 # Version of Archipelago required for this yaml to work as expected.
+
+Cavern of Dreams:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    #
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    #
+    # **Full:** ensure everything can be reached and acquired.
+    #
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  plando_items:
+    # Generic items plando.
+    []
+
+  difficulty:
+    # Considers the ability to perform various movement tech in logic.
+    # Beginner: No difficult tech required. May still require unexpected use of map geometry.
+    # Intermediate: Involves some tricky movement that may require a small amount of practice and fast inputs.
+    # Hard: Involves very particular movement that may require highly strict timing or a large amount of setup.
+    beginner: 50
+    intermediate: 0
+    hard: 0
+
+  start_location:
+    # Where Fynn should start their adventure.
+    #
+    # NOTE: Not all start locations are made equally. In some particular cases,
+    # Fynn will be given additional items to start with in order to minimize the
+    # chances of BK (or to make the seed playable).
+    sun_cavern: 50
+    moon_cavern: 0
+    lostleaf_lobby: 0
+    armada_lobby: 0
+    prismic_lobby: 0
+    gallery_lobby: 0
+    lostleaf_lake: 0
+    lostleaf_church: 0
+    lostleaf_treehouse: 0
+    lostleaf_crypt: 0
+    armada_outside: 0
+    armada_inside: 0
+    armada_earth_drone: 0
+    armada_fire_drone: 0
+    armada_water_drone: 0
+    prismic_valley: 0
+    prismic_palace: 0
+    heavens_gate: 0
+    observatory: 0
+    gallery_foyer: 0
+    gallery_earth: 0
+    gallery_fire: 0
+    gallery_water: 0
+    wastes_of_eternity: 0
+    coils_of_agony: 0
+    pits_of_despair: 0
+
+  entrance_rando:
+    # Whether or not to randomize entrances.
+    "false": 50
+    "true": 0
+
+  shroomsanity:
+    # Shuffles all shrooms into the pool.
+    "false": 0
+    "true": 50
+
+  eventsanity:
+    # Shuffles events into the pool. For example, healing the Giant is a location with a check.
+    "false": 50
+    "true": 0
+
+  gratitudesanity:
+    # How to treat Gratitude, the resource you gain from taking care of your family.
+    #
+    # Disable (default): Gratitude is obtained by feeding hatched fellas, as in the original game.
+    # Enable: Shuffles gratitude into the pool. Feeding hatched fellas is now a location.
+    # Split: Shuffles gratitude and the Sun Cavern teleports into the pool separately.
+    disable: 50
+    enable: 0
+    split: 0
+
+  carryablesanity:
+    # How to treat carryable items, like the apples in Lostleaf Lake, Jester
+    # Boots its various locations, and so on.
+    #
+    # Disable (default): Leave them in their usual spots.
+    # Kind: Shuffle them into the pool. Entering doorways will cause you to drop
+    # your carryable, ensuring short pathways.
+    # Mean: Shuffle them into the pool without mercy. An example scenario is that
+    # you may have to carry Shelnert's Fish from Shelwart's tombstone through
+    # Lostleaf Lake, into Sun Cavern, then through Moon Cavern, Gallery Lobby,
+    # the Foyer, and finally into the Earth Lobby to toss into the painting.
+    disable: 50
+    kind: 0
+    mean: 0
+
+  shuffle_abilities:
+    # Shuffles the abilities the Sage gives you into the pool.
+    "false": 0
+    "true": 50
+
+  shuffle_high_jump:
+    # Shuffles the ability to High Jump into the pool.
+    "false": 50
+    "true": 0
+
+  shuffle_climb:
+    # Shuffles the ability to climb into the pool.
+    "false": 50
+    "true": 0
+
+  shuffle_carry:
+    # Shuffles the ability to pick up and carry throwables into the pool.
+    "false": 50
+    "true": 0
+
+  shuffle_roll:
+    # Shuffles the ability to roll into the pool.
+    "false": 50
+    "true": 0
+
+  shuffle_sprint:
+    # Shuffles the ability to build momentum into the pool.
+    "false": 50
+    "true": 0
+
+  shuffle_swim:
+    # Shuffles the ability to swim into the pool. If you touch water without the
+    # ability to swim, you die.
+    "false": 50
+    "true": 0
+
+  include_double_jump:
+    # Shuffles a brand new ability to double jump into the pool.
+    "false": 50
+    "true": 0
+
+  exclude_flight:
+    # Removes Flight from the pool. Highly recommended.
+    "false": 0
+    "true": 50
+
+  exclude_wings:
+    # Removes Wings from the pool. For the brave and bold.
+    "false": 50
+    "true": 0
+
+  split_tail:
+    # Splits the Tail into grounded and aerial versions, requiring you to obtain both
+    # to have the full power of the Tail Whip.
+    "false": 50
+    "true": 0
+
+  super_bounce:
+    # How to treat super bounce, a tech that enables gaining significant height using an aerial tailwhip while rolling.
+    #
+    # Disable (default): Prevents the use of super bounce.
+    # Enable: Allows the use of super bounce, considering its use in logic.
+    # Shuffle: Shuffles super bounce into the pool, considering its use in logic.
+    disable: 50
+    enable: 0
+    shuffle: 0
+
+  super_bubble_jump:
+    # How to treat super bubble jump, a tech that enables gaining significant height using bubble shots while rolling.
+    #
+    # Disable (default): Prevents the use of super bubble jump.
+    # Enable: Allows the use of super bubble jump, considering its use in logic.
+    # Shuffle: Shuffles super bubble jump into the pool, considering its use in logic.
+    disable: 50
+    enable: 0
+    shuffle: 0
+
+  air_swim:
+    # How to treat air swim, a tech that enables free movement in the air.
+    #
+    # Disable (default): Prevents the use of air swim.
+    # Enable: Allows the use of air swim, considering its use in logic.
+    # Shuffle: Shuffles air swim into the pool, considering its use in logic.
+    disable: 50
+    enable: 0
+    shuffle: 0
+
+  ejection_launch:
+    # Consider use of ejection launches in logic.
+    #
+    # An example of an ejection launch is clipping into the Pom to launch yourself
+    # out of the Jester Boots area in Prismic Palace.
+    "false": 50
+    "true": 0
+
+  z_target:
+    # Consider obscure use of z-targeting in logic.
+    #
+    # An example is using z-targeting to simultaneously move backwards and fire
+    # Bubbles to build significant speed in the air.
+    "false": 50
+    "true": 0
+
+  momentum_cancel:
+    # Consider pausing to cancel momentum in logic.
+    #
+    # An example is repeatedly pausing while using Wings to gain more distance.
+    "false": 50
+    "true": 0
+
+  ability_toggle:
+    # Consider toggling abilities in logic.
+    #
+    # An example is hovering with the Wings, then enabling Double Jump to gain extra height.
+    "false": 50
+    "true": 0
+
+  out_of_bounds:
+    # Consider out of bounds movement in logic.
+    #
+    # An example is clipping out of the lake using the tombstone fish in Lostleaf Lake.
+    "false": 50
+    "true": 0
+
+  wing_jump:
+    # Consider advanced use of the Wings in logic.
+    #
+    # Examples include jumping and immediately activating the Wings to gain more distance, and riding along slopes to gain height.
+    "false": 50
+    "true": 0
+
+  wing_storage:
+    # Consider Wing storage in logic.
+    #
+    # Sliding from an unwalkable slope onto walkable terrain while the Wings are activated makes your next airtime trigger Wings without an additional jump press, enabling a significant boost to height and distance.
+    "false": 50
+    "true": 0
+
+  bubble_jump:
+    # Consider use of Bubble for movement in logic.
+    #
+    # Disable (default): Don't include in logic.
+    # Enable: Consider floating by holding Bubble in logic.
+    # With Recoil: Also consider firing Bubbles to launch yourself backwards in logic.
+    disable: 50
+    enable: 0
+    with_recoil: 0
+
+  roll_disjoint:
+    # Consider use of roll disjoints in logic.
+    #
+    # Roll disjoints involve canceling roll after attempting to trigger another
+    # animation, like a Tail Whip, in order to disjoint Fynn's hitbox to touch
+    # loading zones through walls.
+    "false": 50
+    "true": 0
+
+  damage_boost:
+    # Consider use of damage boosts in logic.
+    "false": 50
+    "true": 0
+
+  ground_tail_jump:
+    # Consider use of grounded Tail Whip jumps in logic.
+    #
+    # If you Tail Whip on the ground and then jump, you are able to jump again once
+    # the animation ends.
+    "false": 50
+    "true": 0
+
+  air_tail_jump:
+    # Consider use of aerial Tail Whip jumps in logic.
+    #
+    # If you land while attempting a Tail Whip in the air, you launch yourself
+    # forward, and are able to jump for a short period of time, gaining a small
+    # amount of extra height compared to a standard jump.
+    "false": 50
+    "true": 0
+
+  jester_boots_slope_movement:
+    # Allows use of the Jester Boots to climb normally unwalkable slopes in
+    # logic.
+    #
+    # Some slopes can uniquely be climbed while wearing the Jester Boots. For
+    # example, you can grab the Deep Woods egg location by simply walking up the
+    # wall with the Jester Boots.
+    "false": 50
+    "true": 0
+
+  carry_through_doors:
+    # Allows Fynn to carry temporary items through doorways.
+    #
+    # When disabled, Fynn drops anything they're carrying as they move to a new
+    # area. Forces Carryablesanity to Kind.
+    "false": 0
+    "true": 50
+
+  allow_fun:
+    # Allows making use of some combinations of abilities that are out-of-logic.
+    #
+    # When disabled, the Jester Boots have a distaste for Fynn carrying items,
+    # and will refuse to allow Fynn to pick items up unless they are taken off
+    # first. They're only fine with the idea if you are within the boundaries of
+    # the Deep Woods.
+    "false": 50
+    "true": 0
+
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    "false": 50
+    "true": 0
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []

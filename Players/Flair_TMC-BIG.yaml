@@ -1,0 +1,318 @@
+﻿# Q. What is this file?
+# A. This file contains options which allow you to configure your multiworld experience while allowing
+#    others to play how they want as well.
+#
+# Q. How do I use it?
+# A. The options in this file are weighted. This means the higher number you assign to a value, the
+#    more chances you have for that option to be chosen. For example, an option like this:
+#
+#    map_shuffle:
+#      on: 5
+#      off: 15
+#
+#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
+#    off.
+#
+# Q. I've never seen a file like this before. What characters am I allowed to use?
+# A. This is a .yaml file. You are allowed to use most characters.
+#    To test if your yaml is valid or not, you can use this website:
+#        http://www.yamllint.com/
+#    You can also verify that your Archipelago options are valid at this site:
+#        https://archipelago.gg/check
+
+# Your name in-game, limited to 16 characters.
+#     {player} will be replaced with the player's slot number.
+#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
+#     {number} will be replaced with the counter value of the name.
+#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
+name: Player{number}
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default The Minish Cap Template
+
+game: The Minish Cap
+requires:
+  version: 0.6.1 # Version of Archipelago required for this yaml to work as expected.
+
+The Minish Cap:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # 
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # **Full:** ensure everything can be reached and acquired.
+    # 
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    'false': 50
+    'true': 0
+
+  death_link_gameover:
+    # If disabled, deathlinks are sent when reaching 0HP, before a fairy is used. Received deathlinks will drop you to
+    # 0HP, using a fairy if you have one.
+    # If enabled, deathlinks are only sent when reaching the gameover screen. Received deathlinks will also send you
+    # straight to a gameover, fairy or not.
+    'false': 50
+    'true': 0
+
+  goal_vaati:
+    # If enabled, DHC will open after completing Pedestal. Kill Vaati to goal.
+    # If disabled, complete Pedestal to goal. DHC/Vaati is unnecessary.
+    'false': 0
+    'true': 50
+
+  ped_elements:
+    # How many elements are required to activate Pedestal?
+    # If GoalVaati is on then you need this many elements before DHC opens,
+    # otherwise you goal immediately upon having this many elements (and other goal conditions) and entering sanctuary
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 4
+    4: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  ped_swords:
+    # What level of sword is required to activate Pedestal?
+    # If GoalVaati is on then you need at least this sword level before DHC opens,
+    # otherwise you goal immediately upon having this sword level (and other goal conditions) and entering sanctuary
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 5
+    5: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  ped_dungeons:
+    # How many dungeons are required to activate Pedestal?
+    # If GoalVaati is on then you need this many dungeons cleared before DHC opens,
+    # otherwise you goal immediately upon having this many dungeons cleared
+    # (and other goal conditions) and entering sanctuary
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 6
+    0: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  dungeon_small_keys:
+    # Own Dungeon (false/default): Randomized within the dungeon they're normally found in
+    # Anywhere (true): Items are in completely random locations
+    # *Note: If using anything other than "anywhere" and you include small keys in start_inventory_from_pool,
+    #     you may get the warning "tried to remove items from their pool that don't exist". This is expected, the keys
+    #     have safely been added to your inventory from the pool.
+    own_dungeon: 50
+    anywhere: 0
+
+  dungeon_big_keys:
+    # Own Dungeon (default/false): Randomized within the dungeon they're normally found in
+    # Anywhere (true): Items are in completely random locations
+    # *Note: If using anything other than "anywhere" and you include big keys in start_inventory_from_pool,
+    #     you may get the warning "tried to remove items from their pool that don't exist". This is expected, the keys
+    #     have safely been added to your inventory from the pool.
+    own_dungeon: 50
+    anywhere: 0
+
+  dungeon_maps:
+    # Own Dungeon (default/false): Randomized within the dungeon they're normally found in
+    # Anywhere (true): Items are in completely random locations
+    # *Note: If using anything other than "anywhere" and you include dungeon maps in start_inventory_from_pool,
+    #     you may get the warning "tried to remove items from their pool that don't exist". This is expected, the maps
+    #     have safely been added to your inventory from the pool.
+    own_dungeon: 50
+    anywhere: 0
+
+  dungeon_compasses:
+    # Own Dungeon (default/false): Randomized within the dungeon they're normally found in
+    # Anywhere (true): Items are in completely random locations
+    # *Note: If using anything other than "anywhere" and you include dungeon compasses in start_inventory_from_pool,
+    #     you may get the warning "tried to remove items from their pool that don't exist". This is expected, the compass
+    #     has safely been added to your inventory from the pool.
+    own_dungeon: 50
+    anywhere: 0
+
+  shuffle_elements:
+    # Lock elements to specific locations
+    # Vanilla: Elements are in the same dungeons as vanilla
+    # Dungeon Prize (false/default): Elements are shuffled between the 6 dungeon prizes
+    # Anywhere (true): Elements are in completely random locations
+    vanilla: 0
+    dungeon_prize: 50
+    anywhere: 0
+
+  rupeesanity:
+    # Add all rupees locations to the pool to be randomized. This setting will not shuffle Rupees that also belong to
+    # another pool, i.e. An underwater rupee will instead be randomized by shuffle_underwater
+    'false': 50
+    'true': 0
+
+  shuffle_pots:
+    # Add all special pots that drop a unique item to the pool. Includes the LonLon Ranch Pot.
+    'false': 50
+    'true': 0
+
+  shuffle_digging:
+    # Add all dig spots that drop a unique item to the pool.
+    'false': 50
+    'true': 0
+
+  shuffle_underwater:
+    # Add all underwater items to the pool. Includes the ToD underwater pot
+    'false': 50
+    'true': 0
+
+  traps_enabled:
+    # Traps may be placed around the world. Traps for local items will have their
+    # sprite randomized to a local item before pickup. When picked up it'll turn
+    # into an exclamation mark (!) and activate a specific trap such as spawning
+    # enemies, setting you on fire, freezing you, etc.
+    'false': 50
+    'true': 0
+
+  random_bottle_contents:
+    # Put random contents into the shuffled bottles, these contents are never considered in logic
+    'false': 50
+    'true': 0
+
+  early_weapon:
+    # Force a weapon to be in your sphere 1.
+    # The weapon placed will be random based off the enabled `weapon` options.
+    # Swords will always be one of the possible weapons placed.
+    'false': 50
+    'true': 0
+
+  weapon_bomb:
+    # Bombs can damage nearly every enemy, Bombs are never considered for Simon Simulations, and Golden Enemies.
+    # 'No': Bombs are not considered as Weapons.
+    # 'Yes': Bombs are considered as weapons for most regular enemy fights.
+    # 'Yes + Bosses': Bombs are considered as weapons for most enemy fights. Fighting Green/Blu Chu, Madderpillars
+    # and Darknuts require only 10 bomb bag. Gleerok, Mazaal and Scissor Beetles require at least 30 bomb bag.
+    # Octo and Gyorg cannot be defeated with bombs.
+    'no': 50
+    'yes': 0
+    yes_boss: 0
+
+  weapon_bow:
+    # Bow can damage most enemies, many enemies are very resilient to damage. Chu Bosses and Darknuts are Immune.
+    # 'false': Bows are not considered as Weapons.
+    # 'true': Bows are considered as weapons for most enemy fights.
+    # Bows are never considered for Chu Bossfights, Darknuts, Scissor Beetles, Madderpillar, Wizzrobes, Simon Simulations,
+    # and Golden Enemies.
+    'false': 50
+    'true': 0
+
+  weapon_gust:
+    # Gust Jar can suck up various enemies like Ghini(Ghosts) and Beetles (The things that grab onto link).
+    # It can also grab objects and fire them like projectiles to kill enemies, some enemies or parts of enemies can be
+    # used as projectiles such as Helmasaurs and Stalfos.
+    # 'false': Gust Jar is never considered for killing enemies.
+    # 'true': Gust Jar is considered as weapons for all enemies that get sucked up by it, you are never expected to use
+    #     objects as projectiles to kill enemies.
+    'false': 50
+    'true': 0
+
+  weapon_lantern:
+    # The lit Lantern can instantly kill Wizzrobes by walking through them.
+    # 'false': Lantern is not considered as a Weapon.
+    # 'true': Lantern is considered as a weapon for fighting Wizzrobes.
+    'false': 50
+    'true': 0
+
+  tricks:
+    # mitts_farm_rupees: Mole Mitts may be required to farm rupees by digging an infinitely respawning red rupee next to
+    #     link's house
+    # bombable_dust: Bombs may be required to blow away dust instead of Gust Jar
+    # crenel_mushroom_gust_jar: The mushroom near the edge of a cliff on Mt Crenel may be required to be grabbed with the
+    #     gust jar to climb higher
+    # light_arrows_break_objects: A charged light arrow shot may be required to destroy obstacles like pots or small trees
+    # bobombs_destroy_walls: Either a Sword or the Gust Jar may be required to blow up walls near Bobombs
+    # like_like_cave_no_sword: Opening the chests in the digging cave in Minish Woods, guarded by a pair of LikeLikes,
+    #     may be required without a weapon
+    # boots_skip_town_guard: A very precise boot dash may be required to skip the guard blocking the west exit of town
+    # beam_crenel_switch: A switch across a gap on Mt Crenel must be hit to extend a bridge to reach cave of flames,
+    #     hitting it with a sword beam may be required
+    # down_thrust_spikey_beetle: Spikey Beetles can be flipped over with a down thrust, which may be required to kill them
+    # dark_rooms_no_lantern: Dark rooms may require being traversed without the lantern. Link always has a small light
+    #     source revealing his surroundings
+    # cape_extensions: Some larger gaps across water can be crossed by extending the distance you can jump (Release cape
+    #     after the hop, then press and hold the glide)
+    # lake_minish_no_boots: Lake hylia can be explored as minish without using the boots to bonk a tree by jumping down
+    #     from the middle island
+    # cabin_swim_no_lilypad: Lake Cabin has a path used to enter as minish, the screen transition can be touched by
+    #     swimming into it
+    # cloud_sharks_no_weapons: The Sharks in cloud tops can be killed by standing near the edge and watching them jump off
+    # fow_pot_gust_jar: A pot near the end of Fortress can be grabbed with the gust jar through a wall from near the
+    #     beginning of the dungeon
+    # pow_2f_no_cane: After climbing the first clouds of Palace, a moving platform can be reached with a precise jump
+    # pot_puzzle_no_bracelets: The Minish sized pot puzzle in Palace can be avoided by hitting the switch that drops the
+    #     item at a later point in the dungeon
+    # dhc_cannons_no_four_sword: The Cannon puzzle rooms of DHC can be completed without the four sword by using a well
+    #     timed bomb strat and sword slash
+    # dhc_pads_no_four_sword: The clone puzzles that press down four pads in DHC can be completed with less clones by
+    #     shuffling across the pads
+    # dhc_switches_no_four_sword: The clone puzzle that slashes 4 switches in DHC can be completed with a well placed spin
+    #     attack
+    []
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_inventory_from_pool:
+    # Start with these items and don't place them in the world.
+    # 
+    # The game decides what the replacement items will be.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []

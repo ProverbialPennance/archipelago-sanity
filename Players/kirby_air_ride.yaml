@@ -1,0 +1,19 @@
+name: ZiggyAirRide
+game: Kirby Air Ride
+description: Example yaml for Kirby Air Ride
+Kirby Air Ride:
+  death_link: 'false'
+  progression_balancing: '50'
+  accessibility: full
+  goal: 100_checklist_boxes
+  checklist_amount: '100'
+  progression_high_effort: 'false'
+  free_run_progression: 'false'
+  progression_multiplayer: 'false'
+  permanent_patch_progression: 'true'
+  traps_enabled: 'false'
+  trap_chance: '10'
+  effect_items_enabled: 'false'
+  checkbox_reward_items: 'false'
+  permanent_patches: 'true'
+  start_inventory: {}

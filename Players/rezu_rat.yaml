@@ -1,0 +1,211 @@
+﻿# Q. What is this file?
+# A. This file contains options which allow you to configure your multiworld experience while allowing
+#    others to play how they want as well.
+#
+# Q. How do I use it?
+# A. The options in this file are weighted. This means the higher number you assign to a value, the
+#    more chances you have for that option to be chosen. For example, an option like this:
+#
+#    map_shuffle:
+#      on: 5
+#      off: 15
+#
+#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
+#    off.
+#
+# Q. I've never seen a file like this before. What characters am I allowed to use?
+# A. This is a .yaml file. You are allowed to use most characters.
+#    To test if your yaml is valid or not, you can use this website:
+#        http://www.yamllint.com/
+#    You can also verify that your Archipelago options are valid at this site:
+#        https://archipelago.gg/check
+
+# Your name in-game, limited to 16 characters.
+#     {player} will be replaced with the player's slot number.
+#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
+#     {number} will be replaced with the counter value of the name.
+#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
+name: RezuRat
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default Autopelago Template
+
+game: Autopelago
+requires:
+  version: 0.6.2 # Version of Archipelago required for this yaml to work as expected.
+
+Autopelago:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    #
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    #
+    # **Full:** ensure everything can be reached and acquired.
+    #
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  plando_items:
+    # Generic items plando.
+    []
+
+  fill_with_determination:
+    # Either fills the rat with determination, or does nothing. Perhaps both.
+    #
+    # This option was added early on for technical reasons. It does not directly affect the game.
+    "false": 50
+    "true": 0
+
+  victory_location:
+    # Optionally moves the final victory location earlier to reduce the number of locations in the multiworld.
+    #
+    # - **Snakes on a Planet (default):** The game goes all the way to "Moon, The". This gives the longest game.
+    # - **Secret Cache:** The game stops at the end of Cool World. This gives the middlest-length game.
+    # - **Captured Goldfish:** The game stops at the end of The Sewers. This gives the shortest game.
+    snakes_on_a_planet: 50
+    secret_cache: 0
+    captured_goldfish: 0
+
+  enabled_buffs:
+    # Enables various buffs that affect how the rat behaves. All are enabled by default.
+    #
+    # - **Well Fed:** Gets more done
+    # - **Lucky:** One free success
+    # - **Energized:** Moves faster
+    # - **Stylish:** Better RNG
+    # - **Confident:** Ignore a trap
+    # - **Smart:** Next check is progression
+    ["Stylish", "Lucky", "Confident", "Energized", "Well Fed", "Smart"]
+
+  enabled_traps:
+    # Enables various traps that affect how the rat behaves. All are enabled by default.
+    #
+    # - **Upset Tummy:** Gets less done
+    # - **Unlucky:** Worse RNG
+    # - **Sluggish:** Moves slower
+    # - **Distracted:** Skip a "step"
+    # - **Startled:** Run towards start
+    # - **Conspiratorial:** Next check is trap
+    [
+      "Sluggish",
+      "Unlucky",
+      "Conspiratorial",
+      "Upset Tummy",
+      "Distracted",
+      "Startled",
+    ]
+
+  msg_changed_target:
+    # What messages the rat can say when a buff or trap is added to the queue of location checks to send before resuming its normal logic.
+    #
+    # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
+    #
+    # The text {LOCATION} will be replaced with the name of the actual location.
+    #
+    # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
+    - "Oh, hey, what's that thing over there at {LOCATION}?"
+    - "There's something at {LOCATION}, I'm sure of it!"
+    - "Something at {LOCATION} smells good!"
+    - "There's a rumor that something's going on at {LOCATION}!"
+
+  msg_enter_go_mode:
+    # What messages the rat can say when it first realizes that it can complete its goal.
+    #
+    # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
+    #
+    # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
+    - "That's it! I have everything I need! The goal is in sight!"
+
+  msg_enter_bk:
+    # What messages the rat can say when it first sees that no further location checks are in logic.
+    #
+    # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
+    #
+    # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
+    - "I don't have anything to do right now. Go team!"
+    - "Hey, I'm completely stuck. But I still believe in you!"
+    - "I've run out of things to do. How are you?"
+    - "I'm out of things for now, gonna get a coffee. Anyone want something?"
+
+  msg_remind_bk:
+    # What messages the rat can say to occasionally remind the players that it has no further location checks in logic.
+    #
+    # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
+    #
+    # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
+    - "I don't have anything to do right now. Go team!"
+    - "Hey, I'm completely stuck. But I still believe in you!"
+    - "I've run out of things to do. How are you?"
+    - "I'm out of things for now, gonna get a coffee. Anyone want something?"
+
+  msg_exit_bk:
+    # What messages the rat can say after one or more location checks become in logic.
+    #
+    # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
+    #
+    # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
+    - "Yippee, that's just what I needed!"
+    - "I'm back! I knew you could do it!"
+    - "Sweet, I'm unblocked! Thanks!"
+    - "Squeak-squeak, it's rattin' time!"
+
+  msg_completed_goal:
+    # What messages the rat can say to celebrate victory.
+    #
+    # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
+    #
+    # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
+    - "Yeah, I did it! er... WE did it!"
+
+  lactose_intolerant:
+    # Replaces all references to lactose-containing products with less offensive ones.
+    "false": 50
+    "true": 0
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []

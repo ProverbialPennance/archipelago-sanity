@@ -1,0 +1,293 @@
+﻿# Q. What is this file?
+# A. This file contains options which allow you to configure your multiworld experience while allowing
+#    others to play how they want as well.
+#
+# Q. How do I use it?
+# A. The options in this file are weighted. This means the higher number you assign to a value, the
+#    more chances you have for that option to be chosen. For example, an option like this:
+#
+#    map_shuffle:
+#      on: 5
+#      off: 15
+#
+#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
+#    off.
+#
+# Q. I've never seen a file like this before. What characters am I allowed to use?
+# A. This is a .yaml file. You are allowed to use most characters.
+#    To test if your yaml is valid or not, you can use this website:
+#        http://www.yamllint.com/
+#    You can also verify that your Archipelago options are valid at this site:
+#        https://archipelago.gg/check
+
+# Your name in-game, limited to 16 characters.
+#     {player} will be replaced with the player's slot number.
+#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
+#     {number} will be replaced with the counter value of the name.
+#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
+name: Flair_PH-BIG
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default The Legend of Zelda - Phantom Hourglass Template
+
+game: The Legend of Zelda - Phantom Hourglass
+requires:
+  version: 0.6.2 # Version of Archipelago required for this yaml to work as expected.
+
+The Legend of Zelda - Phantom Hourglass:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # 
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # **Full:** ensure everything can be reached and acquired.
+    # 
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    # 
+    # **Items:** ensure all logically relevant items can be acquired. Some items, such as keys, may be self-locking, and
+    # some locations may be inaccessible.
+    full: 0
+    minimal: 0
+    items: 50
+
+  plando_items:
+    # Generic items plando.
+    []
+
+  goal:
+    # The goal to accomplish in order to complete the seed.
+    # - Triforce_door: Open the triforce door on TotOK B6. Leftover from pre-alpha
+    # - beat_bellumbeck: beat bellumbeck on the ruins of the ghost ship
+    triforce_door: 0
+    beat_bellumbeck: 50
+
+  dungeons_required:
+    # How many dungeons are required to access the endgame.
+    # Max is 6 unless you add Ghost ship and TotOK with their own options below
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 8
+    3: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  exclude_non_required_dungeons:
+    # Non-required dungeons won't have progression or useful items. Does not apply to TotOK.
+    'false': 0
+    'true': 50
+
+  bellum_access:
+    # What unlocks after you reach your dungeon requirement
+    # - spawn_phantoms_on_b13: getting your goal requirement spawns the phantoms on TotOK B13, and killing them gives
+    # you bellum access. You will have to run TotOK to the bottom after getting your goal requirement
+    # - unlock_staircase: getting your goal requirement unlocks the staircase to bellum. The phantoms on B13 spawn by
+    # default, and killing them unlocks the warp for later
+    # - warp_to_bellum: getting your goal requirement spawns the warp to bellum in TotOK. The phantoms are spawned by
+    # default, and the staircase to bellum is blocked off until reaching the goal
+    # - spawn_bellumbeck: getting your goal requirement spawns the ruins of the ghost ship in the SW quadrant, and you
+    # can skip bellum 1 and the ghost ship fight
+    spawn_phantoms_on_b13: 50
+    unlock_staircase: 0
+    warp_to_bellum: 0
+    spawn_bellumbeck: 0
+
+  ghost_ship_in_dungeon_pool:
+    # Choose whether the ghost ship can be in the dungeon reward pool
+    # - rescue_tetra: the dungeon reward, if rolled, will be on using the ghost key
+    # - cubus_sisters: the dungeon reward will be on defeating the cubus sisters
+    # - false: the ghost ship cannot be rolled for the required dungeon pool
+    rescue_tetra: 50
+    cubus_sisters: 0
+    'false': 0
+
+  totok_in_dungeon_pool:
+    # Choose whether the NE Sea Chart chest on B13 of Temple of the Ocean King is in the dungeon reward pool
+    'false': 50
+    'true': 0
+
+  logic:
+    # Logic options:
+    # - Normal: Glitches not in logic.
+    # - Medium: Includes some cool uses of pots aren't hard, bun unconventional
+    # - Glitched: Hammer clips, chu camera displacement and clever use of items in logic
+    # Be careful, using glitches on normal logic can cause key-related softlocks
+    normal: 50
+    hard: 0
+    glitched: 0
+
+  phantom_combat_difficulty:
+    # Option for what you need to kill phantoms in logic
+    # - require_phantom_sword: need phantom sword
+    # - require_traps: need a pit trap or boulder
+    # - require_stun: require a method of stunning, and an open pit to push into. Includes bow, hammer,
+    # and sword + 2 progressive spirits of power
+    # - require_weapon: all of the above plus grappling hook
+    require_phantom_sword: 50
+    require_traps: 0
+    require_stun: 0
+    require_weapon: 0
+
+  boat_requires_sea_chart:
+    # If True, heading out to sea from mercay requires the SW sea chart.
+    # WARNING! If set to False and you travel without a sea chart, you can softlock by crossing to another sea chart.
+    # Frogs require their sea chart to work
+    'false': 0
+    'true': 50
+
+  keysanity:
+    # Small Key Logic options:
+    # - vanilla: Keys are not randomized
+    # - in_own_dungeon: Keys can be found in their own dungeon
+    # - anywhere: Keysanity. Keys can be found anywhere
+    vanilla: 0
+    in_own_dungeon: 50
+    anywhere: 0
+
+  randomize_frogs:
+    # Ramdomize golden cyclone frogs
+    # - vanilla: shooting a frog gives their warp spot
+    # - start_with: start with all warps unlocked. Frogs are not checks. You don't start with cyclone slate unless it's
+    # in starting_items. You also need their respective sea charts to actually warp.
+    # - randomize: frog glyphs are random and frogs are checks
+    vanilla: 50
+    start_with: 0
+    randomize: 0
+
+  randomize_triforce_crest:
+    # When enabled, The Triforce Crest on the big red door in TotOK B6 will turn into an item and be randomized.
+    # When disabled, the door will always be open
+    'false': 50
+    'true': 0
+
+  randomize_harrow:
+    # Choose whether to randomize the rng hell checks on harrow island
+    'false': 50
+    'true': 0
+
+  randomize_masked_beedle:
+    # Choose whether to randomize the masked beedle ship. You may need to change time of day for this.
+    # Masked beedle appears between 10pm and midnight on weekdays or 10am and noon on weekends.
+    'false': 50
+    'true': 0
+
+  dungeon_hints:
+    # Receive hints for your required dungeons
+    # - false: no hints
+    # - oshus: oshus gives dungeon hints
+    # - totok: entering totok gives dungeon hints
+    'false': 0
+    oshus: 50
+    totok: 0
+
+  shop_hints:
+    # Get hints for shop items you currently can buy
+    # Includes island shops, Beedle, masked Beedle and Eddo
+    'false': 0
+    'true': 50
+
+  spirit_island_hints:
+    # Get hints for spirit island upgrades on entering the shrine
+    # - all: get hints for all upgrades
+    # - level_two: only get hints for the 2nd level upgrades
+    # - none: don't receive hints
+    all: 50
+    level_two: 0
+    none: 0
+
+  fog_settings:
+    # Choose when the fog exists in the NW Quadrant
+    # WARNING! The game crashes if you exit out to the NW quadrant with the spirits out. Enter and exit the ghost ship to remove them
+    # - no_fog: there's no fog in the NW quadrant. You need all 3 spirits to find the ghost ship
+    # - vanilla_fog: fog exists until you defeat the ghost ship, you have to take the twisty route to NW
+    # - open_ghost_ship: fog exists until you beat the ghost ship, and you don't need the spirit items to find it.
+    no_fog: 50
+    vanilla_fog: 0
+    open_ghost_ship: 0
+
+  ph_starting_time:
+    # How much time to start with in your Phantom Hourglass, in minutes
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 30
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  ph_time_increment:
+    # How much time to get for each sand of hours upgrade, in minutes
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 30
+    1: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  remove_items_from_pool:
+    # Removes specified amount of given items from the item pool, replacing them with random filler items.
+    # This option has significant chances to break generation if used carelessly, so test your preset several times
+    # before using it on long generations. Use at your own risk!
+    {}
+
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    'false': 50
+    'true': 0
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_inventory_from_pool:
+    # Start with these items and don't place them in the world.
+    # 
+    # The game decides what the replacement items will be.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []

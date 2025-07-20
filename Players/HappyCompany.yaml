@@ -1,0 +1,181 @@
+---
+name: HappyCompany
+description: Default Lethal Company Template
+game: Lethal Company
+requires:
+  version: 0.6.2
+Lethal Company:
+  progression_balancing: 50
+  accessibility:
+    full: 50
+    minimal: 0
+  plando_items: []
+  death_link:
+    "false": 50
+    "true": 0
+  game_mode:
+    trophy: 50
+    collectathon: 0
+    credit_hunt: 0
+  collectathon_scrap_goal:
+    "10": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  credit_replacement:
+    "50": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  required_credits:
+    "75": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  checks_per_moon:
+    "3": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  num_quotas:
+    "20": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  money_per_quota_check:
+    "500": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  scrapsanity:
+    "false": 50
+    "true": 0
+  randomize_company_building:
+    "false": 50
+    "true": 0
+  randomize_scanner:
+    "false": 50
+    "true": 0
+  randomize_terminal:
+    "false": 50
+    "true": 0
+  starting_moon:
+    randomize: 50
+  starting_stamina_bars:
+    "4": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  starting_inventory_slots:
+    "4": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  moon_grade:
+    s: 0
+    a: 0
+    b: 50
+    c: 0
+    d: 0
+    f: 0
+  split_moon_grades:
+    "false": 50
+    "true": 0
+  low_moon_grade:
+    s: 0
+    a: 0
+    b: 50
+    c: 0
+    d: 0
+    f: 0
+  medium_moon_grade:
+    s: 0
+    a: 0
+    b: 50
+    c: 0
+    d: 0
+    f: 0
+  high_moon_grade:
+    s: 0
+    a: 0
+    b: 50
+    c: 0
+    d: 0
+    f: 0
+  min_scrap_chance:
+    "3": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  min_monster_chance:
+    "5": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  min_money:
+    "100": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  max_money:
+    "1000": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  modify_scrap_spawns:
+    "false": 50
+    "true": 0
+  exclude_killing:
+    "false": 50
+    "true": 0
+  exclude_hive:
+    "false": 50
+    "true": 0
+  money:
+    "80": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  birthday:
+    "20": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  weight_reducers:
+    "5": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  scrap_clone:
+    "20": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  time_add:
+    "20": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  time_trap:
+    "30": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  bracken_trap:
+    "8": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  haunt_trap:
+    "4": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []

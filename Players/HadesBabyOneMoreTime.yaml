@@ -1,0 +1,221 @@
+---
+name: IHadesHere
+description: Default Hades Template
+game: Hades
+requires:
+  version: 0.6.2
+Hades:
+  initial_weapon:
+    sword: 50
+    bow: 0
+    spear: 0
+    shield: 0
+    fist: 0
+    gun: 0
+  location_system:
+    room_based: 50
+    score_based: 0
+    room_weapon_based: 0
+  score_rewards_amount:
+    "150": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  keepsakesanity:
+    "false": 0
+    "true": 50
+  weaponsanity:
+    "false": 0
+    "true": 50
+  hidden_aspectsanity:
+    "false": 0
+    "true": 50
+  storesanity:
+    "false": 0
+    "true": 50
+  fatesanity:
+    "false": 0
+    "true": 50
+  death_link:
+    "false": 50
+    "true": 0
+  hades_defeats_needed:
+    "1": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  weapons_clears_needed:
+    "1": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  keepsakes_needed:
+    "0": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  fates_needed:
+    "0": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  heat_system:
+    reverse_heat: 50
+    minimal_heat: 0
+    vanillla_heat: 0
+  hard_labor_pact_amount:
+    "3": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  lasting_consequences_pact_amount:
+    "2": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  convenience_fee_pact_amount:
+    "1": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  jury_summons_pact_amount:
+    "2": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  extreme_measures_pact_amount:
+    "2": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  calisthenics_program_pact_amount:
+    "1": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  benefits_package_pact_amount:
+    "1": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  middle_management_pact_amount:
+    "1": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  underworld_customs_pact_amount:
+    "1": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  forced_overtime_pact_amount:
+    "1": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  heightened_security_pact_amount:
+    "1": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  routine_inspection_pact_amount:
+    "3": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  damage_control_pact_amount:
+    "1": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  approval_process_pact_amount:
+    "1": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  tight_deadline_pact_amount:
+    "2": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  personal_liability_pact_amount:
+    "0": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  darkness_pack_value:
+    "1000": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  keys_pack_value:
+    "20": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  gemstones_pack_value:
+    "100": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  diamonds_pack_value:
+    "15": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  titan_blood_pack_value:
+    "3": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  nectar_pack_value:
+    "3": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  ambrosia_pack_value:
+    "3": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  filler_helper_percentage:
+    "0": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  max_health_helper_percentage:
+    "35": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  initial_money_helper_percentage:
+    "35": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  filler_trap_percentage:
+    "5": 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  reverse_order_em:
+    "false": 0
+    "true": 50
+  ignore_greece_deaths:
+    "false": 0
+    "true": 50
+  store_give_hints:
+    "false": 0
+    "true": 50
+  automatic_rooms_finish_on_hades_defeat:
+    "false": 50
+    "true": 0
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_inventory_from_pool: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []

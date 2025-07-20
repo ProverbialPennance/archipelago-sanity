@@ -25,7 +25,7 @@
 #     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
 #     {number} will be replaced with the counter value of the name.
 #     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
-name: Player{number}
+name: BrotatoLaura
 
 # Used to describe your yaml. Useful if you have multiple files.
 description: Default Brotato Template
@@ -131,7 +131,7 @@ Brotato:
     # 
     # Characters not listed here will not be available to play. There will be no item to unlock them, and there will be
     # no run or wave complete checks associated with them.
-    ['Farmer', 'Brawler', 'Vampire', 'Bull', 'Technomage', 'Apprentice', 'Ranger', 'Hunter', 'One Armed', 'Mage', 'Wildling', 'King', 'Speedy', 'Pacifist', 'Fisherman', 'Entrepreneur', 'Cyborg', 'Gladiator', 'Old', 'Multitasker', 'Golem', 'Lucky', 'Saver', 'Explorer', 'Lich', 'Demon', 'Well Rounded', 'Ghost', 'Arms Dealer', 'Knight', 'Doctor', 'Loud', 'Mutant', 'Artificer', 'Generalist', 'Crazy', 'Engineer', 'Baby', 'Renegade', 'Streamer', 'Vagabond', 'Masochist', 'Chunky', 'Sick', 'Jack', 'Cryptid', 'Soldier', 'Glutton']
+    ['Brawler', 'Baby', 'Doctor', 'Apprentice', 'Vampire', 'Well Rounded', 'Generalist', 'Arms Dealer', 'Old', 'Gladiator', 'Soldier', 'Mutant', 'Sick', 'Hunter', 'Speedy', 'Demon', 'Farmer', 'Wildling', 'Knight', 'Pacifist', 'Crazy', 'Artificer', 'Streamer', 'Saver', 'Ghost', 'Masochist', 'Ranger', 'Golem', 'Lich', 'Technomage', 'Jack', 'Multitasker', 'Entrepreneur', 'Vagabond', 'Cryptid', 'Mage', 'Engineer', 'Glutton', 'Fisherman', 'One Armed', 'Bull', 'King', 'Explorer', 'Cyborg', 'Renegade', 'Lucky', 'Loud', 'Chunky']
 
   waves_per_drop:
     # How many waves to win to receive a check.
@@ -463,7 +463,7 @@ Brotato:
     # no run or wave complete checks associated with them.
     # 
     # Does nothing if "Enable Abyssal Terrors DLC" is not set.
-    ['Curious', 'Chef', 'Diver', 'Buccaneer', 'Ogre', 'Captain', 'Gangster', 'Sailor', 'Builder', 'Hiker', 'Druid', 'Romantic', 'Creature', 'Dwarf']
+    ['Buccaneer', 'Sailor', 'Curious', 'Captain', 'Druid', 'Hiker', 'Chef', 'Builder', 'Ogre', 'Romantic', 'Dwarf', 'Diver', 'Creature', 'Gangster']
 
   # Item & Location Options
   local_items:
