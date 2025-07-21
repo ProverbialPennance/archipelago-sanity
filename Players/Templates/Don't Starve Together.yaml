@@ -159,7 +159,7 @@ Don't Starve Together:
     # Which seasons will be enabled in your world?
     # 
     # This is not automatic. If changed from default, seasons will need to be set manually in your world settings!
-    ['Summer', 'Autumn', 'Spring', 'Winter']
+    ['Winter', 'Spring', 'Autumn', 'Summer']
 
   starting_season:
     # Which season do you start with in your world?
@@ -188,7 +188,7 @@ Don't Starve Together:
     # This is not automatic. If changed from default, day phases will need to be set manually in your world settings!
     # 
     # Set to Night only if you plan to play on a Lights Out world.
-    ['Dusk', 'Night', 'Day']
+    ['Day', 'Night', 'Dusk']
 
   # Location Options
   cave_regions:

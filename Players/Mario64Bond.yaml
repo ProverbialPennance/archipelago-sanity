@@ -1,5 +1,4 @@
-﻿---
-name: MarioBond
+﻿name: MarioBond
 description: Default Super Mario 64 Template
 game: Super Mario 64
 requires:
@@ -103,6 +102,9 @@ Super Mario 64:
   start_inventory: {}
   start_hints: []
   start_location_hints: []
-  exclude_locations: []
+  exclude_locations:
+    - Bowser in the Dark World Red Coins
+    - Bowser in the Fire Sea Red Coins
+    - Bowser in the Sky Red Coins
   priority_locations: []
   item_links: []

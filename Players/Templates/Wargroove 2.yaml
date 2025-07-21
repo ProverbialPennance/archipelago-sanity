@@ -220,7 +220,7 @@ Wargroove 2:
     # Filler levels do not contain items and automatically provide a victory.
     # 
     # Format as a comma-separated list of early level names: ["Swimming at the Docks", "Floran Trap"]
-    ['Ancient Discoveries', 'Floran Trap', 'Observation Isle', 'Majestic Mountain', 'Swimming at the Docks']
+    ['Observation Isle', 'Floran Trap', 'Swimming at the Docks', 'Ancient Discoveries', 'Majestic Mountain']
 
   custom_main_level_playlist:
     # A list of levels available after the early levels.
@@ -229,7 +229,7 @@ Wargroove 2:
     # Filler levels do not contain items and automatically provide a victory.
     # 
     # Format as a comma-separated list of main level names: ["Wagon Freeway", "Operation Seagull"]
-    ['Operation Seagull', 'Fortification', 'Grand Theft Village', 'Spire Fire', 'Enmity Cliffs', 'Towers of the Abyss', 'Air Support', 'Portal Peril', 'A Ribbitting Time', 'Bridge Brigade', 'Den-Two-Away', 'Riflemen Blockade', 'Kraken Strait', 'Frantic Inlet', 'Slippery Bridge', "Nuru's Vengeance", 'Skydiving', 'Split Valley', 'Gnarled Mountaintop', 'Finishing Blow', "Tenri's Mistake", 'Gold Rush', 'Cherrystone Landing', 'Beached', 'Precarious Cliffs', 'Wagon Freeway', 'Sunken Forest', 'Terrible Tributaries']
+    ['Spire Fire', 'Operation Seagull', 'Wagon Freeway', 'Frantic Inlet', 'Bridge Brigade', 'Split Valley', 'Gnarled Mountaintop', 'Den-Two-Away', 'Enmity Cliffs', 'Kraken Strait', "Nuru's Vengeance", 'Air Support', 'Finishing Blow', 'Beached', 'Riflemen Blockade', 'Terrible Tributaries', 'Slippery Bridge', 'Fortification', 'Grand Theft Village', "Tenri's Mistake", 'Precarious Cliffs', 'Portal Peril', 'Cherrystone Landing', 'Gold Rush', 'A Ribbitting Time', 'Skydiving', 'Towers of the Abyss', 'Sunken Forest']
 
   custom_final_level_playlist:
     # A list of final levels available.
@@ -238,7 +238,7 @@ Wargroove 2:
     # Filler levels will automatically provide a victory.
     # 
     # Format as a comma-separated list of final level names: ["Doomed Metropolis", "Dark Mirror"]
-    ['Doomed Metropolis', 'Dark Mirror', 'Dementia Castle', 'Disastrous Crossing']
+    ['Dark Mirror', 'Dementia Castle', 'Doomed Metropolis', 'Disastrous Crossing']
 
   # Item & Location Options
   local_items:

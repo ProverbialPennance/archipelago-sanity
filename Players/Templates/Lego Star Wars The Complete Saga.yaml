@@ -420,7 +420,7 @@ requires:
     # `/items` command.
     # 
     # If no vehicle Chapters are enabled, no vehicle characters will be included in the item pool.
-    ['Droideka', 'General Grievous', 'Yoda (Ghost)']
+    ['Yoda (Ghost)', 'Droideka', 'General Grievous']
 
   preferred_extras:
     # Specify Extras that the generator should try to always include in the item pool.
@@ -437,7 +437,7 @@ requires:
     # When Progressive Score Multiplier items are enabled (always enabled currently), preferring "Score x{number}" to be
     # included in the item pool will try to ensure there are enough Progressive Score Multiplier items to unlock that
     # score multiplier.
-    ['Score x8', 'Fast Build', 'Stud Magnet', 'Deflect Bolts', 'Dark Side', 'Invincibility', 'Self Destruct', 'Super Ewok Catapult', 'Force Grapple Leap', 'Infinite Torpedos', 'Score x4', 'Disarm Troopers', 'Exploding Blaster Bolts', 'Score x10', 'Score x2', 'Fast Force', 'Score x6']
+    ['Exploding Blaster Bolts', 'Infinite Torpedos', 'Invincibility', 'Score x2', 'Score x10', 'Super Ewok Catapult', 'Fast Build', 'Stud Magnet', 'Disarm Troopers', 'Self Destruct', 'Deflect Bolts', 'Force Grapple Leap', 'Score x6', 'Score x4', 'Fast Force', 'Score x8', 'Dark Side']
 
   start_with_detectors:
     # Start with the Minikit Detector and Power Brick Detector unlocked.

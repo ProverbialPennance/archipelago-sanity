@@ -72,7 +72,7 @@ gzDoom:
     # file.
     # 
     # If you select more than one WAD from this list, it will pick one for you at random.
-    ['FreeDoom', 'MAYhem 2048', 'FreeDoom 2', 'Plutonia', 'No Rest for the Living', 'Scythe', 'TNT', 'Going Down Turbo', '1000 Lines II', 'Scythe 2', 'Doom', 'Doom 2', 'Space Cats Saga', 'Chex Quest 3', '1000 Lines', 'Heretic', 'Demonfear', 'The Adventures of Square']
+    ['FreeDoom 2', 'The Adventures of Square', 'FreeDoom', 'No Rest for the Living', 'Space Cats Saga', '1000 Lines', '1000 Lines II', 'MAYhem 2048', 'Scythe', 'Going Down Turbo', 'Scythe 2', 'Demonfear', 'Plutonia', 'TNT', 'Heretic', 'Doom 2', 'Chex Quest 3', 'Doom']
 
   spawn_filter:
     # Tell the generator which spawn filter (information about what items and enemies

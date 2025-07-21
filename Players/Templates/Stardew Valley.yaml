@@ -527,7 +527,7 @@ Stardew Valley:
     # Bite Rate: Shorter delay to get a bite when fishing
     # Fish Trap: Effect similar to the Trap Bobber, but weaker
     # Fishing Bar Size: Increased Fishing Bar Size
-    ['Luck', 'Bite Rate', 'Defense']
+    ['Luck', 'Defense', 'Bite Rate']
 
   trap_difficulty:
     # When rolling filler items, including resource packs, the game can also roll trap items.

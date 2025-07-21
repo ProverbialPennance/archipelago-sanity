@@ -117,7 +117,7 @@ XCOM 2 War of the Chosen:
   progressive_items:
     # Force these items to be collected in order.
     # Valid values: 'RifleTech', 'MeleeWeaponTech', 'ArmorTech', 'GREMLINTech', 'PsionicsTech'
-    ['MeleeWeaponTech', 'RifleTech', 'ArmorTech', 'GREMLINTech', 'PsionicsTech']
+    ['MeleeWeaponTech', 'PsionicsTech', 'GREMLINTech', 'ArmorTech', 'RifleTech']
 
   early_proving_ground:
     # Force the Proving Ground to be unlockable very early (sphere 1).
@@ -162,7 +162,7 @@ XCOM 2 War of the Chosen:
     # Automatically skip these mission types when they are spawned from a regular calendar event.
     # Can be changed in-game via Mod Config Menu.
     # Valid values: 'SupplyRaid', 'CouncilMission', 'ResistanceOp'
-    ['CouncilMission', 'ResistanceOp', 'SupplyRaid']
+    ['ResistanceOp', 'SupplyRaid', 'CouncilMission']
 
   disable_covert_action_risks:
     # Disable these covert action risks.

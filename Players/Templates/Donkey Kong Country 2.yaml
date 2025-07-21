@@ -212,17 +212,17 @@ Donkey Kong Country 2:
   shuffle_abilities:
     # Which abilities will be added as items in the item pool
     # If an ability is not present in the list they will be treated as unlocked from the start
-    ['Team Attack', 'Cling', 'Carry', 'Swim', 'Climb', 'Cartwheel', 'Helicopter Spin']
+    ['Climb', 'Cartwheel', 'Carry', 'Helicopter Spin', 'Swim', 'Cling', 'Team Attack']
 
   shuffle_animals:
     # Which animal buddies will be added as items in the item pool
     # If an animal buddy is not present in the list they will be treated as unlocked from the start
-    ['Rattly', 'Clapper', 'Rambi', 'Squitter', 'Skull Kart', 'Squawks', 'Glimmer', 'Enguarde']
+    ['Clapper', 'Enguarde', 'Rattly', 'Skull Kart', 'Squitter', 'Glimmer', 'Squawks', 'Rambi']
 
   shuffle_barrels:
     # Which kind of barrels will be added as items in the item pool
     # If a barrel is not present in the list they will be treated as unlocked from the start
-    ['Exclamation Barrels', 'Kong Barrels', 'Controllable Barrels', 'Warp Barrels', 'Barrel Kannons']
+    ['Kong Barrels', 'Controllable Barrels', 'Warp Barrels', 'Barrel Kannons', 'Exclamation Barrels']
 
   # Trivia
   swanky_questions_per_quiz:

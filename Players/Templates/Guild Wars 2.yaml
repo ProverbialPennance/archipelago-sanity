@@ -1,0 +1,353 @@
+﻿# Q. What is this file?
+# A. This file contains options which allow you to configure your multiworld experience while allowing
+#    others to play how they want as well.
+#
+# Q. How do I use it?
+# A. The options in this file are weighted. This means the higher number you assign to a value, the
+#    more chances you have for that option to be chosen. For example, an option like this:
+#
+#    map_shuffle:
+#      on: 5
+#      off: 15
+#
+#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
+#    off.
+#
+# Q. I've never seen a file like this before. What characters am I allowed to use?
+# A. This is a .yaml file. You are allowed to use most characters.
+#    To test if your yaml is valid or not, you can use this website:
+#        http://www.yamllint.com/
+#    You can also verify that your Archipelago options are valid at this site:
+#        https://archipelago.gg/check
+
+# Your name in-game, limited to 16 characters.
+#     {player} will be replaced with the player's slot number.
+#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
+#     {number} will be replaced with the counter value of the name.
+#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
+name: Player{number}
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default Guild Wars 2 Template
+
+game: Guild Wars 2
+requires:
+  version: 0.6.2 # Version of Archipelago required for this yaml to work as expected.
+
+Guild Wars 2:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # 
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # **Full:** ensure everything can be reached and acquired.
+    # 
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  plando_items:
+    # Generic items plando.
+    []
+
+  character:
+    # The name of the character that you will play or "New Character" if you will be making a new
+    # character for it
+    New Character: 50
+
+  character_profession:
+    # Profession of the character you will play
+    warrior: 0
+    guardian: 0
+    revenant: 0
+    thief: 0
+    engineer: 0
+    ranger: 0
+    mesmer: 0
+    elementalist: 0
+    necromancer: 0
+    random: 50
+
+  character_race:
+    # Race of the character you will play
+    asura: 0
+    charr: 0
+    human: 0
+    norn: 0
+    sylvari: 0
+    random: 50
+
+  starting_mainhand_weapon:
+    # Sets your starting mainhand weapon.
+    # 
+    # none: Do not start with a mainhand weapon. Only valid if you select an offhand.  Some offhand weapons are difficult
+    #     to do damage with, so be careful with this option.
+    # random/random_proficient: Selects a mainhand or two-handed weapon your character is proficient with.
+    # random_proficient_one_handed: Selects a one-handed weapon that your profession is proficient with.
+    # random_proficient_two_handed: Selects a two-handed weapon that your profession is proficient with.
+    none: 0
+    axe: 0
+    dagger: 0
+    mace: 0
+    pistol: 0
+    sword: 0
+    scepter: 0
+    greatsword: 0
+    hammer: 0
+    longbow: 0
+    rifle: 0
+    short_bow: 0
+    staff: 0
+    spear: 0
+    random_proficient: 50
+    random_proficient_one_handed: 0
+    random_proficient_two_handed: 0
+
+  starting_offhand_weapon:
+    # Sets your starting offhand weapon.
+    # This will be ignored if a two-handed weapon was selected for starting_mainhand_weapon
+    # 
+    # none: Do not start with an offhand weapon. Only valid if you select a mainhand.
+    # random/random_proficient: Selects an offhand weapon your character is proficient with.
+    none: 0
+    scepter: 0
+    focus: 0
+    shield: 0
+    torch: 0
+    warhorn: 0
+    random_proficient: 50
+
+  group_content:
+    # Sets what kind of group content you are interested in. Please be respectful of other players and do not join
+    # pugs doing difficult content if you do not have the unlocks to contribute (Don't try to fight Dhuum naked)
+    # 
+    # none: Limits game to open world, story, and WvW (if competitive is selected)
+    # five_man: Also allows fractals, dungeons, and PvP (if competitive is selected)
+    # ten_man: Also allows raids and strikes
+    none: 50
+    five_man: 0
+    ten_man: 0
+
+  include_competitive:
+    # Allows PvP and WvW achievements to be included
+    'false': 50
+    'true': 0
+
+  achievement_weight:
+    # The probability weight of any location being an achievement
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 1000
+    500: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  quest_weight:
+    # The probability weight of any location being a quest
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 1000
+    100: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  max_quests:
+    # The maximum number of quest locations to generate. The number of quests in each storyline are as follows:
+    # 
+    # Core => 49,
+    # Season1 => 30,
+    # Season2 => 32,
+    # HeartOfThorns => 16,
+    # Season3 => 36,
+    # PathOfFire => 16,
+    # Season4 => 30,
+    # IcebroodSaga => 41,
+    # EndOfDragons => 27,
+    # SecretsOfTheObscure => 20,
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    49: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  training_weight:
+    # The probability weight of any location being a skill/trait unlock
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 1000
+    0: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  max_training:
+    # The maximum number of training locations to generate. The number of training in each storyline are as follows:
+    # 
+    # Core => 49,
+    # Season1 => 0,
+    # Season2 => 0,
+    # HeartOfThorns => 16,
+    # Season3 => 0,
+    # PathOfFire => 16,
+    # Season4 => 0,
+    # IcebroodSaga => 0,
+    # EndOfDragons => 27,
+    # SecretsOfTheObscure => 0,
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    49: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  world_boss_weight:
+    # The probability weight of any location being a world boss
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 1000
+    250: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  unique_item_weight:
+    # The probability weight of any location being a purchase from a heart vendor (or similar for maps without hearts)
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 1000
+    100: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  poi_weight:
+    # The probability weight of any location being a point of interest (includes waypoints, vistas, and hero points)
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 1000
+    400: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  storyline:
+    # Storyline to focus on for PvE content
+    core: 50
+    season_1: 0
+    season_2: 0
+    heart_of_thorns: 0
+    season_3: 0
+    path_of_fire: 0
+    season_4: 0
+    icebrood_saga: 0
+    end_of_dragons: 0
+    secrets_of_the_obscure: 0
+    janthir_wilds: 0
+
+  mist_fragments_required:
+    # The number of "Mist Fragment" items required to complete this world
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 100
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  extra_mist_fragment_percent:
+    # Multiplier to determine how many extra Mist Fragments to create. For example if mist_fragments_required is 20
+    # and this is value is 50, there will be 30 Mist Fragments in the multi-world,
+    # but only 20 will be required to finish.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 1000
+    50: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  heal_skill:
+    # A random core heal skill could be placed early or given to the player as a starting skill
+    randomize: 0
+    early: 0
+    starting: 50
+
+  gear_slots:
+    # Gear slots could be placed early or given to the player at the start
+    randomize: 0
+    early: 50
+    starting: 0
+
+  storyline_items:
+    # Which skills, traits, and weapons do you want shuffled into the item pool
+    # all: all skills, traits, and weapons
+    # core: only core skills, traits, and weapons
+    # storyline: limit to core items plus those from the selected storyline. Living World storylines include the items
+    #     from their associated expansion
+    # storyline_plus: all items from the selected storyline and all preceding storylines.
+    all: 0
+    core: 0
+    storyline: 0
+    storyline_plus: 50
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []

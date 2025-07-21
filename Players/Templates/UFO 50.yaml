@@ -108,7 +108,7 @@ UFO 50:
 
   goal_games:
     # Choose which games you may have to complete to achieve your goal.
-    ['Campanella 2', 'The Big Bell Race', 'Lords of Diskonia', 'Ninpek', 'Onion Delivery', 'Attactics', 'Caramel Caramel', 'Grimstone', 'Quibble Race', 'Kick Club', 'Rock On! Island', 'Velgress', 'Warptank', 'Party House', 'Seaside Drive', 'Paint Chase', 'Overbold', 'Combatants', 'Bushido Ball', 'Hot Foot', 'Bug Hunter', 'Vainger', 'Planet Zoldath', 'Fist Hell', 'Mortol II', 'Block Koala', 'Mini & Max', 'Magic Garden', 'Golfaria', 'Mooncat', "Waldorf's Journey", "Elfazar's Hat", 'Campanella', 'Cyber Owls', 'Devilition', 'Star Waspir', 'Night Manor', 'Mortol', 'Pilot Quest', 'Porgy', 'Rail Heist', 'Pingolf', 'Campanella 3', 'Divers', 'Rakshasa', 'Valbrace', 'Avianos', 'Camouflage', 'Barbuta', 'Hyper Contender']
+    ['Cyber Owls', 'Barbuta', 'Onion Delivery', 'Planet Zoldath', 'Avianos', 'Warptank', 'Magic Garden', 'Porgy', 'Overbold', 'Campanella 2', 'Devilition', 'Paint Chase', 'Rail Heist', 'The Big Bell Race', 'Kick Club', 'Divers', 'Valbrace', 'Pingolf', 'Caramel Caramel', 'Star Waspir', 'Quibble Race', 'Rakshasa', 'Fist Hell', 'Mortol', 'Velgress', 'Seaside Drive', 'Campanella 3', 'Ninpek', "Waldorf's Journey", 'Hot Foot', 'Night Manor', 'Bug Hunter', 'Party House', 'Block Koala', 'Mortol II', 'Grimstone', 'Pilot Quest', 'Combatants', 'Mooncat', 'Camouflage', 'Campanella', 'Rock On! Island', "Elfazar's Hat", 'Mini & Max', 'Attactics', 'Hyper Contender', 'Lords of Diskonia', 'Vainger', 'Golfaria', 'Bushido Ball']
 
   goal_game_amount:
     # Choose how many games you need to goal to achieve your goal among your Goal Games.
@@ -129,7 +129,7 @@ UFO 50:
     # If the game is not set as a Goal Game, then Cherrying that game will be a check.
     # If the game is not selected at all, then this option will not affect it.
     # The defaults are ones where we believe the Cherry goal is reasonable in the context of a randomizer.
-    ['Night Manor', 'Barbuta']
+    ['Barbuta', 'Night Manor']
 
   # Porgy Options
   porgy_fuel_difficulty:

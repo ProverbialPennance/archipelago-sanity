@@ -135,7 +135,7 @@ ULTRAKILL:
 
   skipped_levels:
     # List as many levels as you would like to skip completing for the goal.
-    ['P-1', '0-E', '1-E', 'P-2']
+    ['1-E', 'P-1', 'P-2', '0-E']
 
   auto_exclude_skipped_locations:
     # Choose if skipped levels should automatically have all of their locations excluded.

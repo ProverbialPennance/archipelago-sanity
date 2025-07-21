@@ -419,7 +419,7 @@ The Legend of Zelda - Oracle of Seasons:
   excluded_rings:
     # Forces a specified set of rings to not appear in the seed.
     # List of ring names can be found here: https://zeldawiki.wiki/wiki/Magic_Ring
-    ['Octo Ring', 'Subrosian Ring', '100th Ring', 'First Gen Ring', 'Like Like Ring', 'Rupee Ring', 'Sign Ring', "Slayer's Ring", 'Friendship Ring', 'GBA Time Ring', 'GBA Nature Ring', 'Victory Ring', 'Cursed Ring', 'Moblin Ring']
+    ['Octo Ring', "Slayer's Ring", 'Friendship Ring', 'First Gen Ring', 'Like Like Ring', 'Victory Ring', 'GBA Nature Ring', 'GBA Time Ring', 'Subrosian Ring', 'Rupee Ring', '100th Ring', 'Cursed Ring', 'Sign Ring', 'Moblin Ring']
 
   fools_ore:
     # In the vanilla game, the Fool's Ore is the item "given" by the strange brothers in "exchange" for your feather.

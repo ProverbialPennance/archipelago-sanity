@@ -242,7 +242,11 @@ Super Mario 64:
 
   exclude_locations:
     # Prevent these locations from having an important item.
-    []
+    [
+      'Bowser in the Dark World Red Coins',
+      'Bowser in the Fire Sea Red Coins',
+      'Bowser in the Sky Red Coins'
+    ]
 
   priority_locations:
     # Prevent these locations from having an unimportant item.

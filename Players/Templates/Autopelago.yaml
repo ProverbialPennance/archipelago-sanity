@@ -90,7 +90,7 @@ Autopelago:
     # - **Stylish:** Better RNG
     # - **Confident:** Ignore a trap
     # - **Smart:** Next check is progression
-    ['Stylish', 'Lucky', 'Confident', 'Energized', 'Well Fed', 'Smart']
+    ['Lucky', 'Confident', 'Stylish', 'Energized', 'Smart', 'Well Fed']
 
   enabled_traps:
     # Enables various traps that affect how the rat behaves. All are enabled by default.
@@ -101,7 +101,7 @@ Autopelago:
     # - **Distracted:** Skip a "step"
     # - **Startled:** Run towards start
     # - **Conspiratorial:** Next check is trap
-    ['Sluggish', 'Unlucky', 'Conspiratorial', 'Upset Tummy', 'Distracted', 'Startled']
+    ['Sluggish', 'Conspiratorial', 'Startled', 'Distracted', 'Unlucky', 'Upset Tummy']
 
   msg_changed_target:
     # What messages the rat can say when a buff or trap is added to the queue of location checks to send before resuming its normal logic.

@@ -131,7 +131,7 @@ Brotato:
     # 
     # Characters not listed here will not be available to play. There will be no item to unlock them, and there will be
     # no run or wave complete checks associated with them.
-    ['Farmer', 'Brawler', 'Vampire', 'Bull', 'Technomage', 'Apprentice', 'Ranger', 'Hunter', 'One Armed', 'Mage', 'Wildling', 'King', 'Speedy', 'Pacifist', 'Fisherman', 'Entrepreneur', 'Cyborg', 'Gladiator', 'Old', 'Multitasker', 'Golem', 'Lucky', 'Saver', 'Explorer', 'Lich', 'Demon', 'Well Rounded', 'Ghost', 'Arms Dealer', 'Knight', 'Doctor', 'Loud', 'Mutant', 'Artificer', 'Generalist', 'Crazy', 'Engineer', 'Baby', 'Renegade', 'Streamer', 'Vagabond', 'Masochist', 'Chunky', 'Sick', 'Jack', 'Cryptid', 'Soldier', 'Glutton']
+    ['One Armed', 'Gladiator', 'Ghost', 'Farmer', 'Vampire', 'King', 'Speedy', 'Multitasker', 'Pacifist', 'Well Rounded', 'Jack', 'Cryptid', 'Old', 'Crazy', 'Ranger', 'Generalist', 'Wildling', 'Sick', 'Mutant', 'Entrepreneur', 'Vagabond', 'Doctor', 'Artificer', 'Brawler', 'Saver', 'Engineer', 'Mage', 'Loud', 'Arms Dealer', 'Soldier', 'Masochist', 'Knight', 'Hunter', 'Apprentice', 'Streamer', 'Golem', 'Renegade', 'Demon', 'Chunky', 'Baby', 'Technomage', 'Bull', 'Lucky', 'Cyborg', 'Fisherman', 'Lich', 'Glutton', 'Explorer']
 
   waves_per_drop:
     # How many waves to win to receive a check.
@@ -463,7 +463,7 @@ Brotato:
     # no run or wave complete checks associated with them.
     # 
     # Does nothing if "Enable Abyssal Terrors DLC" is not set.
-    ['Curious', 'Chef', 'Diver', 'Buccaneer', 'Ogre', 'Captain', 'Gangster', 'Sailor', 'Builder', 'Hiker', 'Druid', 'Romantic', 'Creature', 'Dwarf']
+    ['Gangster', 'Curious', 'Chef', 'Diver', 'Builder', 'Sailor', 'Ogre', 'Romantic', 'Creature', 'Captain', 'Dwarf', 'Hiker', 'Druid', 'Buccaneer']
 
   # Item & Location Options
   local_items:

@@ -222,17 +222,17 @@ Donkey Kong Country:
   shuffle_abilities:
     # Which abilities will be added as items in the item pool
     # If an ability is not present in the list they will be treated as unlocked from the start
-    ['Carry', 'Gorilla Slap', 'Roll', 'Swim', 'Climb']
+    ['Gorilla Slap', 'Climb', 'Carry', 'Swim', 'Roll']
 
   shuffle_animals:
     # Which animal buddies will be added as items in the item pool
     # If an animal buddy is not present in the list they will be treated as unlocked from the start
-    ['Winky', 'Rambi', 'Squawks', 'Enguarde', 'Expresso']
+    ['Enguarde', 'Expresso', 'Rambi', 'Squawks', 'Winky']
 
   shuffle_objects:
     # Which kind of objects will be added as items in the item pool
     # If an object is not present in the list they will be treated as unlocked from the start
-    ['Switch Barrels', 'Barrel Kannons', 'Tires', 'Platforms', 'Minecart']
+    ['Tires', 'Platforms', 'Barrel Kannons', 'Switch Barrels', 'Minecart']
 
   # Traps
   trap_fill_percentage:

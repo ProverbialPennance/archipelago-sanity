@@ -510,7 +510,7 @@ Sonic Adventure DX:
     # Mission 54 (Flags in the Snowboard section of Ice Cap).
     # Mission 58 (Flags in the rolling bounce section of Lost World).
     # Also, you can blacklist all the missions by using the character names. i.e. {'Big', 'Sonic'}
-    ['54', '53', '49', '58']
+    ['53', '49', '58', '54']
 
   twinkle_circuit_check:
     # Determines whether beating Twinkle Circuit grants a check.
