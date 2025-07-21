@@ -1,0 +1,198 @@
+# This file has to be in the Players folder to take effect, keeping the "meta.yaml" name
+# A meta file rolls its own set of options first
+# The result will then overwrite each player's option in that particular field
+# For example, if a meta.yaml fast_ganon result is rolled, every player will have that fast_ganon goal
+# There is the special case of null, which ignores that part of the meta.yaml,
+# allowing for a chance for that meta to not take effect
+meta_description: Meta-Mystery file with the intention of having similar-length completion times for a hopefully better experience
+null:
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    #
+    # **Full:** ensure everything can be reached and acquired.
+    #
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 1
+    minimal: 0
+  progression_balancing: # Progression balancing tries to make sure that the player has *something* towards any players goal in each "sphere"
+  #   # 0: 100
+  #   # 1: 99
+  #   # 2: 98
+  #   # 3: 97
+  #   # 4: 96
+  #   # 5: 95
+  #   # 6: 94
+  #   # 7: 93
+  #   # 8: 92
+  #   # 9: 91
+  #   # 10: 90
+  #   # 11: 89
+  #   # 12: 88
+  #   # 13: 87
+  #   # 14: 86
+  #   # 15: 85
+  #   # 16: 84
+  #   # 17: 83
+  #   # 18: 82
+  #   # 19: 81
+  #   # 20: 80
+  #   # 21: 79
+  #   # 22: 78
+  #   # 23: 77
+  #   # 24: 76
+  #   # 25: 75
+  #   # 26: 74
+  #   # 27: 73
+  #   # 28: 72
+  #   # 29: 71
+  #   # 30: 70
+  #   # 31: 69
+  #   # 32: 68
+  #   # 33: 67
+  #   # 34: 66
+  #   # 35: 65
+  #   # 36: 64
+  #   # 37: 63
+  #   # 38: 62
+  #   # 39: 61
+  #   # 40: 60
+  #   # 41: 59
+  #   # 42: 58
+  #   # 43: 57
+  #   # 44: 56
+  #   # 45: 55
+  #   # 46: 54
+  #   # 47: 53
+  #   # 48: 52
+  #   # 49: 51
+  #   # 50: 50
+  #   # 51: 49
+  #   # 52: 48
+  #   # 53: 47
+  #   # 54: 46
+  #   # 55: 45
+  #   # 56: 44
+  #   # 57: 43
+  #   # 58: 42
+  #   # 59: 41
+  #   # 60: 40
+  #   # 61: 39
+  #   # 62: 38
+  #   # 63: 37
+  #   # 64: 36
+  #   # 65: 35
+  #   # 66: 34
+  #   # 67: 33
+  #   # 68: 32
+  #   # 69: 31
+  #   # 70: 30
+  #   # 71: 29
+  #   # 72: 28
+  #   # 73: 27
+  #   # 74: 26
+  #   # 75: 25
+  #   # 76: 24
+  #   # 77: 23
+  #   # 78: 22
+  #   # 79: 21
+  #   # 80: 20
+  #   # 81: 19
+  #   # 82: 18
+  #   # 83: 17
+  #   # 84: 16
+  #   # 85: 15
+  #   # 86: 14
+  #   # 87: 13
+  #   # 88: 12
+  #   # 89: 11
+  #   # 90: 10
+  #   # 91: 9
+  #   # 92: 8
+  #   # 93: 7
+  #   # 94: 6
+  #   # 95: 5
+  #   # 96: 4
+  #   # 97: 3
+  #   # 98: 2
+  #   # 99: 1
+  #   # 66: 50
+  #
+  #   # NOTE: random and random ranges re-roll for each slot, if you want globals you need to *force* one value by specifying every number yourself
+  #   # 25: 50
+  #   # 26: 50
+  #   # 27: 50
+  #   # 28: 50
+  #   # 29: 50
+  #   # 30: 50
+  #   # 31: 50
+  #   # 32: 50
+  #   # 33: 50
+  #   # 34: 50
+  #   # 35: 50
+  #   # 36: 50
+  #   # 37: 50
+  #   # 38: 50
+  #   # 39: 50
+  #   # 40: 50
+  #   # 41: 50
+  #   # 42: 50
+  #   # 43: 50
+  #   # 44: 50
+  #   # 45: 50
+  #   # 46: 50
+  #   # 47: 50
+  #   # 48: 50
+  #   # 49: 50
+  #   # 50: 50
+  #
+    normal: 50 # Force every player into default progression balancing
+  #   disabled: 0 # Force every player out of progression balancing, then prepare for a lot of logical BK
+  #   null: 0 # Let players decide via their own progression_balancing setting in their yaml, defaulting to 50
+  energy_link:
+    'true': 50
+  gifting:
+    'true': 50
+  death_link:
+    'false': 50
+Factorio:
+  energy_link:
+    'true': 1
+Autopelago:
+  progression_balancing:
+    random-range-0-10: 100000000000
+Satisfactory:
+  energy_link:
+    'true': 1
+Stardew Valley:
+  gifting:
+    'true': 1
+Factorio - Space Age Without Space:
+  energy_link:
+    'true': 1
+# A Link to the Past:
+#   goals:
+#     ganon: 100 # Climb GT, defeat Agahnim 2, and then kill Ganon
+#     fast_ganon: 250 # Only killing Ganon is required. The hole is always open. However, items may still be placed in GT
+#     dungeons: 50 # Defeat the boss of all dungeons, including Agahnim's tower and GT (Aga 2)
+#     pedestal: 100 # Pull the Triforce from the Master Sword pedestal
+#     triforce-hunt: 5 # Collect 20 of 30 Triforce pieces spread throughout the worlds, then turn them in to Murahadala in front of Hyrule Castle
+#     local_triforce_hunt: 5 # Collect 20 of 30 Triforce pieces spread throughout your world, then turn them in to Murahadala in front of Hyrule Castle
+#     ganon_triforce_hunt: 10 # Collect 20 of 30 Triforce pieces spread throughout the worlds, then kill Ganon
+#     local_ganon_triforce_hunt: 10 # Collect 20 of 30 Triforce pieces spread throughout your world, then kill Ganon
+#     ganon_pedestal: 10 # Pull the Master Sword pedestal, then kill Ganon
+#     null: 0 # Maintain individual goals
+#   mode:
+#     standard: 10
+#     open: 60
+#     inverted: 10
+#     null: 10 # Maintain individual world states
+#   triforce_pieces_mode: #Determine how to calculate the extra available triforce pieces.
+#     extra: 0 # available = triforce_pieces_extra + triforce_pieces_required
+#     percentage: 0 # available = (triforce_pieces_percentage /100) * triforce_pieces_required
+#     available: 50 # available = triforce_pieces_available
+#   triforce_pieces_available: # Set to how many triforces pieces are available to collect in the world. Default is 30. Max is 90, Min is 1
+#     # Format "pieces: chance"
+#     30: 50
+#   triforce_pieces_required: # Set to how many out of X triforce pieces you need to win the game in a triforce hunt. Default is 20. Max is 90, Min is 1
+#     # Format "pieces: chance"
+#     25: 50
