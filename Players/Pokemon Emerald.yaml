@@ -105,18 +105,18 @@ Pokemon Emerald:
 
   bikes:
     # Adds the Mach Bike and Acro Bike to the pool.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 50
 
   event_tickets:
     # Adds the event tickets to the pool, which let you access legendaries by sailing from Lilycove.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   rods:
     # Adds fishing rods to the pool.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   overworld_items:
     # Adds items on the ground with a Pokeball sprite to the pool.
@@ -130,13 +130,13 @@ Pokemon Emerald:
 
   npc_gifts:
     # Adds most gifts received from NPCs to the pool (not including key items or HMs).
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   berry_trees:
     # Adds berry trees to the pool. Empty soil patches are converted to locations and contribute Sitrus Berries to the pool.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   dexsanity:
     # Adding a "caught" pokedex entry gives you an item (catching, evolving, trading, etc.). Only wild encounters are considered logical access to a species.
@@ -166,9 +166,9 @@ Pokemon Emerald:
     # - Shuffled: Item pool consists of shuffled vanilla items
     # - Diverse Balanced: Item pool consists of random items approximately proportioned according to what they're replacing
     # - Diverse: Item pool consists of uniformly random (non-unique) items
-    shuffled: 50
+    shuffled: 0
     diverse_balanced: 0
-    diverse: 0
+    diverse: 10
 
   require_itemfinder:
     # The Itemfinder is logically required to pick up hidden items.
@@ -256,11 +256,11 @@ Pokemon Emerald:
     # - Match Type: Wild pokemon are replaced with species that share a type with the original
     # - Match Base Stats and Type: Apply both Match Base Stats and Match Type
     # - Completely Random: There are no restrictions
-    vanilla: 50
+    vanilla: 0
     match_base_stats: 0
     match_type: 0
     match_base_stats_and_type: 0
-    completely_random: 0
+    completely_random: 10
 
   wild_encounter_blacklist:
     # Prevents listed species from appearing in the wild when wild encounters are randomized.
@@ -278,11 +278,11 @@ Pokemon Emerald:
     # - Match Type: Starters are replaced with species that share a type with the original
     # - Match Base Stats and Type: Apply both Match Base Stats and Match Type
     # - Completely Random: There are no restrictions
-    vanilla: 50
+    vanilla: 0
     match_base_stats: 0
     match_type: 0
     match_base_stats_and_type: 0
-    completely_random: 0
+    completely_random: 10
 
   starter_blacklist:
     # Prevents listed species from appearing as starters when starters are randomized.
@@ -302,11 +302,11 @@ Pokemon Emerald:
     # - Match Type: Trainer pokemon are replaced with species that share a type with the original
     # - Match Base Stats and Type: Apply both Match Base Stats and Match Type
     # - Completely Random: There are no restrictions
-    vanilla: 50
+    vanilla: 0
     match_base_stats: 0
     match_type: 0
     match_base_stats_and_type: 0
-    completely_random: 0
+    completely_random: 10
 
   trainer_party_blacklist:
     # Prevents listed species from appearing in opponent trainers' parties if opponent parties are randomized.
@@ -340,12 +340,12 @@ Pokemon Emerald:
     # - Match Type: Legendary encounters are replaced with species that share a type with the original
     # - Match Base Stats and Type: Apply both Match Base Stats and Match Type
     # - Completely Random: There are no restrictions
-    vanilla: 50
+    vanilla: 0
     shuffle: 0
     match_base_stats: 0
     match_type: 0
     match_base_stats_and_type: 0
-    completely_random: 0
+    completely_random: 10
 
   misc_pokemon:
     # Randomizes non-legendary static encounters. May grow to include other pokemon like trades or gifts.
@@ -356,12 +356,12 @@ Pokemon Emerald:
     # - Match Type: Species are replaced with species that share a type with the original
     # - Match Base Stats and Type: Apply both Match Base Stats and Match Type
     # - Completely Random: There are no restrictions
-    vanilla: 50
+    vanilla: 0
     shuffle: 0
     match_base_stats: 0
     match_type: 0
     match_base_stats_and_type: 0
-    completely_random: 0
+    completely_random: 10
 
   types:
     # Randomizes the type(s) of every pokemon. Each species will have the same number of types.
@@ -397,9 +397,9 @@ Pokemon Emerald:
     # - Vanilla: Learnset is unchanged
     # - Randomized: Moves are randomized
     # - Start with Four Moves: Moves are randomized and all Pokemon know 4 moves at level 1
-    vanilla: 50
+    vanilla: 0
     randomized: 0
-    start_with_four_moves: 0
+    start_with_four_moves: 10
 
   move_match_type_bias:
     # Sets the probability that a learned move will be forced match one of the types of a pokemon.
@@ -435,10 +435,10 @@ Pokemon Emerald:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 100
-    random: 0
+    random: 10
     random-low: 0
     random-high: 0
-    vanilla: 50 # equivalent to -1
+    vanilla: 0 # equivalent to -1
     full: 0 # equivalent to 100
 
   hm_compatibility:
@@ -452,15 +452,15 @@ Pokemon Emerald:
     random: 0
     random-low: 0
     random-high: 0
-    vanilla: 50 # equivalent to -1
-    full: 0 # equivalent to 100
+    vanilla: 0 # equivalent to -1
+    full: 10 # equivalent to 100
 
   tm_tutor_moves:
     # Randomizes the moves taught by TMs and move tutors.
     # 
     # Some opponents like gym leaders are allowed to use TMs. This option can affect the moves they know.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   reusable_tms_tutors:
     # Sets TMs to not break after use (they remain sellable). Sets move tutors to infinite use.
@@ -483,15 +483,15 @@ Pokemon Emerald:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 3
     # Maximum value is 255
-    3: 50
+    3: 0
     random: 0
     random-low: 0
-    random-high: 0
+    random-high: 10
 
   guaranteed_catch:
     # Every throw is guaranteed to catch a wild pokemon.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   normalize_encounter_rates:
     # Make every slot on an encounter table approximately equally likely.
@@ -499,8 +499,8 @@ Pokemon Emerald:
     # This does NOT mean each species is equally likely. In the vanilla game, each species may occupy more than one slot, and slots vary in probability.
     # 
     # Species will still occupy the same slots as vanilla, but the slots will be equally weighted. The minimum encounter rate will be 8% (higher in water).
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   exp_modifier:
     # Multiplies gained experience by a percentage.
@@ -513,7 +513,7 @@ Pokemon Emerald:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 1000
-    100: 50
+    200: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -525,8 +525,8 @@ Pokemon Emerald:
 
   purge_spinners:
     # Trainers will rotate in predictable patterns on a set interval instead of randomly and don't turn toward you when you run.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   match_trainer_levels:
     # When you start a battle with a trainer, your party's levels will be automatically set to match that trainer's highest level pokemon.
@@ -538,7 +538,7 @@ Pokemon Emerald:
     # - Off: The vanilla experience
     # - Additive: The modifier you apply to your team is a flat bonus
     # - Multiplicative: The modifier you apply to your team is a percent bonus
-    'off': 50
+    'off': 10
     additive: 0
     multiplicative: 0
 
@@ -569,15 +569,15 @@ Pokemon Emerald:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 100
-    0: 50
-    random: 0
+    0: 0
+    random: 10
     random-low: 0
     random-high: 0
 
   better_shops:
     # Pokemarts sell every item that can be obtained in a pokemart (except mail, which is still unique to the relevant city).
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   remove_roadblocks:
     # Removes specific NPCs that normally stand in your way until certain events are completed.
@@ -589,27 +589,27 @@ Pokemon Emerald:
     # Places strength boulders on Route 115 which block access to Meteor Falls from the beach.
     # 
     # This aims to take some power away from Surf by restricting how much it allows you to access.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   extra_bumpy_slope:
     # Adds a bumpy slope to Route 115 which allows access to Meteor Falls if you have the Acro Bike.
     # 
     # This aims to take some power away from Surf by adding a new way to exit the Rustboro area.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   modify_118:
     # Changes the layout of Route 118 so that it must be crossed with the Acro Bike instead of Surf.
     # 
     # This aims to take some power away from Surf by restricting how much it allows you to access.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   free_fly_location:
     # Enables flying to one random location (excluding cities reachable with no items).
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   free_fly_blacklist:
     # Disables specific locations as valid free fly locations.
@@ -624,8 +624,8 @@ Pokemon Emerald:
 
   turbo_a:
     # Holding A will advance most text automatically.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   receive_item_messages:
     # Determines whether you receive an in-game notification when receiving an item. Items can still only be received in the overworld.
@@ -633,8 +633,8 @@ Pokemon Emerald:
     # - All: Every item shows a message
     # - Progression: Only progression items show a message
     # - None: All items are added to your bag silently (badges will still show).
-    all: 50
-    progression: 0
+    all: 0
+    progression: 10
     none: 0
 
   remote_items:
@@ -643,20 +643,20 @@ Pokemon Emerald:
     # This enables co-op of a single slot and recovering more items after a lost save file (if you're so unlucky).
     # 
     # But it changes pickup behavior slightly and requires connection to the server to receive any items.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   music:
     # Shuffles music played in any situation where it loops. Includes many FRLG tracks.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   fanfares:
     # Shuffles fanfares for item pickups, healing at the pokecenter, etc.
     # 
     # When this option is enabled, pressing B will interrupt most fanfares.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.

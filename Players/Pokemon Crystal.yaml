@@ -334,8 +334,8 @@ Pokemon Crystal:
     random: 0
     random-low: 0
     random-high: 0
-    vanilla: 50 # equivalent to 0
-    fully_compatible: 0 # equivalent to 100
+    vanilla: 0 # equivalent to 0
+    fully_compatible: 10 # equivalent to 100
 
   hm_badge_requirements:
     # Vanilla: HMs require their vanilla badges
@@ -361,9 +361,9 @@ Pokemon Crystal:
     # Map Card: Unlocks a single random Fly destination only after obtaining both the Pokegear and Map card.
     # 
     # Indigo Plateau cannot be chosen as a free Fly location.
-    'off': 50
+    'off': 0
     free_fly: 0
-    free_fly_and_map_card: 0
+    free_fly_and_map_card: 50
     map_card: 0
 
   free_fly_blocklist:
@@ -379,8 +379,8 @@ Pokemon Crystal:
     # If this option is enabled, you will be able to Fly before being forced to use an item to progress
     # Early Fly is a best effort setting, if Fly and its badge cannot be placed early, then they will be placed
     #     randomly
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   # Pokemon
   randomize_wilds:
@@ -389,8 +389,8 @@ Pokemon Crystal:
     # Base Forms: Ensures that at least every Pokemon that cannot be obtained through evolution is available in the wild
     # Evolution Lines: Ensures that at least one Pokemon from each evolutionary line can be obtained in the wild
     # Catch 'em All: Ensures that every Pokemon will be obtainable in the wild
-    vanilla: 50
-    completely_random: 0
+    vanilla: 0
+    completely_random: 10
     base_forms: 0
     evolution_lines: 0
     catch_em_all: 0
@@ -405,8 +405,8 @@ Pokemon Crystal:
   randomize_static_pokemon:
     # Randomizes species of static Pokemon encounters
     # This includes overworld Pokemon, gift Pokémon and gift egg Pokémon
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   static_blocklist:
     # These Pokemon will not appear as static overworld encounters, gift eggs or gift Pokemon
@@ -433,10 +433,10 @@ Pokemon Crystal:
 
   randomize_trades:
     # Randomizes species of in-game trades
-    vanilla: 50
+    vanilla: 0
     received: 0
     requested: 0
-    both: 0
+    both: 10
 
   encounter_grouping:
     # Determines how randomized wild Pokemon are grouped in encounter tables.
@@ -466,17 +466,17 @@ Pokemon Crystal:
     #         Good Rod: 35%/35%/20%/10%
     #         Super Rod: 40%/30%/20%/10%
     # Equal sets all encounter slots to have (almost) equal probability.
-    vanilla: 0
-    remove_one_percents: 50
+    vanilla: 10
+    remove_one_percents: 0
     balanced: 0
     equal: 0
 
   # Starters
   randomize_starters:
     # Randomizes species of starter Pokemon
-    vanilla: 50
+    vanilla: 0
     unevolved_only: 0
-    completely_random: 0
+    completely_random: 10
     first_stage_can_evolve: 0
     base_stat_mode: 0
 
@@ -503,9 +503,9 @@ Pokemon Crystal:
     # Vanilla: Vanilla learnsets
     # Randomize: Random learnsets
     # Start With Four Moves: Random learnsets with 4 starting moves
-    vanilla: 50
+    vanilla: 
     randomize: 0
-    start_with_four_moves: 0
+    start_with_four_moves: 10
 
   learnset_type_bias:
     # This option will have an effect only if Randomize Learnset option is enabled.
@@ -553,8 +553,8 @@ Pokemon Crystal:
 
   randomize_tm_moves:
     # Randomizes the moves available as TMs
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 690
 
   tm_compatibility:
     # Percent chance for Pokemon to be compatible with each TM
@@ -563,10 +563,11 @@ Pokemon Crystal:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 1
     # Maximum value is 100
+    50: 1
     random: 0
     random-low: 0
     random-high: 0
-    vanilla: 50 # equivalent to 0
+    vanilla: 0 # equivalent to 0
     fully_compatible: 0 # equivalent to 100
 
   reusable_tms:
@@ -915,8 +916,8 @@ Pokemon Crystal:
 
   better_marts:
     # Improves the selection of items at Pokemarts
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 50
 
   experience_modifier:
     # Scale the amount of Experience Points given in battle

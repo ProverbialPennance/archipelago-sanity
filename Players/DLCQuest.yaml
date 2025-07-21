@@ -43,9 +43,9 @@ DLCQuest:
   # General
   campaign:
     # Which campaign you want to play
-    basic: 50
+    basic: 0
     live_freemium_or_die: 0
-    both: 0
+    both: 10
 
   item_shuffle:
     # Should Inventory Items be separate from their DLCs and shuffled in the item pool
@@ -66,8 +66,8 @@ DLCQuest:
 
   permanent_coins:
     # If purchasing a pack decreases your current coins amounts.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 50
 
   coinbundlequantity:
     # This is the amount of coins in a coin bundle

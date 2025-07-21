@@ -149,34 +149,34 @@ Sonic Heroes:
   # Story Options
   sonic_story:
     # Should Sonic Story Missions be enabled?
-    disabled: 50
+    disabled: 0
     mission_a_only: 0
     mission_b_only: 0
-    both_missions_enabled: 0
+    both_missions_enabled: 10
 
   dark_story:
     # Should Dark Story Missions be enabled?
     # Mission B will allow for Dark Enemy Sanity
-    disabled: 50
+    disabled: 0
     mission_a_only: 0
     mission_b_only: 0
-    both_missions_enabled: 0
+    both_missions_enabled: 10
 
   rose_story:
     # Should Rose Story Missions be enabled?
     # Mission B will allow for Rose Ring Sanity
     disabled: 0
-    mission_a_only: 50
+    mission_a_only: 0
     mission_b_only: 0
-    both_missions_enabled: 0
+    both_missions_enabled: 10
 
   chaotix_story:
     # Should Chaotix Story Missions be enabled?
     # Either Mission Act, or both, will allow for Chaotix Sanity
-    disabled: 50
+    disabled: 0
     mission_a_only: 0
     mission_b_only: 0
-    both_missions_enabled: 0
+    both_missions_enabled: 10
 
   super_hard_mode_sonic_act_2:
     # Should Sonic Act B Missions be replaced with the Super Hard Mode version?
@@ -297,19 +297,19 @@ Sonic Heroes:
   # Ring Options
   ring_link:
     # Ring Link
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   ring_link_overlord:
     # Should Ring Link be enabled on Metal Overlord?
     # This requires Ring Link to be enabled to have any effect
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   modern_ring_loss:
     # Only lose up to 20 Rings when hit instead of all
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   # Traps
   trap_fill:

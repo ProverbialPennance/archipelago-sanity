@@ -71,9 +71,9 @@ Yacht Dice:
     # Hard: you will need to play smart and be lucky.
     # Extreme: really hard mode, which requires many brain wrinkles and insane luck. NOT RECOMMENDED FOR MULTIWORLDS.
     easy: 0
-    medium: 50
+    medium: 0
     hard: 0
-    extreme: 0
+    extreme: 10
 
   score_for_last_check:
     # The items in the item pool will always allow you to reach a score of 1000.
@@ -105,10 +105,10 @@ Yacht Dice:
     # These are guaranteed, unlike the later items.
     # You can never get more than 8 dice and 5 rolls.
     # You start with one dice and one roll.
-    5_dice_and_3_rolls: 50
+    5_dice_and_3_rolls: 0
     5_dice_and_5_rolls: 0
     6_dice_and_4_rolls: 0
-    7_dice_and_3_rolls: 0
+    7_dice_and_3_rolls: 10
     8_dice_and_2_rolls: 0
 
   number_of_dice_fragments_per_dice:
@@ -149,8 +149,8 @@ Yacht Dice:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 16
-    0: 50
-    random: 0
+    0: 0
+    random: 10
     random-low: 0
     random-high: 0
 
@@ -278,8 +278,8 @@ Yacht Dice:
     # Sure: if there is space left, put in 10 story chapters.
     # Never: do not put any story chapters in, I do not like reading (but I am glad you are reading THIS!)
     all_of_it: 0
-    sure: 0
-    never: 50
+    sure: 10
+    never: 0
 
   which_story:
     # The most important part of Yacht Dice is the narrative.

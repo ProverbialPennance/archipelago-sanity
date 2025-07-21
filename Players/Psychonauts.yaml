@@ -85,7 +85,7 @@ Psychonauts:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 10
-    3: 50
+    1: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -170,8 +170,8 @@ Psychonauts:
     # 
     # Mental Cobweb locations must be collected using the Cobweb Duster. Collecting a Mental Cobweb will not add it to
     # Raz's inventory, so the loom in Ford's Sanctuary will have no use.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 10
 
   # Item & Location Options
   local_items:
