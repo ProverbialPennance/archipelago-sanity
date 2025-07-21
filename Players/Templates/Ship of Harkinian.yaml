@@ -1,0 +1,202 @@
+﻿# Q. What is this file?
+# A. This file contains options which allow you to configure your multiworld experience while allowing
+#    others to play how they want as well.
+#
+# Q. How do I use it?
+# A. The options in this file are weighted. This means the higher number you assign to a value, the
+#    more chances you have for that option to be chosen. For example, an option like this:
+#
+#    map_shuffle:
+#      on: 5
+#      off: 15
+#
+#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
+#    off.
+#
+# Q. I've never seen a file like this before. What characters am I allowed to use?
+# A. This is a .yaml file. You are allowed to use most characters.
+#    To test if your yaml is valid or not, you can use this website:
+#        http://www.yamllint.com/
+#    You can also verify that your Archipelago options are valid at this site:
+#        https://archipelago.gg/check
+
+# Your name in-game, limited to 16 characters.
+#     {player} will be replaced with the player's slot number.
+#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
+#     {number} will be replaced with the counter value of the name.
+#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
+name: Player{number}
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default Ship of Harkinian Template
+
+game: Ship of Harkinian
+requires:
+  version: 0.6.2 # Version of Archipelago required for this yaml to work as expected.
+
+Ship of Harkinian:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # 
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # **Full:** ensure everything can be reached and acquired.
+    # 
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  plando_items:
+    # Generic items plando.
+    []
+
+  shuffle_dungeon_rewards:
+    # Shuffle dungeon rewards to be vanilla, shuffled between dungeons, or anywhere. If not turned on, dungeon rewards will be on their vanilla location.
+    'off': 50
+    dungeons: 0
+    anywhere: 0
+
+  gcbk_setting:
+    # Choose wether Ganon's Castle Boss key is placed anywhere, or upon reaching a requirement. Once the requirements are reached, it'll be granted in the Temple of Time.
+    dungeon_rewards: 50
+    anywhere: 0
+
+  gcbk_rewards_required:
+    # Choose how many dungeon rewards are required to receive GCBK when set to require dungeon rewards.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 9
+    6: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  shuffle_tokens:
+    # Shuffle Gold Skulltula tokens.
+    'off': 50
+    dungeon: 0
+    overworld: 0
+    all: 0
+
+  shuffle_shops:
+    # Shuffle the 4 left items in every shop. Randomized items are free. The other 4 shop items stay vanilla.
+    'false': 50
+    'true': 0
+
+  shuffle_scrubs:
+    # Shuffles all Deku Scrub merchants in the game. Randomized items are free.
+    'false': 50
+    'true': 0
+
+  shuffle_trade_items:
+    # Adds all trade quest items to the pool. If this is turned off, only the Claim Check is in the pool.
+    'false': 50
+    'true': 0
+
+  shuffle_merchants:
+    # Randomize what the bean merchant, Granny's shop, Medigoron and the Wasteland Carpet Merchant sell.
+    'false': 50
+    'true': 0
+
+  shuffle_cows:
+    # Randomize what cows will give when playing Epona's Song for them for the first time.
+    'false': 50
+    'true': 0
+
+  shuffle_frogs:
+    # Shuffle the purple rupee rewards from the frogs in Zora's River. If this is turned off, only the Song of Storms and Frog Minigame rewards are shuffled.
+    'false': 50
+    'true': 0
+
+  shuffle_beehives:
+    # Shuffle all beehives.
+    'false': 50
+    'true': 0
+
+  shuffle_pots:
+    # Shuffle pot drops.
+    'off': 50
+    dungeon: 0
+    overworld: 0
+    all: 0
+
+  shuffle_crates:
+    # Shuffle small and large crate drops.
+    'off': 50
+    dungeon: 0
+    overworld: 0
+    all: 0
+
+  shuffle_freestanding:
+    # Shuffle freestanding items. IF this is turned off, freestanding pieces of heart are still randomized.
+    'off': 50
+    dungeon: 0
+    overworld: 0
+    all: 0
+
+  shuffle_fairies:
+    # Shuffle fairies from wonder spots, playing Song of Storms and other regular songs for Gossip Stones and in Fairy Fountains.
+    'false': 50
+    'true': 0
+
+  shuffle_grass:
+    # Shuffle grass drops.
+    'off': 50
+    dungeon: 0
+    overworld: 0
+    all: 0
+
+  shuffle_fish:
+    # Shuffle fish. Fishing pond fish will have 15 fish for each age. Overworld fish need a bottle to scoop up.
+    'off': 50
+    pond: 0
+    overworld: 0
+    all: 0
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []

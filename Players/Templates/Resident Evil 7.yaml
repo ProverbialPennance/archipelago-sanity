@@ -1,0 +1,241 @@
+﻿# Q. What is this file?
+# A. This file contains options which allow you to configure your multiworld experience while allowing
+#    others to play how they want as well.
+#
+# Q. How do I use it?
+# A. The options in this file are weighted. This means the higher number you assign to a value, the
+#    more chances you have for that option to be chosen. For example, an option like this:
+#
+#    map_shuffle:
+#      on: 5
+#      off: 15
+#
+#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
+#    off.
+#
+# Q. I've never seen a file like this before. What characters am I allowed to use?
+# A. This is a .yaml file. You are allowed to use most characters.
+#    To test if your yaml is valid or not, you can use this website:
+#        http://www.yamllint.com/
+#    You can also verify that your Archipelago options are valid at this site:
+#        https://archipelago.gg/check
+
+# Your name in-game, limited to 16 characters.
+#     {player} will be replaced with the player's slot number.
+#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
+#     {number} will be replaced with the counter value of the name.
+#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
+name: Player{number}
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default Resident Evil 7 Template
+
+game: Resident Evil 7
+requires:
+  version: 0.6.2 # Version of Archipelago required for this yaml to work as expected.
+
+Resident Evil 7:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # 
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # **Full:** ensure everything can be reached and acquired.
+    # 
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  plando_items:
+    # Generic items plando.
+    []
+
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    'false': 50
+    'true': 0
+
+  difficulty:
+    # Standard: Most people should play on this.
+    # Hardcore: Good luck, and thanks for testing deaths. Kappa
+    # Assisted: ... Okay, fine. No judgment here. :)
+    standard: 50
+    hardcore: 0
+    assisted: 0
+
+  unlocked_typewriters:
+    # Specify the exact name of typewriters from the warp buttons in-game, as a YAML array.
+    []
+
+  starting_hip_pouches:
+    # The number of hip pouches you want to start the game with, to a max of 6 (or 5 for Hardcore). 
+    # Any that you start with are taken out of the item pool and replaced with junk.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 6
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 50 # equivalent to 0
+    half: 0 # equivalent to 3
+    all: 0 # equivalent to 6
+
+  starting_ink_ribbons:
+    # If playing Hardcore, the number of ink ribbons you want to start the game with, to a max of 12.
+    # Any that you start with are taken out of the item pool and replaced with junk.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 12
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 50 # equivalent to 0
+    half: 0 # equivalent to 6
+    all: 0 # equivalent to 12
+
+  bonus_start:
+    # Some players might want to start with a little help in the way of a few extra heal items and packs of ammo.
+    # This option IS affected by cross-scenario weapon randomization, if that option is set.
+    # 
+    # False: Normal, don't start with extra heal items and packs of ammo.
+    # True: Start with those helper items.
+    'false': 50
+    'true': 0
+
+  start_at_chapter_2:
+    # With this, the first chapter is not randomized, so you will start "directly" to chapter 2 (just interact with the door bell at the start to start Chapter 2)
+    # 
+    # False: (Default) Normal, you start the game as normal
+    # True: The first chapter is not randomized.
+    'false': 50
+    'true': 0
+
+  randomize_coins:
+    # This option permit you to choose how you Randomize Antique Coins (but not what is unlocked with it)
+    # None: (Default) Won't Randomize Antique Coins
+    # This will make you able to find coins as default, and make that no item will be behind Coinss
+    # 
+    # No_progression: The coins will be randomized but won't contains Progression items.
+    # 
+    # All : The coins will be randomized, and can contains anything.
+    # 
+    # NOTE - This option only affects *YOUR* game. Your progression can still be in someone else's if they have this option enabled.
+    none: 50
+    no_progression: 0
+    all: 0
+
+  randomize_coins_cages:
+    # This option permit you to choose how you Randomize Coins Cages (Not Coins see randomize_coins for that)
+    # None: (Default) Won't Randomize Randomize Coins Cages
+    # The content of coins cage will be as default
+    # 
+    # No_progression: The coins cage will be randomized but won't contains Progression items.
+    # 
+    # All : The coins cage will be randomized, and can contains anything.
+    # 
+    # NOTE - This option only affects *YOUR* game. Your progression can still be in someone else's if they have this option enabled.
+    none: 50
+    no_progression: 0
+    all: 0
+
+  ammo_pack_modifier:
+    # This option, when set, will modify the quantity of ammo in each ammo pack. This can make the game easier or much, much harder.
+    # The available options are:
+    # 
+    # None: You realized that consistency in ammo pack quantities is one of the few true joys in life, and this causes you to not modify them at all.
+    # Max: Each ammo pack will contain the maximum amount of ammo that the game allows. (i.e., you will never, ever run out of ammo.)
+    # Double: Each ammo pack will contain twice as much ammo as it normally contains.
+    # Half: Each ammo pack will contain half as much ammo as it normally contains.
+    # Only Three: Each ammo pack will have an ammo count of 3.
+    # Only Two: Each ammo pack will have an ammo count of 2.
+    # Only One: Each ammo pack will have an ammo count of 1. (Yes, your Handgun Ammo pack will have a single bullet in it.)
+    # Random By Type: Each ammo type's ammo pack will have a random quantity of ammo, and you will get that same quantity of ammo from every pack for that ammo type.
+    #     (For example, you receive a Shotgun Shells pack that has a random quantity of 7 ammo. All Shotgun Shells packs will have a quantity of 7.)
+    # Random Always: Each ammo pack will have a random quantity of ammo, and that quantity will be randomized every time.
+    #     (For example, you receive a Shotgun Shells pack that has a random quantity of 7 ammo. Your next Shotgun Shells pack has a quantity of 4, next has 2, etc.)
+    # 
+    # NOTE: The options for "Only Three", "Only Two", "Only One", "Random By Type", and "Random Always" are not guaranteed to be reasonably beatable.
+    none: 50
+    max: 0
+    double: 0
+    half: 0
+    only_three: 0
+    only_two: 0
+    only_one: 0
+    random_by_type: 0
+    random_always: 0
+
+  no_first_aid_spray:
+    # Enabling this swaps all first aid sprays to filler or less useful items.
+    'false': 50
+    'true': 0
+
+  no_green_herb:
+    # Enabling this swaps all green herbs to filler or less useful items.
+    'false': 50
+    'true': 0
+
+  no_red_herb:
+    # Enabling this swaps all red herbs to filler or less useful items.
+    'false': 50
+    'true': 0
+
+  no_gunpowder:
+    # Enabling this swaps all gunpowder of all types to filler or less useful items.
+    'false': 50
+    'true': 0
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_inventory_from_pool:
+    # Start with these items and don't place them in the world.
+    # 
+    # The game decides what the replacement items will be.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []
