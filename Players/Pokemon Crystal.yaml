@@ -503,7 +503,7 @@ Pokemon Crystal:
     # Vanilla: Vanilla learnsets
     # Randomize: Random learnsets
     # Start With Four Moves: Random learnsets with 4 starting moves
-    vanilla: 
+    vanilla: 0
     randomize: 0
     start_with_four_moves: 10
 
