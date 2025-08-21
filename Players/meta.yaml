@@ -232,8 +232,7 @@ Old School Runescape:
         - "Area: Corsair Cove"
         - "Area: Rimmington"
         - "Area: Crafting Guild"
-      replacement_item: "Area: Lumbridge"
-      link_replacement: true
+      replacement_item: null
 # A Link to the Past:
 #   goals:
 #     ganon: 100 # Climb GT, defeat Agahnim 2, and then kill Ganon
